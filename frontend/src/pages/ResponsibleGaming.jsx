@@ -31,18 +31,18 @@ export default function ResponsibleGaming() {
               <Reveal key={item.title} delay={0.04 * i}>
                 <div className="card-light h-full p-5" data-testid={`rg-card-${i}`}>
                   <span className="icon-chip !h-10 !w-10"><item.icon size={17} /></span>
-                  <h3 className="mt-3 font-heading text-base font-bold text-[#1f361d]">{item.title}</h3>
-                  <p className="mt-1.5 text-sm text-[#1f361d]/60">{item.desc}</p>
+                  <h3 className="mt-3 font-heading text-base font-bold text-[#274A22]">{item.title}</h3>
+                  <p className="mt-1.5 text-sm text-[#274A22]/60">{item.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
           <Reveal delay={0.2}>
-            <div className="mt-7 rounded-2xl border border-[#284525] bg-[#284525] p-5 md:p-8" data-testid="rg-notice">
+            <div className="mt-7 rounded-2xl border border-[#31602C] bg-[#31602C] p-5 md:p-8" data-testid="rg-notice">
               <p className="font-heading text-lg font-bold text-white">Need a break?</p>
               <p className="mt-2 max-w-2xl text-sm text-white/65">
                 If you feel your gaming is becoming a problem, contact our support team at{" "}
-                <a href="mailto:support@nextzgames.com" data-testid="rg-support-email" className="text-[#E8DC6A] underline underline-offset-4">
+                <a href="mailto:support@nextzgames.com" data-testid="rg-support-email" className="text-[#EFE35F] underline underline-offset-4">
                   support@nextzgames.com
                 </a>{" "}
                 to discuss limits, cool-downs or self-exclusion. This page will be updated with region-specific support resources before launch.

@@ -43,8 +43,8 @@ const SOCIALS = [
 ];
 
 export const Footer = () => (
-  <footer data-testid="site-footer" className="relative bg-[#182b17] border-t border-[#E8DC6A]/15">
-    <div className="h-[3px] w-full bg-gradient-to-r from-[#E8DC6A] via-[#E8DC6A]/50 to-transparent" />
+  <footer data-testid="site-footer" className="relative bg-[#1E3C1A] border-t border-[#EFE35F]/15">
+    <div className="h-[3px] w-full bg-gradient-to-r from-[#EFE35F] via-[#EFE35F]/50 to-transparent" />
     <div className="mx-auto max-w-6xl px-6 py-8 md:py-12">
       <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
@@ -60,7 +60,7 @@ export const Footer = () => (
                 href="#"
                 aria-label={label}
                 data-testid={`social-${label.toLowerCase()}`}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#E8DC6A] hover:text-[#E8DC6A]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#EFE35F] hover:text-[#EFE35F]"
               >
                 <Icon size={16} />
               </a>
@@ -69,7 +69,7 @@ export const Footer = () => (
         </div>
         {COLS.map((col) => (
           <div key={col.title}>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E8DC6A]">{col.title}</h4>
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">{col.title}</h4>
             <ul className="mt-5 space-y-3">
               {col.links.map((l) => (
                 <li key={l.label}>

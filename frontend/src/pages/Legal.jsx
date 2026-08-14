@@ -12,14 +12,14 @@ export default function Legal({ slug }) {
         <div className="mx-auto max-w-3xl space-y-10 px-6">
           {page.sections.map((s, i) => (
             <Reveal key={s.h} delay={0.04 * i}>
-              <div className="border-l border-[#9C8F22]/40 pl-6">
-                <h2 className="font-heading text-xl font-bold text-[#1f361d]">{s.h}</h2>
-                <p className="mt-3 text-sm md:text-base leading-relaxed text-[#1f361d]/65">{s.p}</p>
+              <div className="border-l border-[#A3941F]/40 pl-6">
+                <h2 className="font-heading text-xl font-bold text-[#274A22]">{s.h}</h2>
+                <p className="mt-3 text-sm md:text-base leading-relaxed text-[#274A22]/65">{s.p}</p>
               </div>
             </Reveal>
           ))}
           <Reveal delay={0.1}>
-            <p className="text-xs text-[#1f361d]/45">
+            <p className="text-xs text-[#274A22]/45">
               This document is provided for information and will be reviewed and approved by legal counsel before public launch. Last updated: {new Date().getFullYear()}.
             </p>
           </Reveal>

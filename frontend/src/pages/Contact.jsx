@@ -57,7 +57,7 @@ export default function Contact() {
       <PageHero
         chapter="@"
         label="Contact"
-        title={<>Talk to <span className="text-[#E8DC6A]">the Team</span></>}
+        title={<>Talk to <span className="text-[#EFE35F]">the Team</span></>}
         sub="Questions about Poker, Predictions, your account or the app — we are here to help."
       />
       <section className="section-light py-8 md:py-12" data-testid="contact-section">
@@ -67,31 +67,31 @@ export default function Contact() {
             <Reveal delay={0.1}>
               <div className="mt-6 space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#E8DC6A]"><Mail size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#31602C] text-[#EFE35F]"><Mail size={18} /></span>
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Support Email</p>
-                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#1f361d] hover:text-[#9C8F22]">support@nextzgames.com</a>
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Support Email</p>
+                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#274A22] hover:text-[#A3941F]">support@nextzgames.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#E8DC6A]"><Clock size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#31602C] text-[#EFE35F]"><Clock size={18} /></span>
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Support Hours</p>
-                    <p className="mt-1 font-heading font-bold text-[#1f361d]">Mon – Sun, 9:00 – 21:00 IST</p>
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Support Hours</p>
+                    <p className="mt-1 font-heading font-bold text-[#274A22]">Mon – Sun, 9:00 – 21:00 IST</p>
                   </div>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Follow Us</p>
+                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Follow Us</p>
                   <div className="mt-3 flex gap-3">
                     {SOCIALS.map(({ icon: Icon, label }) => (
-                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#284525]/20 text-[#1f361d]/60 transition-colors duration-300 hover:border-[#284525] hover:bg-[#284525] hover:text-[#E8DC6A]">
+                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#31602C]/20 text-[#274A22]/60 transition-colors duration-300 hover:border-[#31602C] hover:bg-[#31602C] hover:text-[#EFE35F]">
                         <Icon size={16} />
                       </a>
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-[#1f361d]/60">
-                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#9C8F22] underline underline-offset-4">FAQ page</Link>.
+                <p className="text-sm text-[#274A22]/60">
+                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#A3941F] underline underline-offset-4">FAQ page</Link>.
                 </p>
               </div>
             </Reveal>
@@ -101,29 +101,29 @@ export default function Contact() {
             <form onSubmit={submit} className="card-light p-8 md:p-10" data-testid="contact-form">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="cf-name" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Name</label>
+                  <label htmlFor="cf-name" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Name</label>
                   <input id="cf-name" data-testid="contact-name" required minLength={2} value={form.name} onChange={set("name")} className="input-light" placeholder="Your full name" />
                 </div>
                 <div>
-                  <label htmlFor="cf-email" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Email</label>
+                  <label htmlFor="cf-email" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Email</label>
                   <input id="cf-email" data-testid="contact-email-input" required type="email" value={form.email} onChange={set("email")} className="input-light" placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label htmlFor="cf-mobile" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Mobile Number</label>
+                  <label htmlFor="cf-mobile" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Mobile Number</label>
                   <input id="cf-mobile" data-testid="contact-mobile" required minLength={8} value={form.mobile} onChange={set("mobile")} className="input-light" placeholder="+91 98765 43210" />
                 </div>
                 <div>
-                  <label htmlFor="cf-category" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Category</label>
+                  <label htmlFor="cf-category" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Category</label>
                   <select id="cf-category" data-testid="contact-category" value={form.category} onChange={set("category")} className="input-light">
                     {CATEGORIES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="cf-subject" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Subject</label>
+                  <label htmlFor="cf-subject" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Subject</label>
                   <input id="cf-subject" data-testid="contact-subject" required minLength={3} value={form.subject} onChange={set("subject")} className="input-light" placeholder="What is this about?" />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="cf-message" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Message</label>
+                  <label htmlFor="cf-message" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#274A22]/50">Message</label>
                   <textarea id="cf-message" data-testid="contact-message" required minLength={10} rows={5} value={form.message} onChange={set("message")} className="input-light resize-none" placeholder="Tell us how we can help..." />
                 </div>
               </div>

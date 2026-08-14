@@ -21,14 +21,14 @@ export const Chapter = ({ n, label, tone = "dark" }) => (
       data-testid={`chapter-${(n || label).toString().toLowerCase().replace(/\s+/g, "-")}`}
       className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 ${
         tone === "light"
-          ? "border-[#284525]/20 bg-white text-[#9C8F22]"
-          : "border-[#E8DC6A]/30 bg-[#E8DC6A]/8 text-[#E8DC6A]"
+          ? "border-[#31602C]/20 bg-white text-[#A3941F]"
+          : "border-[#EFE35F]/30 bg-[#EFE35F]/8 text-[#EFE35F]"
       }`}
     >
       {n && (
         <>
           <span className="font-heading text-[11px] font-extrabold tracking-[0.2em]">{n}</span>
-          <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#284525]/25" : "bg-[#E8DC6A]/40"}`} />
+          <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#31602C]/25" : "bg-[#EFE35F]/40"}`} />
         </>
       )}
       <span className="text-[10px] font-semibold uppercase tracking-[0.28em]">{label}</span>
@@ -49,7 +49,7 @@ export const DownloadButton = ({ testid = "download-btn", label = "Download the 
 );
 
 export const PageHero = ({ chapter, label, title, sub, children }) => (
-  <section className="relative overflow-hidden bg-[#284525] pt-20 pb-8 md:pt-24 md:pb-10">
+  <section className="relative overflow-hidden bg-[#31602C] pt-20 pb-8 md:pt-24 md:pb-10">
     <div className="pointer-events-none absolute -top-40 right-[-10%] h-[420px] w-[420px] rounded-full glow-gold" />
     <div className="relative mx-auto max-w-6xl px-6">
       <Chapter n={chapter} label={label} />

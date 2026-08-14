@@ -14,16 +14,16 @@ export default function HowItWorks() {
       />
       <section className="section-light py-8 md:py-12" data-testid="steps-section">
         <div className="mx-auto max-w-3xl px-6">
-          <div className="relative space-y-10 before:absolute before:bottom-5 before:left-[23px] before:top-5 before:w-px before:bg-[#9C8F22]/30">
+          <div className="relative space-y-10 before:absolute before:bottom-5 before:left-[23px] before:top-5 before:w-px before:bg-[#A3941F]/30">
             {HOW_IT_WORKS_STEPS.map((s, i) => (
               <Reveal key={s.n} delay={0.06 * i}>
                 <div className="relative flex gap-6 md:gap-8" data-testid={`how-page-step-${s.n}`}>
-                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#284525] bg-[#284525] font-heading text-base font-extrabold text-[#E8DC6A] shadow-[0_10px_24px_rgba(24,43,23,0.25)]">
+                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#31602C] bg-[#31602C] font-heading text-base font-extrabold text-[#EFE35F] shadow-[0_10px_24px_rgba(24,43,23,0.25)]">
                     {s.n}
                   </span>
                   <div className="pt-1.5">
-                    <h2 className="font-heading text-xl font-extrabold text-[#1f361d]">{s.title}</h2>
-                    <p className="mt-1.5 max-w-lg text-sm text-[#1f361d]/65">{s.desc}</p>
+                    <h2 className="font-heading text-xl font-extrabold text-[#274A22]">{s.title}</h2>
+                    <p className="mt-1.5 max-w-lg text-sm text-[#274A22]/65">{s.desc}</p>
                   </div>
                 </div>
               </Reveal>

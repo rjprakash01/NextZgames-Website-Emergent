@@ -24,6 +24,8 @@ Home (hero, brand statement, Poker, Predictions, Why, App Showcase, Promotions, 
 - v3 (2026-08-14, user feedback "too big/dull"): compact type scale (h2 ~text-3xl, section padding py-16/24, cards p-6, container max-w-6xl), vibrant gold system — gradient gold buttons with glow, gold marquee band with green text, gold-filled icon chips, gold-gradient headline accents, chapter pills instead of plain labels, gold gradient bar atop footer.
 - v4 (2026-08-14, user feedback): primary accent shifted from #D4C942 to lighter #E8DC6A (buttons, links, icons, highlights, ticker, gradients, glows; readable light-bg variant #9C8F22 kept for text on white). Section numbering removed from homepage chapter pills (inner pages keep step numbers).
 - v5 (2026-08-14, user feedback): further density pass — sections py-8/12, FinalCTA py-10/14, PageHero pt-20/24 pb-8/10, hero pt-20/24 pb-8, mt-10/9/8 → mt-7/6, gap-10 → gap-8, footer py-9/12.
+- v6 (2026-08-14): removed hero badge + footer coming-soon pills (visual editor requests); perf fix — removed fixed grain overlay, Lenis lerp 0.16, lighter header blur.
+- v7 (2026-08-14, user feedback "dull"): brightness pass — greens lifted (#284525→#31602C, #1f361d→#274A22, #182b17→#1E3C1A, #30512d→#3A6335), gold #E8DC6A→#EFE35F, light sections #F7F8F1→#FBFCF4, stronger gold glows.
 - Kinetic hero with masked line-by-line reveal, parallax floating phone mockup, giant outlined NEXTZ backdrop.
 - Slow editorial marquee; numbered manifesto chapters 01–11; Lenis momentum scrolling; scroll reveals throughout.
 - CSS-crafted app screen mockups (home, poker lobby, table, predictions, wallet) in premium phone frames.

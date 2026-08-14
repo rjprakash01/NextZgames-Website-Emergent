@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-    --green: #284525;
-    --green-light: #30512d;
-    --green-dark: #1f361d;
-    --green-darker: #182b17;
-    --gold: #E8DC6A;
+    --green: #31602C;
+    --green-light: #3A6335;
+    --green-dark: #274A22;
+    --green-darker: #1E3C1A;
+    --gold: #EFE35F;
     --gold-hover: #F0E57C;
-    --gold-dim: rgba(232, 220, 106, 0.2);
+    --gold-dim: rgba(239, 227, 95, 0.2);
     --radius: 0.5rem;
 }
 
@@ -55,8 +55,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #F2E77E 0%, #E8DC6A 55%, #D6CB52 100%);
-    color: #1f361d;
+    background: linear-gradient(135deg, #F2E77E 0%, #EFE35F 55%, #D6CB52 100%);
+    color: #274A22;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     letter-spacing: 0.04em;
@@ -64,13 +64,13 @@ body {
     padding: 0.85rem 1.75rem;
     border-radius: 999px;
     font-size: 0.78rem;
-    box-shadow: 0 8px 24px rgba(232, 220, 106, 0.28);
+    box-shadow: 0 8px 24px rgba(239, 227, 95, 0.28);
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 .btn-gold:hover {
     transform: translateY(-2px);
     filter: brightness(1.06);
-    box-shadow: 0 14px 36px rgba(232, 220, 106, 0.42);
+    box-shadow: 0 14px 36px rgba(239, 227, 95, 0.42);
 }
 
 .btn-outline {
@@ -91,13 +91,13 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .btn-outline:hover {
-    background: rgba(232, 220, 106, 0.12);
+    background: rgba(239, 227, 95, 0.12);
     transform: translateY(-2px);
 }
 
 .txt-outline-gold {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(232, 220, 106, 0.45);
+    -webkit-text-stroke: 1px rgba(239, 227, 95, 0.45);
 }
 
 .gold-line {
@@ -107,12 +107,12 @@ body {
 
 .card-green {
     background: linear-gradient(160deg, rgba(48, 81, 45, 0.55), rgba(31, 54, 29, 0.85));
-    border: 1px solid rgba(232, 220, 106, 0.14);
+    border: 1px solid rgba(239, 227, 95, 0.22);
     border-radius: 1.25rem;
     transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 .card-green:hover {
-    border-color: rgba(232, 220, 106, 0.45);
+    border-color: rgba(239, 227, 95, 0.45);
     transform: translateY(-4px);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
@@ -133,11 +133,11 @@ body {
 }
 .input-dark:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(232, 220, 106, 0.15);
+    box-shadow: 0 0 0 3px rgba(239, 227, 95, 0.15);
 }
 
 .glow-gold {
-    background: radial-gradient(closest-side, rgba(232, 220, 106, 0.14), transparent 70%);
+    background: radial-gradient(closest-side, rgba(239, 227, 95, 0.22), transparent 70%);
 }
 
 @keyframes float-slow {
@@ -154,8 +154,8 @@ body {
 
 /* Light editorial sections */
 .section-light {
-    background: #F7F8F1;
-    color: #1f361d;
+    background: #FBFCF4;
+    color: #274A22;
 }
 
 .card-light {
@@ -172,11 +172,11 @@ body {
 }
 
 .gold-strong {
-    color: #9C8F22;
+    color: #A3941F;
 }
 
 .text-gold-gradient {
-    background: linear-gradient(120deg, #F4E98A 0%, #E8DC6A 50%, #C9BC44 100%);
+    background: linear-gradient(120deg, #F4E98A 0%, #EFE35F 50%, #C9BC44 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -190,8 +190,8 @@ body {
     width: 2.75rem;
     border-radius: 0.9rem;
     background: linear-gradient(135deg, #F2E77E, #D9CE57);
-    color: #1f361d;
-    box-shadow: 0 8px 20px rgba(232, 220, 106, 0.3);
+    color: #274A22;
+    box-shadow: 0 8px 20px rgba(239, 227, 95, 0.3);
 }
 
 .btn-outline-dark {
@@ -200,8 +200,8 @@ body {
     justify-content: center;
     gap: 0.5rem;
     background: transparent;
-    border: 1.5px solid #284525;
-    color: #284525;
+    border: 1.5px solid #31602C;
+    color: #31602C;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -222,7 +222,7 @@ body {
     border: 1px solid rgba(40, 69, 37, 0.18);
     border-radius: 0.75rem;
     padding: 0.85rem 1rem;
-    color: #1f361d;
+    color: #274A22;
     font-size: 0.9rem;
     outline: none;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -231,6 +231,6 @@ body {
     color: rgba(31, 54, 29, 0.35);
 }
 .input-light:focus {
-    border-color: #284525;
+    border-color: #31602C;
     box-shadow: 0 0 0 3px rgba(40, 69, 37, 0.12);
 }

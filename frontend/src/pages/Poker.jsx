@@ -29,12 +29,12 @@ export default function Poker() {
           <div className="order-1 lg:order-2">
             <Chapter n="01" label="The Lobby" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1f361d]">
+              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#274A22]">
                 Find Your Table <span className="gold-strong">in Seconds</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#1f361d]/65">
+              <p className="mt-4 max-w-md text-sm md:text-base text-[#274A22]/65">
                 Browse available Poker formats, check blinds and open seats, and join the table that fits your game — all from the lobby inside the app.
               </p>
             </Reveal>
@@ -42,14 +42,14 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#1f361d] py-8 md:py-12" data-testid="poker-features-section">
+      <section className="bg-[#274A22] py-8 md:py-12" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="02" label="Features" />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {POKER_FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={0.07 * i}>
                 <div className="card-green h-full p-5" data-testid={`poker-page-feature-${i}`}>
-                  <span className="font-heading text-[11px] font-bold tracking-[0.3em] text-[#E8DC6A]">0{i + 1}</span>
+                  <span className="font-heading text-[11px] font-bold tracking-[0.3em] text-[#EFE35F]">0{i + 1}</span>
                   <h3 className="mt-3 font-heading text-base font-bold text-white">{f.title}</h3>
                   <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
                 </div>
@@ -64,12 +64,12 @@ export default function Poker() {
           <div>
             <Chapter n="03" label="The Table" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1f361d]">
+              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#274A22]">
                 Every Decision, <span className="gold-strong">In Your Hands</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#1f361d]/65">
+              <p className="mt-4 max-w-md text-sm md:text-base text-[#274A22]/65">
                 A clean, responsive table interface built for focus — your cards, the pot and your actions always front and centre.
               </p>
             </Reveal>
@@ -81,7 +81,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#284525] py-16 text-center" data-testid="poker-cta">
+      <section className="bg-[#31602C] py-16 text-center" data-testid="poker-cta">
         <div className="mx-auto max-w-2xl px-6">
           <Reveal>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Ready for the table?</h2>
