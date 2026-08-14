@@ -18,15 +18,19 @@ export const Reveal = ({ children, delay = 0, className = "", y = 22 }) => (
 export const Chapter = ({ n, label, tone = "dark" }) => (
   <Reveal>
     <div
-      data-testid={`chapter-${n}`}
+      data-testid={`chapter-${(n || label).toString().toLowerCase().replace(/\s+/g, "-")}`}
       className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 ${
         tone === "light"
           ? "border-[#284525]/20 bg-white text-[#9C8F22]"
-          : "border-[#D4C942]/30 bg-[#D4C942]/8 text-[#D4C942]"
+          : "border-[#E8DC6A]/30 bg-[#E8DC6A]/8 text-[#E8DC6A]"
       }`}
     >
-      <span className="font-heading text-[11px] font-extrabold tracking-[0.2em]">{n}</span>
-      <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#284525]/25" : "bg-[#D4C942]/40"}`} />
+      {n && (
+        <>
+          <span className="font-heading text-[11px] font-extrabold tracking-[0.2em]">{n}</span>
+          <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#284525]/25" : "bg-[#E8DC6A]/40"}`} />
+        </>
+      )}
       <span className="text-[10px] font-semibold uppercase tracking-[0.28em]">{label}</span>
     </div>
   </Reveal>
@@ -45,18 +49,18 @@ export const DownloadButton = ({ testid = "download-btn", label = "Download the 
 );
 
 export const PageHero = ({ chapter, label, title, sub, children }) => (
-  <section className="relative overflow-hidden bg-[#284525] pt-28 pb-14 md:pt-36 md:pb-20">
+  <section className="relative overflow-hidden bg-[#284525] pt-24 pb-10 md:pt-28 md:pb-14">
     <div className="pointer-events-none absolute -top-40 right-[-10%] h-[420px] w-[420px] rounded-full glow-gold" />
     <div className="relative mx-auto max-w-6xl px-6">
       <Chapter n={chapter} label={label} />
       <Reveal delay={0.1}>
-        <h1 className="mt-5 max-w-3xl font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+        <h1 className="mt-4 max-w-3xl font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
           {title}
         </h1>
       </Reveal>
       {sub && (
         <Reveal delay={0.2}>
-          <p className="mt-4 max-w-xl text-sm md:text-base text-white/70">{sub}</p>
+          <p className="mt-3 max-w-xl text-sm md:text-base text-white/70">{sub}</p>
         </Reveal>
       )}
       {children}

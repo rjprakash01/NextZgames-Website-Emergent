@@ -20,7 +20,7 @@ export default function Poker() {
         </Reveal>
       </PageHero>
 
-      <section className="section-light py-16 md:py-24" data-testid="poker-lobby-section">
+      <section className="section-light py-12 md:py-16" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
             <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
@@ -42,14 +42,14 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#1f361d] py-16 md:py-24" data-testid="poker-features-section">
+      <section className="bg-[#1f361d] py-12 md:py-16" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="02" label="Features" />
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {POKER_FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={0.07 * i}>
-                <div className="card-green h-full p-6" data-testid={`poker-page-feature-${i}`}>
-                  <span className="font-heading text-[11px] font-bold tracking-[0.3em] text-[#D4C942]">0{i + 1}</span>
+                <div className="card-green h-full p-5" data-testid={`poker-page-feature-${i}`}>
+                  <span className="font-heading text-[11px] font-bold tracking-[0.3em] text-[#E8DC6A]">0{i + 1}</span>
                   <h3 className="mt-3 font-heading text-base font-bold text-white">{f.title}</h3>
                   <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
                 </div>
@@ -59,7 +59,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="section-light relative overflow-hidden py-16 md:py-24" data-testid="poker-table-section">
+      <section className="section-light relative overflow-hidden py-12 md:py-16" data-testid="poker-table-section">
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <div>
             <Chapter n="03" label="The Table" tone="light" />

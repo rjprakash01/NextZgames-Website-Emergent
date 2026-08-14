@@ -7,9 +7,9 @@
     --green-light: #30512d;
     --green-dark: #1f361d;
     --green-darker: #182b17;
-    --gold: #D4C942;
-    --gold-hover: #E5DA53;
-    --gold-dim: rgba(212, 201, 66, 0.2);
+    --gold: #E8DC6A;
+    --gold-hover: #F0E57C;
+    --gold-dim: rgba(232, 220, 106, 0.2);
     --radius: 0.5rem;
 }
 
@@ -65,7 +65,7 @@ body::after {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #E9DD55 0%, #D4C942 55%, #C2B531 100%);
+    background: linear-gradient(135deg, #F2E77E 0%, #E8DC6A 55%, #D6CB52 100%);
     color: #1f361d;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
@@ -74,13 +74,13 @@ body::after {
     padding: 0.85rem 1.75rem;
     border-radius: 999px;
     font-size: 0.78rem;
-    box-shadow: 0 8px 24px rgba(212, 201, 66, 0.28);
+    box-shadow: 0 8px 24px rgba(232, 220, 106, 0.28);
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 .btn-gold:hover {
     transform: translateY(-2px);
     filter: brightness(1.06);
-    box-shadow: 0 14px 36px rgba(212, 201, 66, 0.42);
+    box-shadow: 0 14px 36px rgba(232, 220, 106, 0.42);
 }
 
 .btn-outline {
@@ -101,13 +101,13 @@ body::after {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .btn-outline:hover {
-    background: rgba(212, 201, 66, 0.12);
+    background: rgba(232, 220, 106, 0.12);
     transform: translateY(-2px);
 }
 
 .txt-outline-gold {
     color: transparent;
-    -webkit-text-stroke: 1px rgba(212, 201, 66, 0.45);
+    -webkit-text-stroke: 1px rgba(232, 220, 106, 0.45);
 }
 
 .gold-line {
@@ -117,12 +117,12 @@ body::after {
 
 .card-green {
     background: linear-gradient(160deg, rgba(48, 81, 45, 0.55), rgba(31, 54, 29, 0.85));
-    border: 1px solid rgba(212, 201, 66, 0.14);
+    border: 1px solid rgba(232, 220, 106, 0.14);
     border-radius: 1.25rem;
     transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 .card-green:hover {
-    border-color: rgba(212, 201, 66, 0.45);
+    border-color: rgba(232, 220, 106, 0.45);
     transform: translateY(-4px);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
@@ -143,11 +143,11 @@ body::after {
 }
 .input-dark:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(212, 201, 66, 0.15);
+    box-shadow: 0 0 0 3px rgba(232, 220, 106, 0.15);
 }
 
 .glow-gold {
-    background: radial-gradient(closest-side, rgba(212, 201, 66, 0.14), transparent 70%);
+    background: radial-gradient(closest-side, rgba(232, 220, 106, 0.14), transparent 70%);
 }
 
 @keyframes float-slow {
@@ -186,7 +186,7 @@ body::after {
 }
 
 .text-gold-gradient {
-    background: linear-gradient(120deg, #F0E464 0%, #D4C942 50%, #AFA12C 100%);
+    background: linear-gradient(120deg, #F4E98A 0%, #E8DC6A 50%, #C9BC44 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -199,9 +199,9 @@ body::after {
     height: 2.75rem;
     width: 2.75rem;
     border-radius: 0.9rem;
-    background: linear-gradient(135deg, #E9DD55, #CDBF33);
+    background: linear-gradient(135deg, #F2E77E, #D9CE57);
     color: #1f361d;
-    box-shadow: 0 8px 20px rgba(212, 201, 66, 0.3);
+    box-shadow: 0 8px 20px rgba(232, 220, 106, 0.3);
 }
 
 .btn-outline-dark {

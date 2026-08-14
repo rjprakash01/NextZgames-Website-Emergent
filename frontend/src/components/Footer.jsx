@@ -43,8 +43,8 @@ const SOCIALS = [
 ];
 
 export const Footer = () => (
-  <footer data-testid="site-footer" className="relative bg-[#182b17] border-t border-[#D4C942]/15">
-    <div className="h-[3px] w-full bg-gradient-to-r from-[#D4C942] via-[#D4C942]/50 to-transparent" />
+  <footer data-testid="site-footer" className="relative bg-[#182b17] border-t border-[#E8DC6A]/15">
+    <div className="h-[3px] w-full bg-gradient-to-r from-[#E8DC6A] via-[#E8DC6A]/50 to-transparent" />
     <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
@@ -60,24 +60,24 @@ export const Footer = () => (
                 href="#"
                 aria-label={label}
                 data-testid={`social-${label.toLowerCase()}`}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#D4C942] hover:text-[#D4C942]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#E8DC6A] hover:text-[#E8DC6A]"
               >
                 <Icon size={16} />
               </a>
             ))}
           </div>
           <div className="mt-8 flex gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#D4C942]/30 px-4 py-2 text-xs text-white/70">
-              <Smartphone size={14} className="text-[#D4C942]" /> Android — Coming Soon
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DC6A]/30 px-4 py-2 text-xs text-white/70">
+              <Smartphone size={14} className="text-[#E8DC6A]" /> Android — Coming Soon
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#D4C942]/30 px-4 py-2 text-xs text-white/70">
-              <Apple size={14} className="text-[#D4C942]" /> iOS — Coming Soon
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DC6A]/30 px-4 py-2 text-xs text-white/70">
+              <Apple size={14} className="text-[#E8DC6A]" /> iOS — Coming Soon
             </span>
           </div>
         </div>
         {COLS.map((col) => (
           <div key={col.title}>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4C942]">{col.title}</h4>
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E8DC6A]">{col.title}</h4>
             <ul className="mt-5 space-y-3">
               {col.links.map((l) => (
                 <li key={l.label}>
@@ -94,7 +94,7 @@ export const Footer = () => (
           </div>
         ))}
       </div>
-      <div className="mt-14 flex flex-col gap-4 border-t border-white/8 pt-8 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
+      <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} NextZGames. All rights reserved.</p>
         <p className="max-w-xl">
           NextZGames involves real-money gaming and may be habit-forming or financially risky. Play responsibly.

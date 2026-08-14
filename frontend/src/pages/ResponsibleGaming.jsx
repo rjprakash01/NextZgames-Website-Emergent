@@ -23,13 +23,13 @@ export default function ResponsibleGaming() {
         title={<>Play Smart. <span className="text-gold-gradient">Stay in Control.</span></>}
         sub="Gaming should always remain entertainment. Here is how we help you stay in control — and where to turn if you need support."
       />
-      <section className="section-light py-16 md:py-24" data-testid="rg-items">
+      <section className="section-light py-12 md:py-16" data-testid="rg-items">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="01" label="Our Commitment" tone="light" />
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {ITEMS.map((item, i) => (
               <Reveal key={item.title} delay={0.04 * i}>
-                <div className="card-light h-full p-6" data-testid={`rg-card-${i}`}>
+                <div className="card-light h-full p-5" data-testid={`rg-card-${i}`}>
                   <span className="icon-chip !h-10 !w-10"><item.icon size={17} /></span>
                   <h3 className="mt-3 font-heading text-base font-bold text-[#1f361d]">{item.title}</h3>
                   <p className="mt-1.5 text-sm text-[#1f361d]/60">{item.desc}</p>
@@ -38,11 +38,11 @@ export default function ResponsibleGaming() {
             ))}
           </div>
           <Reveal delay={0.2}>
-            <div className="mt-10 rounded-2xl border border-[#284525] bg-[#284525] p-6 md:p-8" data-testid="rg-notice">
+            <div className="mt-10 rounded-2xl border border-[#284525] bg-[#284525] p-5 md:p-8" data-testid="rg-notice">
               <p className="font-heading text-lg font-bold text-white">Need a break?</p>
               <p className="mt-2 max-w-2xl text-sm text-white/65">
                 If you feel your gaming is becoming a problem, contact our support team at{" "}
-                <a href="mailto:support@nextzgames.com" data-testid="rg-support-email" className="text-[#D4C942] underline underline-offset-4">
+                <a href="mailto:support@nextzgames.com" data-testid="rg-support-email" className="text-[#E8DC6A] underline underline-offset-4">
                   support@nextzgames.com
                 </a>{" "}
                 to discuss limits, cool-downs or self-exclusion. This page will be updated with region-specific support resources before launch.

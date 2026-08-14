@@ -26,10 +26,10 @@ export default function DownloadPage() {
   const Card = ({ id, icon: Icon, title, note, primary }) => (
     <div
       data-testid={`download-card-${id}`}
-      className={`card-light relative h-full p-6 ${primary ? "!border-[#284525]" : ""}`}
+      className={`card-light relative h-full p-5 ${primary ? "!border-[#284525]" : ""}`}
     >
       {primary && (
-        <span className="absolute right-4 top-4 rounded-full bg-[#284525] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#D4C942]">
+        <span className="absolute right-4 top-4 rounded-full bg-[#284525] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#E8DC6A]">
           Your device
         </span>
       )}
@@ -56,7 +56,7 @@ export default function DownloadPage() {
         title={<>Get NextZGames <span className="text-gold-gradient">on Your Phone</span></>}
         sub="Poker and Predictions. One app. One experience."
       />
-      <section className="section-light py-16 md:py-24" data-testid="download-options">
+      <section className="section-light py-12 md:py-16" data-testid="download-options">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-5 md:grid-cols-3">
             <Reveal>
@@ -66,9 +66,9 @@ export default function DownloadPage() {
               <Card id="ios" icon={Apple} title="Download on the App Store" note="The iOS app is on its way. Check back soon." primary={device === "ios"} />
             </Reveal>
             <Reveal delay={0.2}>
-              <div data-testid="download-card-qr" className={`card-light relative h-full p-6 ${device === "desktop" ? "!border-[#284525]" : ""}`}>
+              <div data-testid="download-card-qr" className={`card-light relative h-full p-5 ${device === "desktop" ? "!border-[#284525]" : ""}`}>
                 {device === "desktop" && (
-                  <span className="absolute right-4 top-4 rounded-full bg-[#284525] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#D4C942]">
+                  <span className="absolute right-4 top-4 rounded-full bg-[#284525] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#E8DC6A]">
                     Your device
                   </span>
                 )}

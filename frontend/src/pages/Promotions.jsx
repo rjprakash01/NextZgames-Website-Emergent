@@ -15,7 +15,7 @@ export default function Promotions() {
         title={<>More Reasons <span className="text-gold-gradient">to Play</span></>}
         sub="Promotions live inside the NextZGames app. Download the app to participate in any active offer."
       />
-      <section className="section-light py-16 md:py-24" data-testid="promotions-list">
+      <section className="section-light py-12 md:py-16" data-testid="promotions-list">
         <div className="mx-auto max-w-5xl space-y-6 px-6">
           {PROMOTIONS.map((p, i) => {
             const Icon = PROMO_ICONS[p.icon];
@@ -23,7 +23,7 @@ export default function Promotions() {
               <Reveal key={p.slug} delay={0.05 * i}>
                 <article
                   data-testid={`promotion-${p.slug}`}
-                  className="card-light relative grid gap-6 overflow-hidden p-6 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8"
+                  className="card-light relative grid gap-6 overflow-hidden p-5 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8"
                 >
                   <span className="icon-chip !h-14 !w-14 !rounded-2xl">
                     <Icon size={24} />

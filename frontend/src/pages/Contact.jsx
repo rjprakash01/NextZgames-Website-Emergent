@@ -57,24 +57,24 @@ export default function Contact() {
       <PageHero
         chapter="@"
         label="Contact"
-        title={<>Talk to <span className="text-[#D4C942]">the Team</span></>}
+        title={<>Talk to <span className="text-[#E8DC6A]">the Team</span></>}
         sub="Questions about Poker, Predictions, your account or the app — we are here to help."
       />
-      <section className="section-light py-16 md:py-24" data-testid="contact-section">
+      <section className="section-light py-12 md:py-16" data-testid="contact-section">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.3fr]">
           <div>
             <Chapter n="01" label="Support" tone="light" />
             <Reveal delay={0.1}>
               <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#D4C942]"><Mail size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#E8DC6A]"><Mail size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Support Email</p>
-                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#1f361d] hover:text-[#A3962A]">support@nextzgames.com</a>
+                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#1f361d] hover:text-[#9C8F22]">support@nextzgames.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#D4C942]"><Clock size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#E8DC6A]"><Clock size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Support Hours</p>
                     <p className="mt-1 font-heading font-bold text-[#1f361d]">Mon – Sun, 9:00 – 21:00 IST</p>
@@ -84,14 +84,14 @@ export default function Contact() {
                   <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Follow Us</p>
                   <div className="mt-3 flex gap-3">
                     {SOCIALS.map(({ icon: Icon, label }) => (
-                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#284525]/20 text-[#1f361d]/60 transition-colors duration-300 hover:border-[#284525] hover:bg-[#284525] hover:text-[#D4C942]">
+                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#284525]/20 text-[#1f361d]/60 transition-colors duration-300 hover:border-[#284525] hover:bg-[#284525] hover:text-[#E8DC6A]">
                         <Icon size={16} />
                       </a>
                     ))}
                   </div>
                 </div>
                 <p className="text-sm text-[#1f361d]/60">
-                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#A3962A] underline underline-offset-4">FAQ page</Link>.
+                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#9C8F22] underline underline-offset-4">FAQ page</Link>.
                 </p>
               </div>
             </Reveal>

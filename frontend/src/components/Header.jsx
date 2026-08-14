@@ -25,7 +25,7 @@ export const Header = () => {
         data-testid="site-header"
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
           scrolled || open
-            ? "bg-[#1f361d]/85 backdrop-blur-xl border-b border-[#D4C942]/15"
+            ? "bg-[#1f361d]/85 backdrop-blur-xl border-b border-[#E8DC6A]/15"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -39,7 +39,7 @@ export const Header = () => {
                 data-testid={`nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
                 className={({ isActive }) =>
                   `text-[13px] font-medium tracking-wide transition-colors duration-300 ${
-                    isActive ? "text-[#D4C942]" : "text-white/75 hover:text-white"
+                    isActive ? "text-[#E8DC6A]" : "text-white/75 hover:text-white"
                   }`
                 }
               >
@@ -62,7 +62,7 @@ export const Header = () => {
               data-testid="mobile-menu-toggle"
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition-colors duration-300 hover:border-[#D4C942]/60"
+              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition-colors duration-300 hover:border-[#E8DC6A]/60"
             >
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -78,7 +78,7 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 top-[72px] z-40 lg:hidden bg-[#1f361d]/95 backdrop-blur-2xl border-b border-[#D4C942]/15"
+            className="fixed inset-x-0 top-[72px] z-40 lg:hidden bg-[#1f361d]/95 backdrop-blur-2xl border-b border-[#E8DC6A]/15"
           >
             <nav className="flex flex-col px-6 py-6" aria-label="Mobile">
               {[...NAV_LINKS, ...MOBILE_EXTRA_LINKS].map((l, i) => (
@@ -93,12 +93,12 @@ export const Header = () => {
                     data-testid={`mobile-nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
                     className={({ isActive }) =>
                       `flex items-center justify-between border-b border-white/5 py-4 font-heading text-lg font-bold tracking-wide ${
-                        isActive ? "text-[#D4C942]" : "text-white"
+                        isActive ? "text-[#E8DC6A]" : "text-white"
                       }`
                     }
                   >
                     {l.label}
-                    <span className="text-[#D4C942]/50 text-xs font-normal">0{i + 1}</span>
+                    <span className="text-[#E8DC6A]/50 text-xs font-normal">0{i + 1}</span>
                   </NavLink>
                 </motion.div>
               ))}
