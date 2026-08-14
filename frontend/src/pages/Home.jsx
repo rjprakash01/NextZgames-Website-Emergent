@@ -47,9 +47,7 @@ const Hero = () => {
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
-            <MaskedLine delay={0.25} className="text-white">Poker.</MaskedLine>
-            <MaskedLine delay={0.37} className="text-white">Predictions.</MaskedLine>
-            <MaskedLine delay={0.49} className="text-gold-gradient">Your Next Move.</MaskedLine>
+            <MaskedLine delay={0.25} className="text-gold-gradient">Your Next Move.</MaskedLine>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
