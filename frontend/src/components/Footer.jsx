@@ -1,0 +1,105 @@
+import { Link } from "react-router-dom";
+import { Instagram, Facebook, Youtube, Twitter, Smartphone, Apple } from "lucide-react";
+import { Logo } from "./Logo";
+
+const COLS = [
+  {
+    title: "Product",
+    links: [
+      { to: "/poker", label: "Poker" },
+      { to: "/predictions", label: "Predictions" },
+      { to: "/promotions", label: "Promotions" },
+      { to: "/download", label: "Download App" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { to: "/about-us", label: "About Us" },
+      { to: "/contact", label: "Contact" },
+      { to: "/faq", label: "FAQ" },
+    ],
+  },
+  {
+    title: "Responsible Gaming",
+    links: [{ to: "/responsible-gaming", label: "Responsible Gaming" }],
+  },
+  {
+    title: "Legal",
+    links: [
+      { to: "/terms-and-conditions", label: "Terms & Conditions" },
+      { to: "/privacy-policy", label: "Privacy Policy" },
+      { to: "/payment-policy", label: "Payment Policy" },
+      { to: "/promotion-terms", label: "Promotion Terms" },
+    ],
+  },
+];
+
+const SOCIALS = [
+  { icon: Instagram, label: "Instagram" },
+  { icon: Facebook, label: "Facebook" },
+  { icon: Youtube, label: "YouTube" },
+  { icon: Twitter, label: "X" },
+];
+
+export const Footer = () => (
+  <footer data-testid="site-footer" className="relative bg-[#182b17] border-t border-[#D4C942]/15">
+    <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
+        <div>
+          <Logo />
+          <p className="mt-6 font-heading text-lg font-bold text-white">Poker. Predictions. Your Next Move.</p>
+          <p className="mt-3 max-w-xs text-sm text-white/55">
+            The official home of NextZGames — Poker and Predictions in one mobile experience.
+          </p>
+          <div className="mt-6 flex gap-3">
+            {SOCIALS.map(({ icon: Icon, label }) => (
+              <a
+                key={label}
+                href="#"
+                aria-label={label}
+                data-testid={`social-${label.toLowerCase()}`}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#D4C942] hover:text-[#D4C942]"
+              >
+                <Icon size={16} />
+              </a>
+            ))}
+          </div>
+          <div className="mt-8 flex gap-3">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#D4C942]/30 px-4 py-2 text-xs text-white/70">
+              <Smartphone size={14} className="text-[#D4C942]" /> Android — Coming Soon
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#D4C942]/30 px-4 py-2 text-xs text-white/70">
+              <Apple size={14} className="text-[#D4C942]" /> iOS — Coming Soon
+            </span>
+          </div>
+        </div>
+        {COLS.map((col) => (
+          <div key={col.title}>
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#D4C942]">{col.title}</h4>
+            <ul className="mt-5 space-y-3">
+              {col.links.map((l) => (
+                <li key={l.label}>
+                  <Link
+                    to={l.to}
+                    data-testid={`footer-${l.label.toLowerCase().replace(/[^a-z]+/g, "-")}`}
+                    className="text-sm text-white/60 transition-colors duration-300 hover:text-white"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className="mt-14 flex flex-col gap-4 border-t border-white/8 pt-8 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
+        <p>© {new Date().getFullYear()} NextZGames. All rights reserved.</p>
+        <p className="max-w-xl">
+          NextZGames involves real-money gaming and may be habit-forming or financially risky. Play responsibly.
+          Only for users of legal age in permitted jurisdictions.
+        </p>
+      </div>
+    </div>
+  </footer>
+);

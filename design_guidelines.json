@@ -1,0 +1,95 @@
+{
+  "theme": "dark",
+  "colors": {
+    "primary_bg": "#284525",
+    "primary_bg_lighter": "#30512d",
+    "primary_bg_darker": "#1f361d",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "rgba(255, 255, 255, 0.7)",
+    "accent_gold": "#D4C942",
+    "accent_gold_hover": "#E5DA53"
+  },
+  "typography": {
+    "headings": {
+      "family": "'Plus Jakarta Sans', sans-serif",
+      "weights": ["400", "700", "800"],
+      "usage": "Use for all H1-H6 tags, massive typographic reveals, and numbers. Ensure tight tracking (tracking-tight)."
+    },
+    "body": {
+      "family": "'Inter', sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Use for paragraphs, descriptions, and small labels. Clean and readable."
+    }
+  },
+  "visual_enhancers": {
+    "motion": "Framer Motion for scroll reveals. Use 'whileInView' with 'viewport={{ once: true, margin: \"-100px\" }}'. Use mask-image line-by-line reveals for hero text.",
+    "scrolling": "Lenis for smooth momentum scrolling. This is mandatory for the premium feel.",
+    "marquee": "Use react-fast-marquee for the editorial slow ticker. Golden outline text over deep green background.",
+    "borders": "1px solid rgba(212, 201, 66, 0.2) or solid rgba(255,255,255,0.1) for subtle structure. Use accent_gold for active/hover states.",
+    "gradients": "Avoid excessive gradients. Use solid #284525 with grain/noise overlays or subtle radial glows using rgba(212, 201, 66, 0.05)."
+  },
+  "buttons": {
+    "primary": "bg-[#D4C942] text-[#284525] font-bold px-8 py-4 rounded-full hover:bg-[#E5DA53] transition-colors duration-300",
+    "secondary": "bg-transparent border-2 border-[#D4C942] text-[#D4C942] font-semibold px-8 py-4 rounded-full hover:bg-[#D4C942]/10 transition-colors duration-300"
+  },
+  "layouts": {
+    "spacing": "Generous spacing. Use py-24 or py-32 for section padding.",
+    "grid": "Bento grids for 'Why NextZGames' (6 cards) and 'How It Works'. Asymmetric layouts for text + image sections.",
+    "hero": "Kinetic layout. Large typography overlapping or interacting with the smartphone mockup. Parallax effect on the image."
+  },
+  "components_to_build": [
+    "StickyHeader (Glassmorphism over deep green, absolute/fixed top, z-50)",
+    "KineticHero (Line-by-line text reveal, floating smartphone mockup)",
+    "MarqueeTicker (Editorial text, e.g. 'POKER. PREDICTIONS. YOUR NEXT MOVE.')",
+    "FeatureShowcase (Spotlight effect, large imagery for Poker and Predictions)",
+    "BentoGrid (6 cards for Why NextZGames, varying spans)",
+    "AppCarousel (Horizontal scroll or Framer Motion slider for app screens)",
+    "StepProcess (4-step 'How It Works' with large numbers 01, 02, 03, 04)",
+    "FAQAccordion (Using Radix/Shadcn accordion, customized with gold accents)",
+    "Footer (Multi-column, large CTA, legal links)"
+  ],
+  "image_urls": {
+    "hero_phone": {
+      "url": "https://images.unsplash.com/photo-1582133456304-2f5cb1c2afbb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwzfHxzbWFydHBob25lJTIwbW9ja3VwJTIwaGFuZHxlbnwwfHx8fDE3ODY3MTQ4OTZ8MA&ixlib=rb-4.1.0&q=85",
+      "category": "hero",
+      "description": "Premium smartphone held in hand against dark background, used for Hero section parallax moment."
+    },
+    "poker_feature": {
+      "url": "https://images.unsplash.com/photo-1561050864-6c3c0f49d421?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHw0fHxwcmVtaXVtJTIwcG9rZXIlMjBjYXJkcyUyMGRhcmt8ZW58MHx8fHwxNzg2NzE0OTAxfDA&ixlib=rb-4.1.0&q=85",
+      "category": "features",
+      "description": "Dark aesthetic poker cards used for 'Experience Poker Like Never Before' section."
+    },
+    "predictions_feature": {
+      "url": "https://images.pexels.com/photos/30566478/pexels-photo-30566478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "features",
+      "description": "Dramatic stadium spotlight beam in dark sky used for 'Predict the Outcome. Own the Moment.' section."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Install and setup 'lenis' for smooth scrolling.",
+    "Install 'framer-motion' for scroll-reveals and line-by-line text animations.",
+    "Install 'react-fast-marquee' for the editorial ticker.",
+    "Install 'lucide-react' for icons.",
+    "Strictly follow the homepage section order defined in the problem statement.",
+    "Ensure 'Plus Jakarta Sans' is used for headings and 'Inter' for body. Import from Google Fonts.",
+    "Keep backgrounds restricted to shades of #284525. Do not use generic black or blue.",
+    "Ensure all interactive elements have 'data-testid' attributes (e.g., data-testid='hero-download-btn').",
+    "Avoid generic casino tropes (no red, no chips raining, no neon). Stick to sophisticated green and gold.",
+    "Ensure the hero has a masked text reveal (e.g., overflow-hidden on wrapper, y-translate on text) to give it an Awwwards feel."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic centered layouts or simplistic gradients.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) where appropriate.",
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific properties.",
+    "You MUST NOT center align the app container (.App { text-align: center; }).",
+    "Every interaction needs micro-animations - hover states, transitions, entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, and custom selection states elevate the design."
+  ],
+  "accessibility": [
+    "Maintain contrast ratios. Gold text on green background is accessible, but ensure white text on green meets WCAG AA.",
+    "Support prefers-reduced-motion for Framer Motion animations.",
+    "Provide aria-labels for buttons and icons."
+  ]
+}
