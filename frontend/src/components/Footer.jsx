@@ -45,7 +45,7 @@ const SOCIALS = [
 export const Footer = () => (
   <footer data-testid="site-footer" className="relative bg-[#182b17] border-t border-[#E8DC6A]/15">
     <div className="h-[3px] w-full bg-gradient-to-r from-[#E8DC6A] via-[#E8DC6A]/50 to-transparent" />
-    <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+    <div className="mx-auto max-w-6xl px-6 py-8 md:py-12">
       <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
           <Logo />
@@ -66,7 +66,7 @@ export const Footer = () => (
               </a>
             ))}
           </div>
-          <div className="mt-8 flex gap-3">
+          <div className="mt-6 flex gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DC6A]/30 px-4 py-2 text-xs text-white/70">
               <Smartphone size={14} className="text-[#E8DC6A]" /> Android — Coming Soon
             </span>
@@ -94,7 +94,7 @@ export const Footer = () => (
           </div>
         ))}
       </div>
-      <div className="mt-10 flex flex-col gap-4 border-t border-white/8 pt-8 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
+      <div className="mt-7 flex flex-col gap-4 border-t border-white/8 pt-8 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} NextZGames. All rights reserved.</p>
         <p className="max-w-xl">
           NextZGames involves real-money gaming and may be habit-forming or financially risky. Play responsibly.

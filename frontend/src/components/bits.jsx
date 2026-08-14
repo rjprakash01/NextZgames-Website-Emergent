@@ -49,7 +49,7 @@ export const DownloadButton = ({ testid = "download-btn", label = "Download the 
 );
 
 export const PageHero = ({ chapter, label, title, sub, children }) => (
-  <section className="relative overflow-hidden bg-[#284525] pt-24 pb-10 md:pt-28 md:pb-14">
+  <section className="relative overflow-hidden bg-[#284525] pt-20 pb-8 md:pt-24 md:pb-10">
     <div className="pointer-events-none absolute -top-40 right-[-10%] h-[420px] w-[420px] rounded-full glow-gold" />
     <div className="relative mx-auto max-w-6xl px-6">
       <Chapter n={chapter} label={label} />

@@ -60,12 +60,12 @@ export default function Contact() {
         title={<>Talk to <span className="text-[#E8DC6A]">the Team</span></>}
         sub="Questions about Poker, Predictions, your account or the app — we are here to help."
       />
-      <section className="section-light py-12 md:py-16" data-testid="contact-section">
+      <section className="section-light py-8 md:py-12" data-testid="contact-section">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.3fr]">
           <div>
             <Chapter n="01" label="Support" tone="light" />
             <Reveal delay={0.1}>
-              <div className="mt-8 space-y-6">
+              <div className="mt-6 space-y-6">
                 <div className="flex items-start gap-4">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#E8DC6A]"><Mail size={18} /></span>
                   <div>
@@ -127,7 +127,7 @@ export default function Contact() {
                   <textarea id="cf-message" data-testid="contact-message" required minLength={10} rows={5} value={form.message} onChange={set("message")} className="input-light resize-none" placeholder="Tell us how we can help..." />
                 </div>
               </div>
-              <button type="submit" data-testid="contact-submit-btn" disabled={sending} className="btn-gold mt-8 w-full disabled:opacity-60 sm:w-auto">
+              <button type="submit" data-testid="contact-submit-btn" disabled={sending} className="btn-gold mt-6 w-full disabled:opacity-60 sm:w-auto">
                 {sending ? <LoaderCircle size={15} className="animate-spin" /> : <Send size={15} />}
                 {sending ? "Sending..." : "Submit Request"}
               </button>

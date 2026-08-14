@@ -19,10 +19,10 @@ export default function About() {
         title={<>Built for the <span className="text-gold-gradient">Next Generation</span> of Players</>}
         sub="NextZGames is a digital gaming brand focused on creating engaging Poker and Predictions experiences through a modern mobile platform."
       />
-      <section className="section-light py-12 md:py-16" data-testid="about-pillars">
+      <section className="section-light py-8 md:py-12" data-testid="about-pillars">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="01" label="What We Combine" tone="light" />
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p, i) => (
               <Reveal key={p.title} delay={0.06 * i}>
                 <div className="card-light h-full p-5" data-testid={`about-pillar-${i}`}>
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="bg-[#284525] py-12 md:py-16" data-testid="about-vision">
+      <section className="bg-[#284525] py-8 md:py-12" data-testid="about-vision">
         <div className="mx-auto grid max-w-5xl gap-6 px-6 md:grid-cols-2">
           <Reveal>
             <div className="card-green h-full border-l-4 !border-l-[#E8DC6A] p-8" data-testid="about-vision-card">
@@ -54,7 +54,7 @@ export default function About() {
             </div>
           </Reveal>
         </div>
-        <Reveal delay={0.2} className="mt-9 text-center">
+        <Reveal delay={0.2} className="mt-6 text-center">
           <DownloadButton testid="about-download-btn" source="about" />
         </Reveal>
       </section>

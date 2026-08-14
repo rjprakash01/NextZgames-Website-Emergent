@@ -15,7 +15,7 @@ export default function Promotions() {
         title={<>More Reasons <span className="text-gold-gradient">to Play</span></>}
         sub="Promotions live inside the NextZGames app. Download the app to participate in any active offer."
       />
-      <section className="section-light py-12 md:py-16" data-testid="promotions-list">
+      <section className="section-light py-8 md:py-12" data-testid="promotions-list">
         <div className="mx-auto max-w-5xl space-y-6 px-6">
           {PROMOTIONS.map((p, i) => {
             const Icon = PROMO_ICONS[p.icon];

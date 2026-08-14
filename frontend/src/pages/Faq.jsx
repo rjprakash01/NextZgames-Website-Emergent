@@ -15,7 +15,7 @@ export default function Faq() {
         title={<>Questions? <span className="text-gold-gradient">Answered.</span></>}
         sub="Everything about NextZGames, Poker, Predictions, accounts, payments and the app."
       />
-      <section className="section-light py-12 md:py-16" data-testid="faq-groups">
+      <section className="section-light py-8 md:py-12" data-testid="faq-groups">
         <div className="mx-auto max-w-3xl space-y-10 px-6">
           {FAQ_GROUPS.map((g, gi) => (
             <div key={g.group}>

@@ -56,7 +56,7 @@ export default function DownloadPage() {
         title={<>Get NextZGames <span className="text-gold-gradient">on Your Phone</span></>}
         sub="Poker and Predictions. One app. One experience."
       />
-      <section className="section-light py-12 md:py-16" data-testid="download-options">
+      <section className="section-light py-8 md:py-12" data-testid="download-options">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-5 md:grid-cols-3">
             <Reveal>
@@ -88,7 +88,7 @@ export default function DownloadPage() {
         </div>
       </section>
       <section className="relative overflow-hidden bg-[#284525] py-16 md:py-20" data-testid="download-showcase">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 px-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 px-6 lg:grid-cols-2">
           <Reveal>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               The Table Is Set. <span className="text-gold-gradient">Your Seat Is Waiting.</span>

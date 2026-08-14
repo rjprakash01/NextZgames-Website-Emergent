@@ -44,7 +44,7 @@ const Hero = () => {
   return (
     <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#284525]">
       <div className="pointer-events-none absolute -right-32 top-16 h-[460px] w-[460px] rounded-full glow-gold" />
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-6 pb-12 pt-24 md:pt-28 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+      <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -120,7 +120,7 @@ const Ticker = () => (
 );
 
 const BrandStatement = () => (
-  <section className="section-light py-12 md:py-16" data-testid="brand-statement">
+  <section className="section-light py-8 md:py-12" data-testid="brand-statement">
     <div className="mx-auto max-w-5xl px-6">
       <Chapter label="The Brand" tone="light" />
       <Reveal delay={0.1}>
@@ -145,9 +145,9 @@ const BrandStatement = () => (
 );
 
 const PokerSection = () => (
-  <section className="relative overflow-hidden bg-[#1f361d] py-12 md:py-16" data-testid="poker-section">
+  <section className="relative overflow-hidden bg-[#1f361d] py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
           <Chapter label="Poker" />
           <Reveal delay={0.1}>
@@ -170,7 +170,7 @@ const PokerSection = () => (
           <PhoneMockup screen="poker" className="relative w-[215px] md:w-[235px] rotate-2" />
         </Reveal>
       </div>
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {POKER_FEATURES.map((f, i) => (
           <Reveal key={f.title} delay={0.07 * i}>
             <div className="card-green h-full p-5" data-testid={`poker-feature-${i}`}>
@@ -180,7 +180,7 @@ const PokerSection = () => (
           </Reveal>
         ))}
       </div>
-      <Reveal delay={0.15} className="mt-9 text-center">
+      <Reveal delay={0.15} className="mt-6 text-center">
         <p className="font-heading text-lg md:text-xl font-bold text-white">Ready for the table?</p>
         <div className="mt-4">
           <DownloadButton testid="poker-ready-download-btn" source="poker_ready" label="Download the NextZGames App" />
@@ -191,9 +191,9 @@ const PokerSection = () => (
 );
 
 const PredictionsSection = () => (
-  <section className="section-light relative overflow-hidden py-12 md:py-16" data-testid="predictions-section">
+  <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="predictions-section">
     <div className="mx-auto max-w-6xl px-6">
-      <div className="grid items-center gap-10 lg:grid-cols-2">
+      <div className="grid items-center gap-8 lg:grid-cols-2">
         <Reveal delay={0.15} className="relative order-2 mx-auto lg:order-1">
           <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
           <PhoneMockup screen="predictions" className="relative w-[215px] md:w-[235px] -rotate-2" />
@@ -216,7 +216,7 @@ const PredictionsSection = () => (
           </Reveal>
         </div>
       </div>
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="card-light h-full p-5" data-testid={`prediction-step-${s.n}`}>
@@ -231,7 +231,7 @@ const PredictionsSection = () => (
 );
 
 const WhySection = () => (
-  <section className="bg-[#1f361d] py-12 md:py-16" data-testid="why-section">
+  <section className="bg-[#1f361d] py-8 md:py-12" data-testid="why-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
@@ -239,7 +239,7 @@ const WhySection = () => (
           Why <span className="text-gold-gradient">NextZGames?</span>
         </h2>
       </Reveal>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {WHY_CARDS.map((c, i) => {
           const Icon = WHY_ICONS[c.icon];
           return (
@@ -266,7 +266,7 @@ const AppShowcase = () => {
     { s: "wallet", label: "Wallet" },
   ];
   return (
-    <section className="section-light relative overflow-hidden py-12 md:py-16" data-testid="app-showcase">
+    <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="app-showcase">
       <div className="relative mx-auto max-w-6xl px-6">
         <Chapter label="The App Experience" tone="light" />
         <div className="mt-4 flex flex-wrap items-end justify-between gap-5">
@@ -281,7 +281,7 @@ const AppShowcase = () => {
             </p>
           </Reveal>
         </div>
-        <div className="mt-9 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 lg:justify-center lg:overflow-visible">
+        <div className="mt-6 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 lg:justify-center lg:overflow-visible">
           {screens.map(({ s, label }, i) => (
             <Reveal key={s} delay={0.07 * i} className="snap-center">
               <div className={i === 2 ? "lg:-translate-y-4 lg:scale-105" : "lg:translate-y-3"}>
@@ -300,7 +300,7 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-[#1f361d] py-12 md:py-16" data-testid="promotions-section">
+  <section className="bg-[#1f361d] py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
@@ -318,7 +318,7 @@ const PromotionsSection = () => (
           </Link>
         </Reveal>
       </div>
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
+      <div className="mt-6 grid gap-4 md:grid-cols-3">
         {PROMOTIONS.map((p, i) => {
           const Icon = PROMO_ICONS[p.icon];
           return (
@@ -349,7 +349,7 @@ const PromotionsSection = () => (
 );
 
 const HowItWorksSection = () => (
-  <section className="section-light py-12 md:py-16" data-testid="how-it-works-section">
+  <section className="section-light py-8 md:py-12" data-testid="how-it-works-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Getting Started" tone="light" />
       <Reveal delay={0.1}>
@@ -357,7 +357,7 @@ const HowItWorksSection = () => (
           Getting Started <span className="gold-strong">Is Simple</span>
         </h2>
       </Reveal>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="card-light h-full p-5" data-testid={`how-step-${s.n}`}>
@@ -367,7 +367,7 @@ const HowItWorksSection = () => (
           </Reveal>
         ))}
       </div>
-      <Reveal delay={0.25} className="mt-8">
+      <Reveal delay={0.25} className="mt-6">
         <Link to="/how-it-works" data-testid="how-it-works-more" className="btn-outline-dark">See How It Works</Link>
       </Reveal>
     </div>
@@ -375,7 +375,7 @@ const HowItWorksSection = () => (
 );
 
 const TrustSection = () => (
-  <section className="bg-[#1f361d] py-12 md:py-16" data-testid="trust-section">
+  <section className="bg-[#1f361d] py-8 md:py-12" data-testid="trust-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Trust & Responsible Gaming" />
       <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
@@ -414,7 +414,7 @@ const TrustSection = () => (
 );
 
 const FaqSection = () => (
-  <section className="section-light py-12 md:py-16" data-testid="faq-section">
+  <section className="section-light py-8 md:py-12" data-testid="faq-section">
     <div className="mx-auto max-w-3xl px-6">
       <Chapter label="FAQ" tone="light" />
       <Reveal delay={0.1}>
@@ -442,7 +442,7 @@ const FaqSection = () => (
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-[#284525] py-14 md:py-20" data-testid="final-cta">
+  <section className="relative overflow-hidden bg-[#284525] py-10 md:py-14" data-testid="final-cta">
     <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full glow-gold" />
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal>

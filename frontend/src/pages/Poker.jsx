@@ -20,7 +20,7 @@ export default function Poker() {
         </Reveal>
       </PageHero>
 
-      <section className="section-light py-12 md:py-16" data-testid="poker-lobby-section">
+      <section className="section-light py-8 md:py-12" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
             <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
@@ -42,10 +42,10 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#1f361d] py-12 md:py-16" data-testid="poker-features-section">
+      <section className="bg-[#1f361d] py-8 md:py-12" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="02" label="Features" />
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {POKER_FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={0.07 * i}>
                 <div className="card-green h-full p-5" data-testid={`poker-page-feature-${i}`}>
@@ -59,7 +59,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="section-light relative overflow-hidden py-12 md:py-16" data-testid="poker-table-section">
+      <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="poker-table-section">
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <div>
             <Chapter n="03" label="The Table" tone="light" />

@@ -12,7 +12,7 @@ export default function HowItWorks() {
         title={<>Getting Started <span className="text-gold-gradient">Is Simple</span></>}
         sub="Five steps separate you from your first game. The entire experience happens inside the NextZGames app."
       />
-      <section className="section-light py-12 md:py-16" data-testid="steps-section">
+      <section className="section-light py-8 md:py-12" data-testid="steps-section">
         <div className="mx-auto max-w-3xl px-6">
           <div className="relative space-y-10 before:absolute before:bottom-5 before:left-[23px] before:top-5 before:w-px before:bg-[#9C8F22]/30">
             {HOW_IT_WORKS_STEPS.map((s, i) => (
@@ -29,7 +29,7 @@ export default function HowItWorks() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={0.2} className="mt-9">
+          <Reveal delay={0.2} className="mt-6">
             <DownloadButton testid="how-page-download-btn" source="how_it_works" className="!px-9 !py-4 !text-sm" />
           </Reveal>
         </div>
