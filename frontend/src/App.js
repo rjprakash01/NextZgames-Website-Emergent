@@ -74,7 +74,7 @@ const Shell = () => (
 function App() {
   useEffect(() => {
     captureUtm(window.location.search);
-    const lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
+    const lenis = new Lenis({ lerp: 0.16, wheelMultiplier: 1.05 });
     let rafId;
     const raf = (t) => {
       lenis.raf(t);

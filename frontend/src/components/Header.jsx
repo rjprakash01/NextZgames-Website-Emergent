@@ -25,7 +25,7 @@ export const Header = () => {
         data-testid="site-header"
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
           scrolled || open
-            ? "bg-[#1f361d]/85 backdrop-blur-xl border-b border-[#E8DC6A]/15"
+            ? "bg-[#1f361d]/90 backdrop-blur-md border-b border-[#E8DC6A]/15"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -78,7 +78,7 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 top-[72px] z-40 lg:hidden bg-[#1f361d]/95 backdrop-blur-2xl border-b border-[#E8DC6A]/15"
+            className="fixed inset-x-0 top-[72px] z-40 lg:hidden bg-[#1f361d]/95 backdrop-blur-md border-b border-[#E8DC6A]/15"
           >
             <nav className="flex flex-col px-6 py-6" aria-label="Mobile">
               {[...NAV_LINKS, ...MOBILE_EXTRA_LINKS].map((l, i) => (
