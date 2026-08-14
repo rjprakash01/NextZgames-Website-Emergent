@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Twitter, Smartphone, Apple } from "lucide-react";
+import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 import { Logo } from "./Logo";
 
 const COLS = [
@@ -65,14 +65,6 @@ export const Footer = () => (
                 <Icon size={16} />
               </a>
             ))}
-          </div>
-          <div className="mt-6 flex gap-3">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DC6A]/30 px-4 py-2 text-xs text-white/70">
-              <Smartphone size={14} className="text-[#E8DC6A]" /> Android — Coming Soon
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#E8DC6A]/30 px-4 py-2 text-xs text-white/70">
-              <Apple size={14} className="text-[#E8DC6A]" /> iOS — Coming Soon
-            </span>
           </div>
         </div>
         {COLS.map((col) => (

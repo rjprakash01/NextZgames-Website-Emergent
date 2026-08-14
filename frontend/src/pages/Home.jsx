@@ -46,15 +46,6 @@ const Hero = () => {
       <div className="pointer-events-none absolute -right-32 top-16 h-[460px] w-[460px] rounded-full glow-gold" />
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#E8DC6A]/35 bg-[#E8DC6A]/10 px-4 py-1.5"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#E8DC6A]" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#E8DC6A]">Poker + Predictions · One App</span>
-          </motion.div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
             <MaskedLine delay={0.25} className="text-white">Poker.</MaskedLine>
             <MaskedLine delay={0.37} className="text-white">Predictions.</MaskedLine>
