@@ -7,7 +7,6 @@ import {
   Lock, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
 } from "lucide-react";
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
-import { PhoneMockup } from "../components/PhoneMockup";
 import {
   POKER_FEATURES, PREDICTION_STEPS, WHY_CARDS, TRUST_ITEMS,
   HOW_IT_WORKS_STEPS, PROMOTIONS, FAQ_GROUPS,
@@ -39,7 +38,7 @@ const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
-  const phoneR = useTransform(scrollYProgress, [0, 1], [0, -5]);
+  const phoneR = useTransform(scrollYProgress, [0, 1], [0, -3]);
 
   return (
     <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#31602C]">
@@ -85,7 +84,12 @@ const Hero = () => {
         >
           <motion.div style={{ y: phoneY, rotate: phoneR }}>
             <div className="float-slow">
-              <PhoneMockup screen="table" testid="hero-phone" className="w-[220px] md:w-[245px]" />
+              <img
+                src="/creative-poker.jpg"
+                alt="NextZGames Poker app — cash games and tournaments"
+                data-testid="hero-phone"
+                className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#EFE35F]/25 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+              />
             </div>
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
@@ -156,7 +160,7 @@ const PokerSection = () => (
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
           <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
-          <PhoneMockup screen="poker" className="relative w-[215px] md:w-[235px] rotate-2" />
+          <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
         </Reveal>
       </div>
       <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -185,7 +189,7 @@ const PredictionsSection = () => (
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <Reveal delay={0.15} className="relative order-2 mx-auto lg:order-1">
           <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
-          <PhoneMockup screen="predictions" className="relative w-[215px] md:w-[235px] -rotate-2" />
+          <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#31602C]/15 -rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
         </Reveal>
         <div className="order-1 lg:order-2">
           <Chapter label="Predictions" tone="light" />
@@ -247,12 +251,9 @@ const WhySection = () => (
 );
 
 const AppShowcase = () => {
-  const screens = [
-    { s: "home", label: "App Home" },
-    { s: "poker", label: "Poker Lobby" },
-    { s: "table", label: "Poker Table" },
-    { s: "predictions", label: "Predictions" },
-    { s: "wallet", label: "Wallet" },
+  const creatives = [
+    { img: "/creative-poker.jpg", label: "Poker — Cash Games & Tournaments", testid: "showcase-creative-poker" },
+    { img: "/creative-predictions.jpg", label: "Predictions — Live Events & Wins", testid: "showcase-creative-predictions" },
   ];
   return (
     <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="app-showcase">
@@ -270,17 +271,23 @@ const AppShowcase = () => {
             </p>
           </Reveal>
         </div>
-        <div className="mt-6 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 lg:justify-center lg:overflow-visible">
-          {screens.map(({ s, label }, i) => (
-            <Reveal key={s} delay={0.07 * i} className="snap-center">
-              <div className={i === 2 ? "lg:-translate-y-4 lg:scale-105" : "lg:translate-y-3"}>
-                <PhoneMockup screen={s} testid={`showcase-phone-${s}`} className="w-[180px] md:w-[195px]" />
-                <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-[#274A22]/45">{label}</p>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 max-w-3xl">
+          {creatives.map(({ img, label, testid }, i) => (
+            <Reveal key={label} delay={0.08 * i}>
+              <div className="group overflow-hidden rounded-3xl border border-[#274A22]/10 bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]">
+                <img
+                  src={img}
+                  alt={label}
+                  loading="lazy"
+                  data-testid={testid}
+                  className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                />
               </div>
+              <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-[#274A22]/45">{label}</p>
             </Reveal>
           ))}
         </div>
-        <Reveal delay={0.2} className="mt-6 text-center">
+        <Reveal delay={0.2} className="mt-6">
           <DownloadButton testid="showcase-download-btn" source="app_showcase" />
         </Reveal>
       </div>

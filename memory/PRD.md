@@ -26,6 +26,7 @@ Home (hero, brand statement, Poker, Predictions, Why, App Showcase, Promotions, 
 - v5 (2026-08-14, user feedback): further density pass — sections py-8/12, FinalCTA py-10/14, PageHero pt-20/24 pb-8/10, hero pt-20/24 pb-8, mt-10/9/8 → mt-7/6, gap-10 → gap-8, footer py-9/12.
 - v6 (2026-08-14): removed hero badge + footer coming-soon pills (visual editor requests); perf fix — removed fixed grain overlay, Lenis lerp 0.16, lighter header blur.
 - v7 (2026-08-14, user feedback "dull"): brightness pass — greens lifted (#284525→#31602C, #1f361d→#274A22, #182b17→#1E3C1A, #30512d→#3A6335), gold #E8DC6A→#EFE35F, light sections #F7F8F1→#FBFCF4, stronger gold glows.
+- v8 (2026-08-14): real app creatives integrated — user-supplied Poker lobby and Predictions screens (/public/creative-poker.jpg, creative-predictions.jpg) now used in hero, home Poker/Predictions sections, two-up App Showcase, Poker page lobby, Predictions page experience, Download page. CSS PhoneMockup retained only for Poker page "The Table" section.
 - Kinetic hero with masked line-by-line reveal, parallax floating phone mockup, giant outlined NEXTZ backdrop.
 - Slow editorial marquee; numbered manifesto chapters 01–11; Lenis momentum scrolling; scroll reveals throughout.
 - CSS-crafted app screen mockups (home, poker lobby, table, predictions, wallet) in premium phone frames.
