@@ -3,31 +3,34 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { track } from "../lib/track";
 
-export const Reveal = ({ children, delay = 0, className = "", y = 26 }) => (
+export const Reveal = ({ children, delay = 0, className = "", y = 22 }) => (
   <motion.div
     initial={{ opacity: 0, y }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-60px" }}
-    transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }}
+    transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
     className={className}
   >
     {children}
   </motion.div>
 );
 
-export const Chapter = ({ n, label, tone = "dark" }) => {
-  const gold = tone === "light" ? "text-[#A3962A]" : "text-[#D4C942]";
-  const line = tone === "light" ? "bg-[#A3962A]/60" : "bg-[#D4C942]/60";
-  return (
-    <Reveal>
-      <div className="flex items-center gap-4" data-testid={`chapter-${n}`}>
-        <span className={`font-heading text-xs font-bold tracking-[0.3em] ${gold}`}>{n}</span>
-        <span className={`h-px w-12 ${line}`} />
-        <span className={`text-[11px] font-medium uppercase tracking-[0.35em] ${gold}`}>{label}</span>
-      </div>
-    </Reveal>
-  );
-};
+export const Chapter = ({ n, label, tone = "dark" }) => (
+  <Reveal>
+    <div
+      data-testid={`chapter-${n}`}
+      className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 ${
+        tone === "light"
+          ? "border-[#284525]/20 bg-white text-[#9C8F22]"
+          : "border-[#D4C942]/30 bg-[#D4C942]/8 text-[#D4C942]"
+      }`}
+    >
+      <span className="font-heading text-[11px] font-extrabold tracking-[0.2em]">{n}</span>
+      <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#284525]/25" : "bg-[#D4C942]/40"}`} />
+      <span className="text-[10px] font-semibold uppercase tracking-[0.28em]">{label}</span>
+    </div>
+  </Reveal>
+);
 
 export const DownloadButton = ({ testid = "download-btn", label = "Download the App", className = "", source = "site" }) => (
   <Link
@@ -42,18 +45,18 @@ export const DownloadButton = ({ testid = "download-btn", label = "Download the 
 );
 
 export const PageHero = ({ chapter, label, title, sub, children }) => (
-  <section className="relative overflow-hidden bg-[#284525] pt-32 pb-20 md:pt-40 md:pb-28">
-    <div className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full glow-gold" />
+  <section className="relative overflow-hidden bg-[#284525] pt-28 pb-14 md:pt-36 md:pb-20">
+    <div className="pointer-events-none absolute -top-40 right-[-10%] h-[420px] w-[420px] rounded-full glow-gold" />
     <div className="relative mx-auto max-w-6xl px-6">
       <Chapter n={chapter} label={label} />
       <Reveal delay={0.1}>
-        <h1 className="mt-6 font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-3xl">
+        <h1 className="mt-5 max-w-3xl font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
           {title}
         </h1>
       </Reveal>
       {sub && (
         <Reveal delay={0.2}>
-          <p className="mt-6 max-w-xl text-base md:text-lg text-white/70">{sub}</p>
+          <p className="mt-4 max-w-xl text-sm md:text-base text-white/70">{sub}</p>
         </Reveal>
       )}
       {children}

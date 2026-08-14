@@ -8,7 +8,7 @@ export default function Legal({ slug }) {
   return (
     <>
       <PageHero chapter="§" label="Legal" title={page.title} sub={page.intro} />
-      <section className="section-light py-24 md:py-32" data-testid={`legal-${slug}`}>
+      <section className="section-light py-16 md:py-24" data-testid={`legal-${slug}`}>
         <div className="mx-auto max-w-3xl space-y-10 px-6">
           {page.sections.map((s, i) => (
             <Reveal key={s.h} delay={0.04 * i}>

@@ -44,7 +44,8 @@ const SOCIALS = [
 
 export const Footer = () => (
   <footer data-testid="site-footer" className="relative bg-[#182b17] border-t border-[#D4C942]/15">
-    <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+    <div className="h-[3px] w-full bg-gradient-to-r from-[#D4C942] via-[#D4C942]/50 to-transparent" />
+    <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
       <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
           <Logo />

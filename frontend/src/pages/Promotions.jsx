@@ -12,26 +12,26 @@ export default function Promotions() {
       <PageHero
         chapter="%"
         label="Promotions"
-        title={<>More Reasons <span className="text-[#D4C942]">to Play</span></>}
+        title={<>More Reasons <span className="text-gold-gradient">to Play</span></>}
         sub="Promotions live inside the NextZGames app. Download the app to participate in any active offer."
       />
-      <section className="section-light py-24 md:py-32" data-testid="promotions-list">
-        <div className="mx-auto max-w-6xl space-y-8 px-6">
+      <section className="section-light py-16 md:py-24" data-testid="promotions-list">
+        <div className="mx-auto max-w-5xl space-y-6 px-6">
           {PROMOTIONS.map((p, i) => {
             const Icon = PROMO_ICONS[p.icon];
             return (
-              <Reveal key={p.slug} delay={0.06 * i}>
+              <Reveal key={p.slug} delay={0.05 * i}>
                 <article
                   data-testid={`promotion-${p.slug}`}
-                  className="card-light relative grid gap-8 overflow-hidden p-8 md:grid-cols-[auto_1fr_auto] md:items-center md:p-10"
+                  className="card-light relative grid gap-6 overflow-hidden p-6 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8"
                 >
-                  <span className="flex h-16 w-16 items-center justify-center rounded-2xl border border-[#284525]/15 bg-[#284525] text-[#D4C942]">
-                    <Icon size={26} />
+                  <span className="icon-chip !h-14 !w-14 !rounded-2xl">
+                    <Icon size={24} />
                   </span>
                   <div>
-                    <h2 className="font-heading text-2xl font-extrabold text-[#1f361d]">{p.title}</h2>
-                    <p className="mt-3 max-w-xl text-sm md:text-base text-[#1f361d]/65">{p.desc}</p>
-                    <div className="mt-5 grid gap-3 text-xs text-[#1f361d]/55 sm:grid-cols-3">
+                    <h2 className="font-heading text-xl font-extrabold text-[#1f361d]">{p.title}</h2>
+                    <p className="mt-2 max-w-xl text-sm text-[#1f361d]/65">{p.desc}</p>
+                    <div className="mt-4 grid gap-2.5 text-xs text-[#1f361d]/55 sm:grid-cols-3">
                       <span className="flex items-start gap-2"><BadgeCheck size={14} className="mt-0.5 shrink-0 gold-strong" /> Eligibility: verified app accounts</span>
                       <span className="flex items-start gap-2"><ListChecks size={14} className="mt-0.5 shrink-0 gold-strong" /> {p.terms}</span>
                       <span className="flex items-start gap-2"><CalendarDays size={14} className="mt-0.5 shrink-0 gold-strong" /> Validity: {p.validity}</span>

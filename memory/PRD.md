@@ -20,7 +20,8 @@ Home (hero, brand statement, Poker, Predictions, Why, App Showcase, Promotions, 
 
 ## Implemented (2026-08-14)
 - All 15 routes with brand system (#284525 / #D4C942 / #FFFFFF), Plus Jakarta Sans + Inter.
-- v2 (2026-08-14, user feedback): alternating light editorial sections (#F7F8F1 warm white) with white cards + dark-green ink text; dark gold (#A3962A) used for accents on light backgrounds; deep green retained for hero, marquee, Poker, Why, Promotions, Trust, Final CTA and footer. Lenis tuned (lerp 0.08, smoothWheel).
+- v2 (2026-08-14, user feedback): alternating light editorial sections (#F7F8F1 warm white) with white cards + dark-green ink text; dark gold (#9C8F22) used for accents on light backgrounds; deep green retained for hero, marquee, Poker, Why, Promotions, Trust, Final CTA and footer. Lenis tuned (lerp 0.08, smoothWheel).
+- v3 (2026-08-14, user feedback "too big/dull"): compact type scale (h2 ~text-3xl, section padding py-16/24, cards p-6, container max-w-6xl), vibrant gold system — gradient gold buttons with glow, gold marquee band with green text, gold-filled icon chips, gold-gradient headline accents, chapter pills instead of plain labels, gold gradient bar atop footer.
 - Kinetic hero with masked line-by-line reveal, parallax floating phone mockup, giant outlined NEXTZ backdrop.
 - Slow editorial marquee; numbered manifesto chapters 01–11; Lenis momentum scrolling; scroll reveals throughout.
 - CSS-crafted app screen mockups (home, poker lobby, table, predictions, wallet) in premium phone frames.

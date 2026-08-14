@@ -12,21 +12,21 @@ export default function Faq() {
       <PageHero
         chapter="FAQ"
         label="Help Centre"
-        title={<>Questions? <span className="text-[#D4C942]">Answered.</span></>}
+        title={<>Questions? <span className="text-gold-gradient">Answered.</span></>}
         sub="Everything about NextZGames, Poker, Predictions, accounts, payments and the app."
       />
-      <section className="section-light py-24 md:py-32" data-testid="faq-groups">
-        <div className="mx-auto max-w-4xl space-y-16 px-6">
+      <section className="section-light py-16 md:py-24" data-testid="faq-groups">
+        <div className="mx-auto max-w-3xl space-y-10 px-6">
           {FAQ_GROUPS.map((g, gi) => (
             <div key={g.group}>
               <Chapter n={`0${gi + 1}`} label={g.group} tone="light" />
-              <Reveal delay={0.1} className="mt-6">
+              <Reveal delay={0.1} className="mt-4">
                 <Accordion type="single" collapsible className="w-full">
                   {g.items.map((f, i) => (
                     <AccordionItem key={f.q} value={`${gi}-${i}`} className="border-[#284525]/15">
                       <AccordionTrigger
                         data-testid={`faq-q-${g.group.toLowerCase()}-${i}`}
-                        className="text-left font-heading text-base font-bold text-[#1f361d] hover:text-[#A3962A] hover:no-underline"
+                        className="text-left font-heading text-sm md:text-base font-bold text-[#1f361d] hover:text-[#9C8F22] hover:no-underline"
                       >
                         {f.q}
                       </AccordionTrigger>

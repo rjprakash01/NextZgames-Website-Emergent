@@ -65,22 +65,22 @@ body::after {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: var(--gold);
-    color: var(--green-darker);
+    background: linear-gradient(135deg, #E9DD55 0%, #D4C942 55%, #C2B531 100%);
+    color: #1f361d;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 1rem 2rem;
+    padding: 0.85rem 1.75rem;
     border-radius: 999px;
-    font-size: 0.8rem;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 0 rgba(212, 201, 66, 0);
+    font-size: 0.78rem;
+    box-shadow: 0 8px 24px rgba(212, 201, 66, 0.28);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 .btn-gold:hover {
-    background: var(--gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(212, 201, 66, 0.25);
+    filter: brightness(1.06);
+    box-shadow: 0 14px 36px rgba(212, 201, 66, 0.42);
 }
 
 .btn-outline {
@@ -182,7 +182,26 @@ body::after {
 }
 
 .gold-strong {
-    color: #A3962A;
+    color: #9C8F22;
+}
+
+.text-gold-gradient {
+    background: linear-gradient(120deg, #F0E464 0%, #D4C942 50%, #AFA12C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.icon-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, #E9DD55, #CDBF33);
+    color: #1f361d;
+    box-shadow: 0 8px 20px rgba(212, 201, 66, 0.3);
 }
 
 .btn-outline-dark {
