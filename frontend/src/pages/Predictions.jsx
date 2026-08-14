@@ -18,21 +18,21 @@ export default function Predictions() {
         </Reveal>
       </PageHero>
 
-      <section className="bg-[#1f361d] py-24 md:py-32" data-testid="predictions-steps-section">
+      <section className="section-light py-24 md:py-32" data-testid="predictions-steps-section">
         <div className="mx-auto max-w-7xl px-6">
-          <Chapter n="01" label="How Predictions Work" />
+          <Chapter n="01" label="How Predictions Work" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-6 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-              Four Steps. <span className="text-[#D4C942]">One Moment.</span>
+            <h2 className="mt-6 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1f361d]">
+              Four Steps. <span className="gold-strong">One Moment.</span>
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {PREDICTION_STEPS.map((s, i) => (
               <Reveal key={s.n} delay={0.08 * i}>
-                <div className="card-green h-full p-8" data-testid={`predictions-step-${s.n}`}>
-                  <span className="font-heading text-4xl font-extrabold text-[#D4C942]">{s.n}</span>
-                  <h3 className="mt-5 font-heading text-xl font-bold text-white">{s.title}</h3>
-                  <p className="mt-2 text-sm text-white/60">{s.desc}</p>
+                <div className="card-light h-full p-8" data-testid={`predictions-step-${s.n}`}>
+                  <span className="font-heading text-4xl font-extrabold gold-strong">{s.n}</span>
+                  <h3 className="mt-5 font-heading text-xl font-bold text-[#1f361d]">{s.title}</h3>
+                  <p className="mt-2 text-sm text-[#1f361d]/60">{s.desc}</p>
                 </div>
               </Reveal>
             ))}

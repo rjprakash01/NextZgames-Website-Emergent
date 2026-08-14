@@ -60,71 +60,71 @@ export default function Contact() {
         title={<>Talk to <span className="text-[#D4C942]">the Team</span></>}
         sub="Questions about Poker, Predictions, your account or the app — we are here to help."
       />
-      <section className="bg-[#1f361d] py-24 md:py-32" data-testid="contact-section">
+      <section className="section-light py-24 md:py-32" data-testid="contact-section">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.3fr]">
           <div>
-            <Chapter n="01" label="Support" />
+            <Chapter n="01" label="Support" tone="light" />
             <Reveal delay={0.1}>
               <div className="mt-8 space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#D4C942]/30 bg-[#D4C942]/10 text-[#D4C942]"><Mail size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#D4C942]"><Mail size={18} /></span>
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-white/45">Support Email</p>
-                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-white hover:text-[#D4C942]">support@nextzgames.com</a>
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Support Email</p>
+                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#1f361d] hover:text-[#A3962A]">support@nextzgames.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#D4C942]/30 bg-[#D4C942]/10 text-[#D4C942]"><Clock size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#284525] text-[#D4C942]"><Clock size={18} /></span>
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.25em] text-white/45">Support Hours</p>
-                    <p className="mt-1 font-heading font-bold text-white">Mon – Sun, 9:00 – 21:00 IST</p>
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Support Hours</p>
+                    <p className="mt-1 font-heading font-bold text-[#1f361d]">Mon – Sun, 9:00 – 21:00 IST</p>
                   </div>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.25em] text-white/45">Follow Us</p>
+                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Follow Us</p>
                   <div className="mt-3 flex gap-3">
                     {SOCIALS.map(({ icon: Icon, label }) => (
-                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#D4C942] hover:text-[#D4C942]">
+                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#284525]/20 text-[#1f361d]/60 transition-colors duration-300 hover:border-[#284525] hover:bg-[#284525] hover:text-[#D4C942]">
                         <Icon size={16} />
                       </a>
                     ))}
                   </div>
                 </div>
-                <p className="text-sm text-white/55">
-                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="text-[#D4C942] underline underline-offset-4">FAQ page</Link>.
+                <p className="text-sm text-[#1f361d]/60">
+                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#A3962A] underline underline-offset-4">FAQ page</Link>.
                 </p>
               </div>
             </Reveal>
           </div>
 
           <Reveal delay={0.15}>
-            <form onSubmit={submit} className="card-green p-8 md:p-10" data-testid="contact-form">
+            <form onSubmit={submit} className="card-light p-8 md:p-10" data-testid="contact-form">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="cf-name" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-white/50">Name</label>
-                  <input id="cf-name" data-testid="contact-name" required minLength={2} value={form.name} onChange={set("name")} className="input-dark" placeholder="Your full name" />
+                  <label htmlFor="cf-name" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Name</label>
+                  <input id="cf-name" data-testid="contact-name" required minLength={2} value={form.name} onChange={set("name")} className="input-light" placeholder="Your full name" />
                 </div>
                 <div>
-                  <label htmlFor="cf-email" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-white/50">Email</label>
-                  <input id="cf-email" data-testid="contact-email-input" required type="email" value={form.email} onChange={set("email")} className="input-dark" placeholder="you@example.com" />
+                  <label htmlFor="cf-email" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Email</label>
+                  <input id="cf-email" data-testid="contact-email-input" required type="email" value={form.email} onChange={set("email")} className="input-light" placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label htmlFor="cf-mobile" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-white/50">Mobile Number</label>
-                  <input id="cf-mobile" data-testid="contact-mobile" required minLength={8} value={form.mobile} onChange={set("mobile")} className="input-dark" placeholder="+91 98765 43210" />
+                  <label htmlFor="cf-mobile" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Mobile Number</label>
+                  <input id="cf-mobile" data-testid="contact-mobile" required minLength={8} value={form.mobile} onChange={set("mobile")} className="input-light" placeholder="+91 98765 43210" />
                 </div>
                 <div>
-                  <label htmlFor="cf-category" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-white/50">Category</label>
-                  <select id="cf-category" data-testid="contact-category" value={form.category} onChange={set("category")} className="input-dark">
+                  <label htmlFor="cf-category" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Category</label>
+                  <select id="cf-category" data-testid="contact-category" value={form.category} onChange={set("category")} className="input-light">
                     {CATEGORIES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="cf-subject" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-white/50">Subject</label>
-                  <input id="cf-subject" data-testid="contact-subject" required minLength={3} value={form.subject} onChange={set("subject")} className="input-dark" placeholder="What is this about?" />
+                  <label htmlFor="cf-subject" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Subject</label>
+                  <input id="cf-subject" data-testid="contact-subject" required minLength={3} value={form.subject} onChange={set("subject")} className="input-light" placeholder="What is this about?" />
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="cf-message" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-white/50">Message</label>
-                  <textarea id="cf-message" data-testid="contact-message" required minLength={10} rows={5} value={form.message} onChange={set("message")} className="input-dark resize-none" placeholder="Tell us how we can help..." />
+                  <label htmlFor="cf-message" className="mb-2 block text-[11px] uppercase tracking-[0.25em] text-[#1f361d]/50">Message</label>
+                  <textarea id="cf-message" data-testid="contact-message" required minLength={10} rows={5} value={form.message} onChange={set("message")} className="input-light resize-none" placeholder="Tell us how we can help..." />
                 </div>
               </div>
               <button type="submit" data-testid="contact-submit-btn" disabled={sending} className="btn-gold mt-8 w-full disabled:opacity-60 sm:w-auto">

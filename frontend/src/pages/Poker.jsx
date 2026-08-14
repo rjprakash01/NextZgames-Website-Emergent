@@ -20,21 +20,21 @@ export default function Poker() {
         </Reveal>
       </PageHero>
 
-      <section className="bg-[#1f361d] py-24 md:py-32" data-testid="poker-lobby-section">
+      <section className="section-light py-24 md:py-32" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
             <div className="pointer-events-none absolute inset-0 -m-16 rounded-full glow-gold" />
             <PhoneMockup screen="poker" className="relative w-[250px] rotate-2" />
           </Reveal>
           <div className="order-1 lg:order-2">
-            <Chapter n="01" label="The Lobby" />
+            <Chapter n="01" label="The Lobby" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-                Find Your Table <span className="text-[#D4C942]">in Seconds</span>
+              <h2 className="mt-6 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1f361d]">
+                Find Your Table <span className="gold-strong">in Seconds</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-md text-base text-white/70">
+              <p className="mt-6 max-w-md text-base text-[#1f361d]/65">
                 Browse available Poker formats, check blinds and open seats, and join the table that fits your game — all from the lobby inside the app.
               </p>
             </Reveal>
@@ -42,7 +42,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#284525] py-24 md:py-32" data-testid="poker-features-section">
+      <section className="bg-[#1f361d] py-24 md:py-32" data-testid="poker-features-section">
         <div className="mx-auto max-w-7xl px-6">
           <Chapter n="02" label="Features" />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -59,18 +59,17 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#1f361d] py-24 md:py-32" data-testid="poker-table-section">
-        <span aria-hidden className="txt-outline-gold pointer-events-none absolute -bottom-8 right-0 select-none font-heading text-[16vw] font-extrabold leading-none opacity-30">TABLE</span>
+      <section className="section-light relative overflow-hidden py-24 md:py-32" data-testid="poker-table-section">
         <div className="relative mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
           <div>
-            <Chapter n="03" label="The Table" />
+            <Chapter n="03" label="The Table" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-                Every Decision, <span className="text-[#D4C942]">In Your Hands</span>
+              <h2 className="mt-6 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1f361d]">
+                Every Decision, <span className="gold-strong">In Your Hands</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-md text-base text-white/70">
+              <p className="mt-6 max-w-md text-base text-[#1f361d]/65">
                 A clean, responsive table interface built for focus — your cards, the pot and your actions always front and centre.
               </p>
             </Reveal>

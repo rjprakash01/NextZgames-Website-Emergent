@@ -19,16 +19,18 @@ export default function About() {
         title={<>Built for the <span className="text-[#D4C942]">Next Generation</span> of Players</>}
         sub="NextZGames is a digital gaming brand focused on creating engaging Poker and Predictions experiences through a modern mobile platform."
       />
-      <section className="bg-[#1f361d] py-24 md:py-32" data-testid="about-pillars">
+      <section className="section-light py-24 md:py-32" data-testid="about-pillars">
         <div className="mx-auto max-w-7xl px-6">
-          <Chapter n="01" label="What We Combine" />
+          <Chapter n="01" label="What We Combine" tone="light" />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p, i) => (
               <Reveal key={p.title} delay={0.08 * i}>
-                <div className="card-green h-full p-8" data-testid={`about-pillar-${i}`}>
-                  <p.icon size={22} className="text-[#D4C942]" />
-                  <h3 className="mt-5 font-heading text-lg font-bold text-white">{p.title}</h3>
-                  <p className="mt-2 text-sm text-white/60">{p.desc}</p>
+                <div className="card-light h-full p-8" data-testid={`about-pillar-${i}`}>
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#284525] text-[#D4C942]">
+                    <p.icon size={20} />
+                  </span>
+                  <h3 className="mt-5 font-heading text-lg font-bold text-[#1f361d]">{p.title}</h3>
+                  <p className="mt-2 text-sm text-[#1f361d]/60">{p.desc}</p>
                 </div>
               </Reveal>
             ))}
