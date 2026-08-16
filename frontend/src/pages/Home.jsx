@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import {
-  ShieldCheck, Headphones,
-  Users, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
-  Lock, Clock, Handshake, Headset,
+  ShieldCheck,
+  Users, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
+  Lock, Clock, Handshake, Headset, HandCoins,
 } from "lucide-react";
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
 import {
-  POKER_FEATURES, PREDICTION_STEPS, WHY_CARDS,
+  POKER_FEATURES, PREDICTION_STEPS,
   PROMOTIONS, FAQ_GROUPS,
 } from "../data/content";
 import { track } from "../lib/track";
@@ -17,7 +17,6 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "../components/ui/accordion";
 
-const WHY_ICONS = { scale: Scale, database: Database, card: CreditCard, zap: Zap, shield: ShieldCheck, headphones: Headphones };
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
 const CHIP_COLORS = ["#EFE35F", "#FF7A59", "#5EC8F2", "#9B7FE0", "#4ADE80", "#F2C94C"];
 const STEP_COLORS = ["#8C7A0F", "#0E7C6B", "#D65A3A", "#6A4FA3"];
@@ -191,6 +190,15 @@ const WHY_MOBILE = [
   { Icon: Headset, title: "24/7 Player Support", desc: "Need help? Our support team is available around the clock, whenever you need us." },
 ];
 
+const WHY_DESKTOP = [
+  { Icon: ShieldCheck, title: "Fair Play, Always", desc: "Transparent gameplay and fair outcomes, because trust comes first." },
+  { Icon: Lock, title: "Your Data, Protected", desc: "Strong security measures keep your personal and account information protected." },
+  { Icon: CreditCard, title: "Secure Transactions", desc: "Safe, encrypted payments and withdrawals designed to keep your money secure." },
+  { Icon: HandCoins, title: "Fast Withdrawals", desc: "Get access to your winnings with quick and hassle-free withdrawals." },
+  { Icon: Handshake, title: "Built on Trust", desc: "A platform designed around transparency, security, and responsible play." },
+  { Icon: Headset, title: "24/7 Player Support", desc: "Need help? Our support team is available around the clock, whenever you need us." },
+];
+
 const WhySection = () => (
   <section className="bg-white md:bg-[#122A0E] py-9 md:py-12" data-testid="why-section">
     {/* MOBILE ONLY — Play with Confidence */}
@@ -211,29 +219,23 @@ const WhySection = () => (
       </div>
     </div>
 
-    {/* DESKTOP — existing layout */}
-    <div className="hidden md:block mx-auto max-w-6xl px-6">
-      <Chapter label="Why NextZGames" />
+    {/* DESKTOP ONLY — Why Players Trust NextZGames */}
+    <div className="hidden md:block mx-auto max-w-5xl px-6">
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-          Why <span className="text-gold-gradient">NextZGames?</span>
+        <h2 className="text-center font-heading text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
+          Why Players Trust <span className="text-gold-gradient">NextZGames</span>
         </h2>
       </Reveal>
-      <div className="mt-7 grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
-        {WHY_CARDS.map((c, i) => {
-          const Icon = WHY_ICONS[c.icon];
-          return (
-            <Reveal key={c.title} delay={0.05 * i}>
-              <div className="flex gap-4" data-testid={`why-card-${i}`}>
-                <span className="icon-chip shrink-0" style={{ background: CHIP_COLORS[i % CHIP_COLORS.length], color: "#122A0E" }}><Icon size={19} /></span>
-                <div>
-                  <h3 className="font-heading text-base font-bold text-white">{c.title}</h3>
-                  <p className="mt-1 text-sm text-white/65">{c.desc}</p>
-                </div>
-              </div>
-            </Reveal>
-          );
-        })}
+      <div className="mt-12 grid grid-cols-3 gap-x-10 gap-y-14">
+        {WHY_DESKTOP.map(({ Icon, title, desc }, i) => (
+          <Reveal key={title} delay={0.05 * i}>
+            <div className="flex flex-col items-center text-center px-2" data-testid={`why-card-${i}`}>
+              <Icon size={52} strokeWidth={1.5} className="text-[#EFE35F]" />
+              <h3 className="mt-5 font-heading text-xl font-bold text-white">{title}</h3>
+              <p className="mt-2.5 max-w-[16rem] text-sm leading-relaxed text-white/70">{desc}</p>
+            </div>
+          </Reveal>
+        ))}
       </div>
     </div>
   </section>

@@ -102,9 +102,36 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify a MOBILE-VIEW-ONLY redesign on the NextZGames home page at the site root (/). The home page has a 'Why NextZGames' section (data-testid='why-section') with a mobile-only variant titled 'Play with Confidence' that should ONLY appear on mobile screen widths (below 768px), and a separate desktop variant ('Why NextZGames?') that should ONLY appear at >=768px."
+user_problem_statement: "Verify a DESKTOP-VIEW redesign of the 'Why NextZGames' section on the NextZGames home page (site root /). The DESKTOP variant should match a new reference layout with centered heading 'Why Players Trust NextZGames', 6 cards in 3-column grid (2 rows of 3), center-aligned cards with gold/yellow icons on top, bold white titles, centered light descriptions, and dark green background (#122A0E). Mobile version should remain unchanged."
 
 frontend:
+  - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ DESKTOP VIEWPORT (1440x900): Desktop section verified with heading 'Why Players Trust NextZGames'. All 6 cards (why-card-0 through why-card-5) present in 3-column grid layout (grid-cols-3). Cards are center-aligned with gold/yellow icons (rgb(239, 227, 95) = #EFE35F), bold white titles, and centered light descriptions. Section background is dark green rgb(18, 42, 14) = #122A0E. Mobile block (why-mobile) correctly hidden on desktop."
+      - working: true
+        agent: "testing"
+        comment: "✅ MOBILE VIEWPORT (390x844): Mobile section (data-testid='why-mobile') remains visible with correct heading 'Play with Confidence'. Desktop variant (data-testid='why-card-0') is correctly hidden. Mobile version not broken by desktop redesign."
+
+  - task: "Desktop section - 6 cards with correct titles and content"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All 6 desktop cards verified with correct titles in order: 'Fair Play, Always', 'Your Data, Protected', 'Secure Transactions', 'Fast Withdrawals', 'Built on Trust', '24/7 Player Support'. Each card has icon on top, bold white title below, and centered light description. Visual layout matches reference design."
+
   - task: "Mobile-only 'Play with Confidence' section - responsive visibility"
     implemented: true
     working: true
@@ -118,7 +145,7 @@ frontend:
         comment: "✅ MOBILE VIEWPORT (390x844): Mobile section (data-testid='why-mobile') is visible with correct heading 'Play with Confidence'. Desktop variant (data-testid='why-card-0') is correctly hidden."
       - working: true
         agent: "testing"
-        comment: "✅ DESKTOP VIEWPORT (1440x900): Mobile section is correctly hidden. Desktop variant with heading 'Why NextZGames?' is visible. Background color is correct dark theme (rgb(18, 42, 14))."
+        comment: "✅ DESKTOP VIEWPORT (1440x900): Mobile section is correctly hidden. Desktop variant with heading 'Why Players Trust NextZGames' is visible. Background color is correct dark theme (rgb(18, 42, 14))."
 
   - task: "Mobile section - 6 cards in 2-column grid with correct content"
     implemented: true
@@ -147,13 +174,13 @@ frontend:
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 1
+  test_sequence: 2
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Mobile-only 'Play with Confidence' section - responsive visibility"
-    - "Mobile section - 6 cards in 2-column grid with correct content"
+    - "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
+    - "Desktop section - 6 cards with correct titles and content"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -161,3 +188,5 @@ test_plan:
 agent_communication:
   - agent: "testing"
     message: "Completed comprehensive testing of mobile-only 'Play with Confidence' section. All responsive behavior working correctly. Mobile section shows only on mobile (<768px), desktop section shows only on desktop (>=768px). All 6 cards present with correct content and styling. Screenshots captured for both viewports."
+  - agent: "testing"
+    message: "Completed verification of DESKTOP redesign for 'Why Players Trust NextZGames' section. Desktop layout verified at 1440x900 viewport: centered heading, 6 cards in 3-column grid (2 rows), center-aligned cards with gold/yellow icons, bold white titles, centered descriptions, dark green background (#122A0E). Mobile version (390x844) re-confirmed working correctly with 'Play with Confidence' heading and 2-column grid. Desktop redesign successfully implemented without breaking mobile view. Screenshots captured for both viewports."
