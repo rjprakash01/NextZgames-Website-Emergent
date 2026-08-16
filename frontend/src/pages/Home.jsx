@@ -42,7 +42,7 @@ const Hero = () => {
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
 
   return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-plum">
+    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08]">
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
