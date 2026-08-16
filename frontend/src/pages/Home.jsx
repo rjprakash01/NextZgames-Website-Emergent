@@ -372,43 +372,43 @@ const HowItWorksSection = () => (
 
 
 const FaqSection = () => (
-  <section className="section-light py-8 md:py-12" data-testid="faq-section">
+  <section className="bg-[#122A0E] py-8 md:py-12" data-testid="faq-section">
     <div className="mx-auto max-w-3xl px-6">
-      <Chapter label="FAQ" tone="light" />
+      <Chapter label="FAQ" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#122A0E]">
-          Common <span className="acc-violet">Questions</span>
+        <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+          Common <span className="text-gold-gradient">Questions</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2} className="mt-6">
         <Accordion type="single" collapsible className="w-full">
           {FAQ_GROUPS[0].items.slice(0, 5).map((f, i) => (
-            <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#122A0E]/15">
-              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#122A0E] hover:text-[#6A4FA3] hover:no-underline">
+            <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-white/15">
+              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-white hover:text-[#EFE35F] hover:no-underline">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-[#122A0E]/65">{f.a}</AccordionContent>
+              <AccordionContent className="text-sm text-white/65">{f.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </Reveal>
       <Reveal delay={0.3} className="mt-6">
-        <Link to="/faq" data-testid="faq-view-all" className="btn-outline-dark">View All FAQs</Link>
+        <Link to="/faq" data-testid="faq-view-all" className="btn-outline">View All FAQs</Link>
       </Reveal>
     </div>
   </section>
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-[#0F260C] py-10 md:py-14" data-testid="final-cta">
+  <section className="section-light relative overflow-hidden py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal delay={0.1}>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-          Your Next Move<br />Starts <span className="text-gold-gradient">Here.</span>
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#122A0E]">
+          Your Next Move<br />Starts <span className="acc-coral">Here.</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2}>
-        <p className="mx-auto mt-3 max-w-md text-sm md:text-base text-white/70">
+        <p className="mx-auto mt-3 max-w-md text-sm md:text-base text-[#122A0E]/70">
           Download NextZGames and discover Poker and Predictions in one mobile experience.
         </p>
       </Reveal>
