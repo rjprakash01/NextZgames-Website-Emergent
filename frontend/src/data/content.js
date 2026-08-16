@@ -21,10 +21,10 @@ export const POKER_FEATURES = [
 ];
 
 export const PREDICTION_STEPS = [
-  { n: "01", title: "Choose", desc: "Browse live and upcoming events — cricket, football and more, refreshed around the clock." },
-  { n: "02", title: "Predict", desc: "Read the form, trust your call and pick your outcome from clear, transparent options." },
-  { n: "03", title: "Confirm", desc: "Review your selection and lock it in with a single tap. No confusion, no fine print." },
-  { n: "04", title: "Follow", desc: "Track the action live and watch results settle the moment the game is decided." },
+  { n: "1", title: "Choose", desc: "Browse live and upcoming events — cricket, football and more, refreshed around the clock." },
+  { n: "2", title: "Predict", desc: "Read the form, trust your call and pick your outcome from clear, transparent options." },
+  { n: "3", title: "Confirm", desc: "Review your selection and lock it in with a single tap. No confusion, no fine print." },
+  { n: "4", title: "Follow", desc: "Track the action live and watch results settle the moment the game is decided." },
 ];
 
 export const WHY_CARDS = [
@@ -44,11 +44,11 @@ export const TRUST_ITEMS = [
 ];
 
 export const HOW_IT_WORKS_STEPS = [
-  { n: "01", title: "Download", desc: "Get the official NextZGames app for Android or iOS — free, fast and straight from the source." },
-  { n: "02", title: "Register", desc: "Create your account in under two minutes and complete a quick verification to keep the platform safe for everyone." },
-  { n: "03", title: "Explore", desc: "Walk through the poker lobby or browse live prediction events — see everything on offer before you commit a rupee." },
-  { n: "04", title: "Play", desc: "Join a table or back your prediction. Your balance, your pace, your call." },
-  { n: "05", title: "Enjoy", desc: "Track your results, unlock promotions and discover new formats and events as they drop." },
+  { n: "1", title: "Download", desc: "Get the official NextZGames app for Android or iOS — free, fast and straight from the source." },
+  { n: "2", title: "Register", desc: "Create your account in under two minutes and complete a quick verification to keep the platform safe for everyone." },
+  { n: "3", title: "Explore", desc: "Walk through the poker lobby or browse live prediction events — see everything on offer before you commit a rupee." },
+  { n: "4", title: "Play", desc: "Join a table or back your prediction. Your balance, your pace, your call." },
+  { n: "5", title: "Enjoy", desc: "Track your results, unlock promotions and discover new formats and events as they drop." },
 ];
 
 export const PROMOTIONS = [

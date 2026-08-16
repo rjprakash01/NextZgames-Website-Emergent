@@ -29,8 +29,7 @@ export default function Predictions() {
             {PREDICTION_STEPS.map((s, i) => (
               <Reveal key={s.n} delay={0.07 * i}>
                 <div className="card-light h-full p-5" data-testid={`predictions-step-${s.n}`}>
-                  <span className="font-heading text-2xl font-extrabold gold-strong">{s.n}</span>
-                  <h3 className="mt-2 font-heading text-base font-bold text-[#1B3A17]">{s.title}</h3>
+                  <h3 className="font-heading text-base font-bold text-[#1B3A17]"><span className="gold-strong text-lg">{s.n}.</span> {s.title}</h3>
                   <p className="mt-1.5 text-sm text-[#1B3A17]/60">{s.desc}</p>
                 </div>
               </Reveal>

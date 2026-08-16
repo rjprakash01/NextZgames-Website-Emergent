@@ -207,8 +207,7 @@ const PredictionsSection = () => (
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="border-t-2 border-[#1B3A17]/30 pt-4" data-testid={`prediction-step-${s.n}`}>
-              <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
-              <h3 className="mt-1 font-heading text-base font-bold text-[#1B3A17]">{s.title}</h3>
+              <h3 className="font-heading text-base font-bold text-[#1B3A17]"><span className="gold-strong">{s.n}.</span> {s.title}</h3>
               <p className="mt-1.5 text-sm text-[#1B3A17]/60">{s.desc}</p>
             </div>
           </Reveal>
@@ -353,8 +352,7 @@ const HowItWorksSection = () => (
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="border-t-2 border-[#1B3A17]/30 pt-4" data-testid={`how-step-${s.n}`}>
-              <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
-              <h3 className="mt-1 font-heading text-base font-bold text-[#1B3A17]">{s.title}</h3>
+              <h3 className="font-heading text-base font-bold text-[#1B3A17]"><span className="gold-strong">{s.n}.</span> {s.title}</h3>
               <p className="mt-1.5 text-sm text-[#1B3A17]/60">{s.desc}</p>
             </div>
           </Reveal>
