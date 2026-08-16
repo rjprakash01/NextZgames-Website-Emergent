@@ -31,7 +31,7 @@ const HOME_STEPS = [
 const Hero = () => (
   <section data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08] pt-[72px]">
     <picture>
-      <source media="(min-width: 768px)" srcSet="/hero-desktop.jpg" />
+      <source media="(min-width: 768px)" srcSet="/hero-desktop-v2.jpg" />
       <img
         src="/hero-mobile.jpg"
         alt="The Thrill of Poker & Predictions — NextZGames app with poker tables, tournaments and game modes"
