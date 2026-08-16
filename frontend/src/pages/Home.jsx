@@ -41,8 +41,7 @@ const Hero = () => {
   const phoneR = useTransform(scrollYProgress, [0, 1], [0, -3]);
 
   return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#23401F]">
-      <div className="pointer-events-none absolute -right-32 top-16 h-[460px] w-[460px] rounded-full glow-gold" />
+    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#284525]">
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
@@ -103,9 +102,9 @@ const Ticker = () => (
   <div className="bg-[#EFE35F] py-3" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
       {["Poker", "Predictions", "Your Next Move", "One App", "Mobile First", "Download NextZGames"].map((t) => (
-        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#1B3318]">
+        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#284525]">
           {t}
-          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#1B3318]" />
+          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#284525]" />
         </span>
       ))}
     </Marquee>
@@ -117,7 +116,7 @@ const BrandStatement = () => (
     <div className="mx-auto max-w-5xl px-6">
       <Chapter label="The Brand" tone="light" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1B3318]">
+        <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#284525]">
           Built for the <span className="gold-strong">Next Move.</span>
         </h2>
       </Reveal>
@@ -129,7 +128,7 @@ const BrandStatement = () => (
         className="gold-line mt-5 w-44 origin-left"
       />
       <Reveal delay={0.25}>
-        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#1B3318]/65">
+        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#284525]/65">
           NextZGames brings Poker and Predictions together in a modern mobile experience designed around the way players play today.
         </p>
       </Reveal>
@@ -138,7 +137,7 @@ const BrandStatement = () => (
 );
 
 const PokerSection = () => (
-  <section className="relative overflow-hidden bg-[#1B3318] py-8 md:py-12" data-testid="poker-section">
+  <section className="relative overflow-hidden bg-[#284525] py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
@@ -159,7 +158,6 @@ const PokerSection = () => (
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
-          <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
           <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
         </Reveal>
       </div>
@@ -188,18 +186,17 @@ const PredictionsSection = () => (
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <Reveal delay={0.15} className="relative order-2 mx-auto lg:order-1">
-          <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
-          <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#23401F]/15 -rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
+          <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#284525]/15 -rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
         </Reveal>
         <div className="order-1 lg:order-2">
           <Chapter label="Predictions" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#1B3318]">
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#284525]">
               Predict the Outcome.<br /><span className="gold-strong">Own the Moment.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-3 max-w-md text-sm md:text-base text-[#1B3318]/65">
+            <p className="mt-3 max-w-md text-sm md:text-base text-[#284525]/65">
               Follow the action and explore Predictions through the NextZGames mobile experience.
             </p>
           </Reveal>
@@ -213,8 +210,8 @@ const PredictionsSection = () => (
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="card-light h-full p-5" data-testid={`prediction-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#1B3318]">{s.title}</h3>
-              <p className="mt-1.5 text-sm text-[#1B3318]/60">{s.desc}</p>
+              <h3 className="font-heading text-base font-bold text-[#284525]">{s.title}</h3>
+              <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
             </div>
           </Reveal>
         ))}
@@ -224,7 +221,7 @@ const PredictionsSection = () => (
 );
 
 const WhySection = () => (
-  <section className="bg-[#1B3318] py-8 md:py-12" data-testid="why-section">
+  <section className="bg-[#284525] py-8 md:py-12" data-testid="why-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
@@ -261,12 +258,12 @@ const AppShowcase = () => {
         <Chapter label="The App Experience" tone="light" />
         <div className="mt-4 flex flex-wrap items-end justify-between gap-5">
           <Reveal delay={0.1}>
-            <h2 className="max-w-xl font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#1B3318]">
+            <h2 className="max-w-xl font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#284525]">
               Everything. Right in <span className="gold-strong">Your Hands.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="max-w-sm text-sm text-[#1B3318]/65">
+            <p className="max-w-sm text-sm text-[#284525]/65">
               One App. Multiple Experiences. Discover Poker and Predictions from one simple mobile experience.
             </p>
           </Reveal>
@@ -274,7 +271,7 @@ const AppShowcase = () => {
         <div className="mt-6 grid gap-6 sm:grid-cols-2 max-w-3xl">
           {creatives.map(({ img, label, testid }, i) => (
             <Reveal key={label} delay={0.08 * i}>
-              <div className="group overflow-hidden rounded-3xl border border-[#1B3318]/10 bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]">
+              <div className="group overflow-hidden rounded-3xl border border-[#284525]/10 bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]">
                 <img
                   src={img}
                   alt={label}
@@ -283,7 +280,7 @@ const AppShowcase = () => {
                   className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 />
               </div>
-              <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-[#1B3318]/45">{label}</p>
+              <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-[#284525]/45">{label}</p>
             </Reveal>
           ))}
         </div>
@@ -296,7 +293,7 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-[#1B3318] py-8 md:py-12" data-testid="promotions-section">
+  <section className="bg-[#284525] py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
@@ -320,7 +317,6 @@ const PromotionsSection = () => (
           return (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div className="card-green group relative h-full overflow-hidden p-5" data-testid={`promo-card-${p.slug}`}>
-                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full glow-gold" />
                 <span className="icon-chip"><Icon size={19} /></span>
                 <h3 className="mt-3 font-heading text-lg font-bold text-white">{p.title}</h3>
                 <p className="mt-1.5 text-sm text-white/60">{p.desc}</p>
@@ -349,7 +345,7 @@ const HowItWorksSection = () => (
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Getting Started" tone="light" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#1B3318]">
+        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#284525]">
           Getting Started <span className="gold-strong">Is Simple</span>
         </h2>
       </Reveal>
@@ -357,8 +353,8 @@ const HowItWorksSection = () => (
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="card-light h-full p-5" data-testid={`how-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#1B3318]">{s.title}</h3>
-              <p className="mt-1.5 text-sm text-[#1B3318]/60">{s.desc}</p>
+              <h3 className="font-heading text-base font-bold text-[#284525]">{s.title}</h3>
+              <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
             </div>
           </Reveal>
         ))}
@@ -371,7 +367,7 @@ const HowItWorksSection = () => (
 );
 
 const TrustSection = () => (
-  <section className="bg-[#1B3318] py-8 md:py-12" data-testid="trust-section">
+  <section className="bg-[#284525] py-8 md:py-12" data-testid="trust-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Trust & Responsible Gaming" />
       <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
@@ -414,18 +410,18 @@ const FaqSection = () => (
     <div className="mx-auto max-w-3xl px-6">
       <Chapter label="FAQ" tone="light" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1B3318]">
+        <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
           Common <span className="gold-strong">Questions</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2} className="mt-6">
         <Accordion type="single" collapsible className="w-full">
           {FAQ_GROUPS[0].items.slice(0, 5).map((f, i) => (
-            <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#23401F]/15">
-              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#1B3318] hover:text-[#A3941F] hover:no-underline">
+            <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#284525]/15">
+              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#284525] hover:text-[#A3941F] hover:no-underline">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-[#1B3318]/65">{f.a}</AccordionContent>
+              <AccordionContent className="text-sm text-[#284525]/65">{f.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
@@ -438,8 +434,7 @@ const FaqSection = () => (
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-[#23401F] py-10 md:py-14" data-testid="final-cta">
-    <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full glow-gold" />
+  <section className="relative overflow-hidden bg-[#284525] py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal>
         <span className="inline-flex items-center gap-2 rounded-full border border-[#EFE35F]/35 bg-[#EFE35F]/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EFE35F]">

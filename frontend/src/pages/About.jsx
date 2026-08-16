@@ -27,15 +27,15 @@ export default function About() {
               <Reveal key={p.title} delay={0.06 * i}>
                 <div className="card-light h-full p-5" data-testid={`about-pillar-${i}`}>
                   <span className="icon-chip"><p.icon size={18} /></span>
-                  <h3 className="mt-4 font-heading text-base font-bold text-[#1B3318]">{p.title}</h3>
-                  <p className="mt-1.5 text-sm text-[#1B3318]/60">{p.desc}</p>
+                  <h3 className="mt-4 font-heading text-base font-bold text-[#284525]">{p.title}</h3>
+                  <p className="mt-1.5 text-sm text-[#284525]/60">{p.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
         </div>
       </section>
-      <section className="bg-[#23401F] py-8 md:py-12" data-testid="about-vision">
+      <section className="bg-[#284525] py-8 md:py-12" data-testid="about-vision">
         <div className="mx-auto grid max-w-5xl gap-6 px-6 md:grid-cols-2">
           <Reveal>
             <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-vision-card">

@@ -28,6 +28,7 @@ Home (hero, brand statement, Poker, Predictions, Why, App Showcase, Promotions, 
 - v7 (2026-08-14, user feedback "dull"): brightness pass — greens lifted (#284525→#31602C, #1f361d→#274A22, #182b17→#1E3C1A, #30512d→#3A6335), gold #E8DC6A→#EFE35F, light sections #F7F8F1→#FBFCF4, stronger gold glows.
 - v8 (2026-08-14): real app creatives integrated — user-supplied Poker lobby and Predictions screens (/public/creative-poker.jpg, creative-predictions.jpg) now used in hero, home Poker/Predictions sections, two-up App Showcase, Poker page lobby, Predictions page experience, Download page. CSS PhoneMockup retained only for Poker page "The Table" section.
 - v9 (2026-08-16, user feedback): greens darkened — #31602C→#23401F (hero/main), #274A22→#1B3318 (dark sections), #1E3C1A→#142711 (footer), #3A6335→#2C4A27 (cards). Gold #EFE35F unchanged.
+- v10 (2026-08-16, user feedback): uniform brand green — ALL green backgrounds set to original PRD hex #284525 (header, hero, all dark sections, footer); all yellow radial glow patches removed sitewide; cards keep a slightly lighter derived shade #30512D for structure. Palette now: #284525 + #EFE35F gold family + white/light #FBFCF4.
 - Kinetic hero with masked line-by-line reveal, parallax floating phone mockup, giant outlined NEXTZ backdrop.
 - Slow editorial marquee; numbered manifesto chapters 01–11; Lenis momentum scrolling; scroll reveals throughout.
 - CSS-crafted app screen mockups (home, poker lobby, table, predictions, wallet) in premium phone frames.

@@ -13,13 +13,13 @@ export default function Legal({ slug }) {
           {page.sections.map((s, i) => (
             <Reveal key={s.h} delay={0.04 * i}>
               <div className="border-l border-[#A3941F]/40 pl-6">
-                <h2 className="font-heading text-xl font-bold text-[#1B3318]">{s.h}</h2>
-                <p className="mt-3 text-sm md:text-base leading-relaxed text-[#1B3318]/65">{s.p}</p>
+                <h2 className="font-heading text-xl font-bold text-[#284525]">{s.h}</h2>
+                <p className="mt-3 text-sm md:text-base leading-relaxed text-[#284525]/65">{s.p}</p>
               </div>
             </Reveal>
           ))}
           <Reveal delay={0.1}>
-            <p className="text-xs text-[#1B3318]/45">
+            <p className="text-xs text-[#284525]/45">
               This document is provided for information and will be reviewed and approved by legal counsel before public launch. Last updated: {new Date().getFullYear()}.
             </p>
           </Reveal>

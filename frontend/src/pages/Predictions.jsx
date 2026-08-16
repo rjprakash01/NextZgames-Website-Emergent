@@ -22,7 +22,7 @@ export default function Predictions() {
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="01" label="How Predictions Work" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1B3318]">
+            <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
               Four Steps. <span className="gold-strong">One Moment.</span>
             </h2>
           </Reveal>
@@ -31,8 +31,8 @@ export default function Predictions() {
               <Reveal key={s.n} delay={0.07 * i}>
                 <div className="card-light h-full p-5" data-testid={`predictions-step-${s.n}`}>
                   <span className="font-heading text-2xl font-extrabold gold-strong">{s.n}</span>
-                  <h3 className="mt-3 font-heading text-base font-bold text-[#1B3318]">{s.title}</h3>
-                  <p className="mt-1.5 text-sm text-[#1B3318]/60">{s.desc}</p>
+                  <h3 className="mt-3 font-heading text-base font-bold text-[#284525]">{s.title}</h3>
+                  <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -43,7 +43,7 @@ export default function Predictions() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#23401F] py-8 md:py-12" data-testid="predictions-experience-section">
+      <section className="relative overflow-hidden bg-[#284525] py-8 md:py-12" data-testid="predictions-experience-section">
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <div>
             <Chapter n="02" label="The Experience" />
@@ -62,7 +62,6 @@ export default function Predictions() {
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
-            <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
             <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
         </div>

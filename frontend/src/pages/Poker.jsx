@@ -23,18 +23,17 @@ export default function Poker() {
       <section className="section-light py-8 md:py-12" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
-            <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
             <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
           <div className="order-1 lg:order-2">
             <Chapter n="01" label="The Lobby" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1B3318]">
+              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
                 Find Your Table <span className="gold-strong">in Seconds</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#1B3318]/65">
+              <p className="mt-4 max-w-md text-sm md:text-base text-[#284525]/65">
                 Browse available Poker formats, check blinds and open seats, and join the table that fits your game — all from the lobby inside the app.
               </p>
             </Reveal>
@@ -42,7 +41,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#1B3318] py-8 md:py-12" data-testid="poker-features-section">
+      <section className="bg-[#284525] py-8 md:py-12" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="02" label="Features" />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -64,24 +63,23 @@ export default function Poker() {
           <div>
             <Chapter n="03" label="The Table" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1B3318]">
+              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
                 Every Decision, <span className="gold-strong">In Your Hands</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#1B3318]/65">
+              <p className="mt-4 max-w-md text-sm md:text-base text-[#284525]/65">
                 A clean, responsive table interface built for focus — your cards, the pot and your actions always front and centre.
               </p>
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
-            <div className="pointer-events-none absolute inset-0 -m-14 rounded-full glow-gold" />
             <PhoneMockup screen="table" className="relative w-[220px] -rotate-2" />
           </Reveal>
         </div>
       </section>
 
-      <section className="bg-[#23401F] py-16 text-center" data-testid="poker-cta">
+      <section className="bg-[#284525] py-16 text-center" data-testid="poker-cta">
         <div className="mx-auto max-w-2xl px-6">
           <Reveal>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Ready for the table?</h2>

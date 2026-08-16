@@ -18,12 +18,12 @@ export default function HowItWorks() {
             {HOW_IT_WORKS_STEPS.map((s, i) => (
               <Reveal key={s.n} delay={0.06 * i}>
                 <div className="relative flex gap-6 md:gap-8" data-testid={`how-page-step-${s.n}`}>
-                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#23401F] bg-[#23401F] font-heading text-base font-extrabold text-[#EFE35F] shadow-[0_10px_24px_rgba(24,43,23,0.25)]">
+                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#284525] bg-[#284525] font-heading text-base font-extrabold text-[#EFE35F] shadow-[0_10px_24px_rgba(24,43,23,0.25)]">
                     {s.n}
                   </span>
                   <div className="pt-1.5">
-                    <h2 className="font-heading text-xl font-extrabold text-[#1B3318]">{s.title}</h2>
-                    <p className="mt-1.5 max-w-lg text-sm text-[#1B3318]/65">{s.desc}</p>
+                    <h2 className="font-heading text-xl font-extrabold text-[#284525]">{s.title}</h2>
+                    <p className="mt-1.5 max-w-lg text-sm text-[#284525]/65">{s.desc}</p>
                   </div>
                 </div>
               </Reveal>
