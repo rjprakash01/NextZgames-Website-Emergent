@@ -9,7 +9,7 @@ import {
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
 import {
   POKER_FEATURES, PREDICTION_STEPS, WHY_CARDS,
-  HOW_IT_WORKS_STEPS, PROMOTIONS, FAQ_GROUPS,
+  PROMOTIONS, FAQ_GROUPS,
 } from "../data/content";
 import { track } from "../lib/track";
 import { usePageMeta } from "../lib/meta";
@@ -21,6 +21,13 @@ const WHY_ICONS = { scale: Scale, database: Database, card: CreditCard, zap: Zap
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
 const CHIP_COLORS = ["#EFE35F", "#FF7A59", "#5EC8F2", "#9B7FE0", "#4ADE80", "#F2C94C"];
 const STEP_COLORS = ["#8C7A0F", "#0E7C6B", "#D65A3A", "#6A4FA3"];
+const HOME_STEPS = [
+  { n: 1, title: "Download", desc: "Get the official NextZGames app — fast and free." },
+  { n: 2, title: "Register", desc: "Create your account in just a few simple steps." },
+  { n: 3, title: "Explore", desc: "Discover poker and live prediction events." },
+  { n: 4, title: "Play", desc: "Choose your game, make your move, and play your way." },
+];
+
 
 const MaskedLine = ({ children, delay, className = "" }) => (
   <span className="block overflow-hidden pb-1">
@@ -365,15 +372,8 @@ const HowItWorksSection = () => (
           Getting Started <span className="acc-coral">Is Simple</span>
         </h2>
       </Reveal>
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        className="gold-line mt-4 w-44 origin-left"
-      />
       <div className="mt-7 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
-        {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
+        {HOME_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="border-t-2 pt-4" style={{ borderColor: STEP_COLORS[i % STEP_COLORS.length] }} data-testid={`how-step-${s.n}`}>
               <h3 className="font-heading text-base font-bold text-[#122A0E]">
@@ -424,12 +424,12 @@ const FinalCTA = () => (
   <section className="section-light relative overflow-hidden py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal delay={0.1}>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#122A0E]">
-          Your Next Move<br />Starts <span className="acc-coral">Here.</span>
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl lg:whitespace-nowrap font-extrabold tracking-tight text-[#122A0E]">
+          Your Next Move<br className="lg:hidden" /> Starts <span className="acc-coral">Here.</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2}>
-        <p className="mx-auto mt-3 max-w-md text-sm md:text-base text-[#122A0E]/70">
+        <p className="mx-auto mt-3 max-w-md lg:max-w-none text-sm md:text-base text-[#122A0E]/70">
           Download NextZGames and discover Poker and Predictions in one mobile experience.
         </p>
       </Reveal>

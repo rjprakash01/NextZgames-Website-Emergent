@@ -36,10 +36,10 @@ const COLS = [
 ];
 
 const SOCIALS = [
-  { icon: Instagram, label: "Instagram" },
-  { icon: Facebook, label: "Facebook" },
-  { icon: Youtube, label: "YouTube" },
-  { icon: Twitter, label: "X" },
+  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/nextz_games/" },
+  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61593105832190" },
+  { icon: Youtube, label: "YouTube", href: "#" },
+  { icon: Twitter, label: "X", href: "#" },
 ];
 
 export const Footer = () => (
@@ -54,10 +54,11 @@ export const Footer = () => (
             The official home of NextZGames — Poker and Predictions in one mobile experience.
           </p>
           <div className="mt-5 flex gap-3">
-            {SOCIALS.map(({ icon: Icon, label }) => (
+            {SOCIALS.map(({ icon: Icon, label, href }) => (
               <a
                 key={label}
-                href="#"
+                href={href}
+                {...(href !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 aria-label={label}
                 data-testid={`social-${label.toLowerCase()}`}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#EFE35F] hover:text-[#EFE35F]"
