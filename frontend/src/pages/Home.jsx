@@ -18,7 +18,6 @@ import {
 } from "../components/ui/accordion";
 
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
-const CHIP_COLORS = ["#EFE35F", "#FF7A59", "#5EC8F2", "#9B7FE0", "#4ADE80", "#F2C94C"];
 const STEP_COLORS = ["#8C7A0F", "#0E7C6B", "#D65A3A", "#6A4FA3"];
 const HOME_STEPS = [
   { n: 1, title: "Download", desc: "Get the official NextZGames app — fast and free." },
@@ -117,7 +116,7 @@ const PokerSection = () => (
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {POKER_FEATURES.map((f, i) => (
           <Reveal key={f.title} delay={0.07 * i}>
-            <div className="border-t-2 pt-4" style={{ borderColor: CHIP_COLORS[i % CHIP_COLORS.length] }} data-testid={`poker-feature-${i}`}>
+            <div className="border-t-2 border-[#D4C942] pt-4" data-testid={`poker-feature-${i}`}>
               <h3 className="font-heading text-base font-bold text-white">{f.title}</h3>
               <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
             </div>
@@ -168,7 +167,7 @@ const PredictionsSection = () => (
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="border-t-2 pt-4" style={{ borderColor: STEP_COLORS[i % STEP_COLORS.length] }} data-testid={`prediction-step-${s.n}`}>
+            <div className="border-t-2 border-[#D4C942] pt-4" data-testid={`prediction-step-${s.n}`}>
               <h3 className="font-heading text-base font-bold text-[#122A0E]">
                 <span style={{ color: STEP_COLORS[i % STEP_COLORS.length] }}>{s.n}.</span> {s.title}
               </h3>
@@ -315,7 +314,7 @@ const PromotionsSection = () => (
           return (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div className="card-light group relative flex h-full flex-col overflow-hidden p-6" data-testid={`promo-card-${p.slug}`}>
-                <span className="absolute inset-x-0 top-0 h-1" style={{ background: accent }} />
+                <span className="absolute inset-x-0 top-0 h-1 bg-[#D4C942]" />
                 <div className="flex items-center justify-between">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-sm transition-transform duration-300 group-hover:scale-105" style={{ background: accent }}>
                     <Icon size={22} />
