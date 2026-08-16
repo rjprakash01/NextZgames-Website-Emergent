@@ -44,7 +44,7 @@ const StickyMobileCTA = () => {
 };
 
 const Shell = () => (
-  <div className="min-h-screen bg-[#1B3A17] text-white">
+  <div className="min-h-screen bg-[#122A0E] text-white">
     <ScrollToTop />
     <Header />
     <main>

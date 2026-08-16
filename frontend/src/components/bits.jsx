@@ -30,7 +30,7 @@ export const DownloadButton = ({ testid = "download-btn", label = "Download the 
 );
 
 export const PageHero = ({ chapter, label, title, sub, children }) => (
-  <section className="relative overflow-hidden bg-[#1B3A17] pt-20 pb-8 md:pt-24 md:pb-10">
+  <section className="relative overflow-hidden bg-[#122A0E] pt-20 pb-8 md:pt-24 md:pb-10">
     <div className="relative mx-auto max-w-6xl px-6">
       <Chapter n={chapter} label={label} />
       <Reveal delay={0.1}>

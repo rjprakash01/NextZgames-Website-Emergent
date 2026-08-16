@@ -43,7 +43,7 @@ const SOCIALS = [
 ];
 
 export const Footer = () => (
-  <footer data-testid="site-footer" className="relative bg-[#1B3A17] border-t border-[#EFE35F]/15">
+  <footer data-testid="site-footer" className="relative bg-[#122A0E] border-t border-[#EFE35F]/15">
     <div className="h-[3px] w-full bg-gradient-to-r from-[#EFE35F] via-[#EFE35F]/50 to-transparent" />
     <div className="mx-auto max-w-6xl px-6 py-9 md:py-12">
       <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(4,1fr)]">

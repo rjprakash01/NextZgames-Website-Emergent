@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --green: #1B3A17;
+    --green: #122A0E;
     --green-light: #30512D;
-    --green-dark: #1B3A17;
-    --green-darker: #1B3A17;
+    --green-dark: #122A0E;
+    --green-darker: #122A0E;
     --gold: #EFE35F;
     --gold-hover: #F0E57C;
     --gold-dim: rgba(239, 227, 95, 0.2);
@@ -56,7 +56,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     background: linear-gradient(135deg, #F2E77E 0%, #EFE35F 55%, #D6CB52 100%);
-    color: #1B3A17;
+    color: #122A0E;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     letter-spacing: 0.04em;
@@ -102,7 +102,7 @@ body {
 
 .gold-line {
     height: 2px;
-    background: linear-gradient(90deg, #1B3A17, transparent);
+    background: linear-gradient(90deg, #122A0E, transparent);
 }
 
 .card-green {
@@ -192,7 +192,7 @@ body {
 
 .btn-gold {
     background: linear-gradient(135deg, #F2E77E 0%, #EFE35F 55%, #D9CE57 100%);
-    color: #1B3A17;
+    color: #122A0E;
     box-shadow: 0 8px 24px rgba(239, 227, 95, 0.28);
 }
 .btn-gold:hover {
@@ -210,7 +210,7 @@ body {
 
 .icon-chip {
     background: linear-gradient(135deg, #F2E77E, #D9CE57);
-    color: #1B3A17;
+    color: #122A0E;
     box-shadow: 0 8px 20px rgba(239, 227, 95, 0.3);
 }
 
@@ -225,7 +225,7 @@ body {
 /* Light editorial sections */
 .section-light {
     background: #FFFFFF;
-    color: #1B3A17;
+    color: #122A0E;
 }
 
 .card-light {
@@ -242,10 +242,10 @@ body {
 }
 
 .gold-strong {
-    color: #1B3A17;
+    color: #122A0E;
 }
 
-.text-[#1B3A17] {
+.text-[#122A0E] {
     background: linear-gradient(120deg, #F4E98A 0%, #EFE35F 50%, #C9BC44 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -260,7 +260,7 @@ body {
     width: 2.75rem;
     border-radius: 0.9rem;
     background: linear-gradient(135deg, #F2E77E, #D9CE57);
-    color: #1B3A17;
+    color: #122A0E;
     box-shadow: 0 8px 20px rgba(239, 227, 95, 0.3);
 }
 
@@ -270,8 +270,8 @@ body {
     justify-content: center;
     gap: 0.5rem;
     background: transparent;
-    border: 1.5px solid #1B3A17;
-    color: #1B3A17;
+    border: 1.5px solid #122A0E;
+    color: #122A0E;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -292,7 +292,7 @@ body {
     border: 1px solid rgba(40, 69, 37, 0.18);
     border-radius: 0.75rem;
     padding: 0.85rem 1rem;
-    color: #1B3A17;
+    color: #122A0E;
     font-size: 0.9rem;
     outline: none;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -301,6 +301,6 @@ body {
     color: rgba(31, 54, 29, 0.35);
 }
 .input-light:focus {
-    border-color: #1B3A17;
+    border-color: #122A0E;
     box-shadow: 0 0 0 3px rgba(40, 69, 37, 0.12);
 }
