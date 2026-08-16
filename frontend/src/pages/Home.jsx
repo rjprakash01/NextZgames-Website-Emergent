@@ -200,19 +200,19 @@ const WHY_DESKTOP = [
 ];
 
 const WhySection = () => (
-  <section className="bg-white md:bg-[#122A0E] py-9 md:py-12" data-testid="why-section">
+  <section className="bg-[#122A0E] py-9 md:py-12" data-testid="why-section">
     {/* MOBILE ONLY — Play with Confidence */}
     <div className="md:hidden px-6" data-testid="why-mobile">
-      <h2 className="text-center font-heading text-3xl font-extrabold tracking-tight text-[#122A0E]">
+      <h2 className="text-center font-heading text-3xl font-extrabold tracking-tight text-white">
         Play with Confidence
       </h2>
       <div className="mt-9 grid grid-cols-2 gap-x-5 gap-y-11">
         {WHY_MOBILE.map(({ Icon, title, desc }, i) => (
           <Reveal key={title} delay={0.05 * i}>
             <div className="flex flex-col items-center text-center" data-testid={`why-mobile-card-${i}`}>
-              <Icon size={46} strokeWidth={1.4} className="text-[#4B5563]" />
-              <h3 className="mt-4 font-heading text-lg font-bold text-[#122A0E]">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#374151]">{desc}</p>
+              <Icon size={46} strokeWidth={1.4} className="text-[#EFE35F]" />
+              <h3 className="mt-4 font-heading text-lg font-bold text-white">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70">{desc}</p>
             </div>
           </Reveal>
         ))}
