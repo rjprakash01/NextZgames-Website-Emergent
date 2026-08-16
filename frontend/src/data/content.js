@@ -20,10 +20,10 @@ export const POKER_FEATURES = [
 ];
 
 export const PREDICTION_STEPS = [
-  { n: "1", title: "Choose", desc: "Browse live and upcoming events — cricket, football and more, refreshed around the clock." },
-  { n: "2", title: "Predict", desc: "Read the form, trust your call and pick your outcome from clear, transparent options." },
-  { n: "3", title: "Confirm", desc: "Review your selection and lock it in with a single tap. No confusion, no fine print." },
-  { n: "4", title: "Follow", desc: "Track the action live and watch results settle the moment the game is decided." },
+  { n: "1", title: "Live Sports Action", desc: "Stay connected to the action with predictions across cricket, football and more, with live events and markets updated in real time." },
+  { n: "2", title: "Multiple Prediction Markets", desc: "Explore different ways to predict the game — from match outcomes to player, score and game-specific markets." },
+  { n: "3", title: "Clear & Transparent", desc: "See the available options, potential returns and key details clearly before making your prediction." },
+  { n: "4", title: "Follow the Action", desc: "Track your predictions as the game unfolds and stay connected until the final result is decided." },
 ];
 
 export const WHY_CARDS = [

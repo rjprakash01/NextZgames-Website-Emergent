@@ -28,17 +28,56 @@ const HOME_STEPS = [
 ];
 
 
+const HERO_SLIDES = [
+  { desktop: "/hero-desktop-v2.jpg", mobile: "/hero-mobile.jpg" },
+  { desktop: "/hero-desktop2.jpg", mobile: "/hero-mobile2.jpg" },
+];
+
+const HeroCarousel = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((p) => (p + 1) % HERO_SLIDES.length), 3000);
+    return () => clearInterval(id);
+  }, [index]);
+  return (
+    <div className="relative overflow-hidden" data-testid="hero-carousel">
+      <div
+        className="flex transition-transform duration-700 ease-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {HERO_SLIDES.map((s, i) => (
+          <div key={i} className="w-full shrink-0">
+            <picture>
+              <source media="(min-width: 768px)" srcSet={s.desktop} />
+              <img
+                src={s.mobile}
+                alt="The Thrill of Poker & Predictions — NextZGames app"
+                data-testid={`hero-slide-${i}`}
+                className="block h-auto w-full md:h-[78vh] md:object-cover md:object-top"
+              />
+            </picture>
+          </div>
+        ))}
+      </div>
+      <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2">
+        {HERO_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Show hero slide ${i + 1}`}
+            data-testid={`hero-carousel-dot-${i}`}
+            onClick={() => setIndex(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${i === index ? "w-6 bg-[#D4C942]" : "w-2 bg-white/60"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Hero = () => (
   <section data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08] pt-[72px]">
-    <picture>
-      <source media="(min-width: 768px)" srcSet="/hero-desktop-v2.jpg" />
-      <img
-        src="/hero-mobile.jpg"
-        alt="The Thrill of Poker & Predictions — NextZGames app with poker tables, tournaments and game modes"
-        data-testid="hero-image"
-        className="block h-auto w-full md:h-[78vh] md:object-cover md:object-top"
-      />
-    </picture>
+    <HeroCarousel />
   </section>
 );
 
@@ -211,9 +250,7 @@ const PredictionsSection = () => (
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="border-t-2 border-[#D4C942] pt-4" data-testid={`prediction-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#122A0E]">
-                <span style={{ color: STEP_COLORS[i % STEP_COLORS.length] }}>{s.n}.</span> {s.title}
-              </h3>
+              <h3 className="font-heading text-base font-bold text-[#122A0E]">{s.title}</h3>
               <p className="mt-1.5 text-sm text-[#122A0E]/60">{s.desc}</p>
             </div>
           </Reveal>

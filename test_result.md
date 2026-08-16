@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify a new auto-scrolling image carousel inside the Poker section of the NextZGames home page (site root /). The carousel has data-testid='poker-carousel' and lives inside the 'Poker' section (data-testid='poker-section'). It cycles through 3 phone-screenshot images (/poker-slide-1.jpg, /poker-slide-2.jpg, /poker-slide-3.jpg) and should AUTO-ADVANCE every 3 seconds. It also has 3 clickable dot buttons: data-testid='poker-carousel-dot-0', 'poker-carousel-dot-1', 'poker-carousel-dot-2'. Verify on DESKTOP (1440x900) AND MOBILE (390x844)."
+user_problem_statement: "Verify a new auto-scrolling HERO carousel at the top of the NextZGames home page (site root /). The hero carousel has data-testid='hero-carousel' and is inside data-testid='hero-section'. It has 2 slides and should AUTO-ADVANCE every 3 seconds. Each slide is responsive: Slide 0 (data-testid='hero-slide-0'): mobile image /hero-mobile.jpg, desktop image /hero-desktop-v2.jpg; Slide 1 (data-testid='hero-slide-1'): mobile image /hero-mobile2.jpg, desktop image /hero-desktop2.jpg. There are 2 dot buttons: data-testid='hero-carousel-dot-0' and 'hero-carousel-dot-1'. Verify on DESKTOP (1440x900) AND MOBILE (390x844)."
 
 frontend:
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
@@ -219,15 +219,27 @@ frontend:
         agent: "testing"
         comment: "✅ DESKTOP (1440x900) & MOBILE (390x844): Poker carousel (data-testid='poker-carousel') is visible inside poker-section with rounded phone-like frame and border. All 3 images present (/poker-slide-1.jpg, /poker-slide-2.jpg, /poker-slide-3.jpg). Auto-advance working perfectly - advances every ~3 seconds, wraps from slide 3 back to slide 1, continues after manual clicks. Carousel dimensions correct on mobile (240px width). Minor: Race condition exists with dot click functionality - dot buttons work most of the time but occasionally fail when clicked near the moment auto-advance fires. The interval timer should be reset when user clicks a dot. Core functionality working, this is a UX polish issue."
 
+  - task: "Hero carousel - auto-scrolling image carousel with 2 slides at page top"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ DESKTOP (1440x900) & MOBILE (390x844): Hero carousel (data-testid='hero-carousel') is visible at the very top of the home page inside hero-section. Both slides present (hero-slide-0 and hero-slide-1) with correct data-testids. Both dot buttons (hero-carousel-dot-0 and hero-carousel-dot-1) present and functional. Auto-advance working correctly - carousel advances every ~3 seconds and wraps from slide 1 back to slide 0. Extended timing test confirmed: carousel advances at ~4-5s (first advance after component mount), then every ~3s thereafter. Dot click functionality working - clicking dot-1 correctly switches to slide 1. Responsive images working perfectly: Desktop (1440x900) loads desktop images (hero-desktop-v2.jpg for slide 0, hero-desktop2.jpg for slide 1), Mobile (390x844) loads mobile images (hero-mobile.jpg for slide 0, hero-mobile2.jpg for slide 1). Browser currentSrc confirms correct image loading on both viewports. All requirements met."
+
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 4
+  test_sequence: 5
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Poker carousel - auto-scrolling image carousel with 3 slides"
+    - "Hero carousel - auto-scrolling image carousel with 2 slides at page top"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -241,3 +253,5 @@ agent_communication:
     message: "Completed comprehensive testing of redesigned Promotions section. DESKTOP (1440x900): Verified heading 'More Reasons to Play', 3 promotion cards (welcome-boost, refer-and-earn, weekend-predictions) in 3-column grid, all card components present (accent bars, icon tiles, validity badges, titles, descriptions, View Promotion links), and 'View all promotions' link. MOBILE (390x844): Verified cards stack properly in single column, all components readable and well-spaced, responsive behavior working correctly. All visual elements rendering perfectly on both viewports. Screenshots captured. Promotions section is fully functional and matches design requirements."
   - agent: "testing"
     message: "Completed comprehensive testing of new Poker carousel feature. TESTED: Auto-scroll functionality (advances every ~3 seconds, wraps correctly), visual presentation (rounded phone-like frame, all 3 images present), responsive behavior (works on both desktop 1440x900 and mobile 390x844), and dot button functionality. RESULTS: ✅ Carousel is fully functional and visible on both viewports. ✅ Auto-advance working perfectly. ⚠️ Minor UX issue found: Race condition with dot click functionality - dot buttons work most of the time but occasionally fail when clicked near the moment auto-advance fires. RECOMMENDATION: Reset the interval timer when user manually clicks a dot to prevent race condition. This is a minor polish issue and does not break core functionality. Core carousel feature is working as expected."
+  - agent: "testing"
+    message: "Completed comprehensive testing of new HERO carousel feature at the top of the home page. TESTED: Carousel visibility and positioning (at page top inside hero-section), slide elements (2 slides with correct data-testids), dot buttons (2 dots, clickable), auto-advance functionality (timing and wrap-around), responsive images (desktop vs mobile images), and visual presentation on both desktop (1440x900) and mobile (390x844) viewports. RESULTS: ✅ All requirements met. Hero carousel is fully functional on both viewports. ✅ Auto-advance working correctly - advances every ~3 seconds after initial component mount, wraps from slide 1 back to slide 0. ✅ Dot buttons working - clicking switches slides correctly. ✅ Responsive images working perfectly - desktop viewport loads desktop images (hero-desktop-v2.jpg, hero-desktop2.jpg), mobile viewport loads mobile images (hero-mobile.jpg, hero-mobile2.jpg). Extended timing test (12 seconds) confirmed carousel advances and wraps as expected. Screenshots captured for both viewports. Hero carousel feature is production-ready."
