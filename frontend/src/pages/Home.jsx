@@ -256,19 +256,19 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-[#0E230B] py-8 md:py-12" data-testid="promotions-section">
+  <section className="section-light py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
-          <Chapter label="Promotions" />
+          <Chapter label="Promotions" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-              More Reasons <span className="text-gold-gradient">to Play</span>
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#122A0E]">
+              More Reasons <span className="acc-coral">to Play</span>
             </h2>
           </Reveal>
         </div>
         <Reveal delay={0.2}>
-          <Link to="/promotions" data-testid="promotions-view-all" className="group inline-flex items-center gap-2 text-sm font-semibold text-[#EFE35F]">
+          <Link to="/promotions" data-testid="promotions-view-all" className="group inline-flex items-center gap-2 text-sm font-semibold text-[#6A4FA3]">
             View all promotions
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
@@ -297,7 +297,7 @@ const PromotionsSection = () => (
         })}
       </div>
       <Reveal delay={0.2}>
-        <p className="mt-5 text-xs text-white/40">Sample promotions shown for preview. Final offers, eligibility and terms will be published before launch.</p>
+        <p className="mt-5 text-xs text-[#122A0E]/40">Sample promotions shown for preview. Final offers, eligibility and terms will be published before launch.</p>
       </Reveal>
     </div>
   </section>
@@ -390,9 +390,7 @@ export default function Home() {
       <PokerSection />
       <PredictionsSection />
       <WhySection />
-      <AppShowcase />
       <PromotionsSection />
-      <HowItWorksSection />
       <FaqSection />
       <FinalCTA />
     </>
