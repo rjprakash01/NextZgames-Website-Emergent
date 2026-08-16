@@ -48,16 +48,19 @@ export const Header = () => {
             ))}
           </nav>
           <div className="flex items-center gap-3">
-            <Link
-              to="/download"
-              data-testid="header-download-btn"
-              onClick={() => track("download_cta_click", { source: "header" })}
-              className="btn-gold !px-5 !py-2.5 !text-[11px]"
-            >
-              <Download size={14} strokeWidth={2.5} />
-              <span className="hidden sm:inline">Download App</span>
-              <span className="sm:hidden">Get App</span>
-            </Link>
+            <div className="flex flex-col items-center gap-1">
+              <Link
+                to="/download"
+                data-testid="header-download-btn"
+                onClick={() => track("download_cta_click", { source: "header" })}
+                className="btn-gold !px-5 !py-2.5 !text-[11px]"
+              >
+                <Download size={14} strokeWidth={2.5} />
+                <span className="hidden sm:inline">Download App</span>
+                <span className="sm:hidden">Get App</span>
+              </Link>
+              <span data-testid="header-launch-note" className="whitespace-nowrap text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-white/45">Android & iOS — Launching Soon</span>
+            </div>
             <button
               data-testid="mobile-menu-toggle"
               aria-label={open ? "Close menu" : "Open menu"}

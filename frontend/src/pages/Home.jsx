@@ -49,9 +49,9 @@ const Hero = () => {
 
   return (
     <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08]">
-      <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:gap-8">
         <div>
-          <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
+          <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(1.8rem,5.8vw,4.3rem)]">
             <MaskedLine delay={0.25} className="text-gold-gradient">Your Next Move.</MaskedLine>
           </h1>
           <motion.p
@@ -68,19 +68,10 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.85 }}
             className="mt-6 flex flex-wrap items-center gap-3"
           >
-            <DownloadButton testid="hero-download-btn" source="hero" />
-            <Link to="/poker" data-testid="hero-explore-poker-btn" onClick={() => track("cta_click", { source: "hero_poker" })} className="btn-outline">
-              Explore Poker
+            <Link to="/poker" data-testid="hero-explore-games-btn" onClick={() => track("cta_click", { source: "hero_explore" })} className="btn-outline whitespace-nowrap !px-4 sm:!px-7">
+              Explore Games
             </Link>
           </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 1 }}
-            className="mt-4 text-[10px] uppercase tracking-[0.25em] text-white/40"
-          >
-            Android & iOS — Launching Soon
-          </motion.p>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 50, rotate: 4 }}
@@ -93,7 +84,7 @@ const Hero = () => {
               src="/creative-poker.jpg"
               alt="NextZGames Poker app — cash games and tournaments"
               data-testid="hero-phone"
-              className="w-[260px] md:w-[320px] rounded-[2rem] border border-white/15 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+              className="w-full max-w-[150px] sm:max-w-[200px] md:max-w-[320px] rounded-[2rem] border border-white/15 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
             />
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
