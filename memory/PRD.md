@@ -1,4 +1,6 @@
 <!-- Latest update (16 Aug 2026): Home page — added the Brand section's gold-gradient underline divider (gold-line) under the headings of the Poker, Predictions, and How It Works sections. Colored card/step top-borders (CHIP_COLORS/STEP_COLORS) intentionally kept as-is per user choice. Verified via screenshots. -->
+<!-- Update 6 (16 Aug 2026): Hero mobile-only height increase — mobile padding now pt-28/pb-24 (desktop unchanged at md:pt-28/md:pb-16). Verified on 390px viewport. -->
+
 <!-- Update 5 (16 Aug 2026): Hero headline now "The Thrill of Poker & Predictions" at clamp(1.5rem,5.2vw,3.9rem); hero section vertical padding increased (pb-12/pt-24, md:pb-16/md:pt-28) for a slightly bigger section. Verified desktop + mobile. -->
 
 <!-- Update 4 (16 Aug 2026): Hero headline changed to "Experience the Thrill of Poker & Predictions" (gold gradient, clamp min 1.6rem); hero sub-paragraph removed; Explore Games button now btn-gold (gold gradient, dark text) with thinner padding on mobile; hero image enlarged (180/230/360px breakpoints). Header "Android & iOS — Launching Soon" caption now hidden on mobile (sm+ only). Verified desktop + mobile 390px. -->

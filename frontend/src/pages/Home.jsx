@@ -49,7 +49,7 @@ const Hero = () => {
 
   return (
     <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08]">
-      <div className="relative mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 pb-12 pt-24 md:pb-16 md:pt-28 lg:grid-cols-[1.15fr_1fr] lg:gap-8">
+      <div className="relative mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 pb-24 pt-28 md:pb-16 md:pt-28 lg:grid-cols-[1.15fr_1fr] lg:gap-8">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(1.5rem,5.2vw,3.9rem)]">
             <MaskedLine delay={0.25} className="text-gold-gradient">The Thrill of Poker & Predictions</MaskedLine>
