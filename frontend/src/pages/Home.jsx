@@ -1,7 +1,6 @@
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ShieldCheck, Headphones,
   Users, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
@@ -29,62 +28,19 @@ const HOME_STEPS = [
 ];
 
 
-const MaskedLine = ({ children, delay, className = "" }) => (
-  <span className="block overflow-hidden pb-1">
-    <motion.span
-      className={`block ${className}`}
-      initial={{ y: "110%" }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.9, delay, ease: [0.16, 1, 0.3, 1] }}
-    >
-      {children}
-    </motion.span>
-  </span>
+const Hero = () => (
+  <section data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08] pt-[72px]">
+    <picture>
+      <source media="(min-width: 768px)" srcSet="/hero-desktop.jpg" />
+      <img
+        src="/hero-mobile.jpg"
+        alt="The Thrill of Poker & Predictions — NextZGames app with poker tables, tournaments and game modes"
+        data-testid="hero-image"
+        className="block h-auto w-full"
+      />
+    </picture>
+  </section>
 );
-
-const Hero = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
-
-  return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#0B1D08]">
-      <div className="relative mx-auto grid max-w-6xl grid-cols-2 items-center gap-4 px-6 pb-24 pt-28 md:pb-16 md:pt-28 lg:grid-cols-[1.15fr_1fr] lg:gap-8">
-        <div>
-          <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(1.5rem,5.2vw,3.9rem)]">
-            <MaskedLine delay={0.25} className="text-gold-gradient">The Thrill of Poker & Predictions</MaskedLine>
-          </h1>
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.85 }}
-            className="mt-6 flex flex-wrap items-center gap-3"
-          >
-            <Link to="/poker" data-testid="hero-explore-games-btn" onClick={() => track("cta_click", { source: "hero_explore" })} className="btn-gold whitespace-nowrap !px-4 !py-2 sm:!px-7 sm:!py-[0.85rem]">
-              Explore Games
-            </Link>
-          </motion.div>
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 50, rotate: 4 }}
-          animate={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto"
-        >
-          <motion.div style={{ y: phoneY }}>
-            <img
-              src="/creative-poker.jpg"
-              alt="NextZGames Poker app — cash games and tournaments"
-              data-testid="hero-phone"
-              className="w-full max-w-[180px] sm:max-w-[230px] md:max-w-[360px] rounded-[2rem] border border-white/15 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
-            />
-          </motion.div>
-          <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
-        </motion.div>
-      </div>
-    </section>
-  );
-};
 
 const Ticker = () => (
   <div className="bg-[#EFE35F] py-1.5" data-testid="ticker">
