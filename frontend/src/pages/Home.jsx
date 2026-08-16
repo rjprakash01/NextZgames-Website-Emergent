@@ -528,6 +528,8 @@ const PromotionsSection = () => (
               >
                 <span className="absolute inset-x-0 top-0 z-10 h-1 bg-[#D4C942]" />
                 {Decor ? <Decor /> : null}
+                {/* mobile-only scrim so text stays clean over artwork */}
+                <div className="absolute inset-0 z-[5] bg-[linear-gradient(to_right,#0a2109_0%,#0a2109_58%,rgba(10,33,9,0.55)_78%,transparent_100%)] md:hidden" />
                 <div className="relative z-10 flex h-full flex-col">
                   <span className="self-start rounded-full border border-[#D4C942]/40 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#EFE35F]">
                     {p.validity}

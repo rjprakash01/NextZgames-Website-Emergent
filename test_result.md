@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify the redesigned Promotions cards on the NextZGames home page (site root /). The Promotions section has data-testid='promotions-section' with 2 cards: data-testid='promo-card-welcome-boost' and data-testid='promo-card-refer-and-earn'. Each card has a DARK GREEN gradient background with GOLD decorative SVG artwork (no icon tiles anymore). The welcome-boost card shows a gold GIFT BOX with ribbon/bow and gold 'NZ' coins on the right side, plus faint card-suit symbols. The refer-and-earn card shows a gold NETWORK of connected people nodes and gold coins on the right side. Each card has a thin yellow bar at the top, a pill badge with validity text, a bold white title, a white description, and a gold 'View Promotion' link. Verify on DESKTOP (1440x900) AND MOBILE (390x844)."
+user_problem_statement: "Bug verification (MOBILE ONLY): On the NextZGames home page (site root /), a user reported that on MOBILE the Promotions card text was overlapping/mixing with the gold background artwork, making it hard to read. A mobile-only dark gradient scrim was added behind the text to fix this. Verify on MOBILE (390x844) that text is clearly separated from artwork and readable, and on DESKTOP (1440x900) that the fix did not negatively impact the cards."
 
 frontend:
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
@@ -171,7 +171,7 @@ frontend:
         agent: "testing"
         comment: "✅ Mobile section has white background (bg-white class) with dark text (text-[#122A0E]). Visual styling matches clean light layout as expected."
 
-  - task: "Promotions section - redesigned cards with dark green gradient backgrounds and gold SVG artwork"
+  - task: "Promotions section - mobile text readability fix with dark gradient scrim"
     implemented: true
     working: true
     file: "/app/frontend/src/pages/Home.jsx"
@@ -185,6 +185,15 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ MOBILE VIEWPORT (390x844): Both promotion cards stack vertically (refer card below welcome card at y=465.96875 vs y=155.21875). Dark green gradient backgrounds maintained on mobile. Gold SVG artwork visible on both cards. All text elements readable (titles, descriptions, validity badges, View Promotion links). Responsive layout working correctly. Screenshot captured. Redesign is complete and fully functional on both desktop and mobile viewports."
+      - working: "NA"
+        agent: "user"
+        comment: "Bug report: On MOBILE viewport, Promotions card text is overlapping/mixing with the gold background artwork, making it hard to read. Need to add a mobile-only dark gradient scrim behind the text to separate it from the artwork."
+      - working: true
+        agent: "main"
+        comment: "Added mobile-only dark gradient scrim to Promotions cards. Implemented linear-gradient(to_right, #0a2109 0%, #0a2109 58%, rgba(10,33,9,0.55) 78%, transparent 100%) with z-index 5, positioned between artwork and text. Scrim only applies on mobile (md:hidden class). Text container has z-index 10 to sit above scrim. This creates a clean dark-green surface behind text on mobile while keeping artwork visible on the right side."
+      - working: true
+        agent: "testing"
+        comment: "✅ BUG FIX VERIFIED - MOBILE TEXT READABILITY: MOBILE (390x844): Mobile-only scrim successfully implemented on both promo cards (welcome-boost and refer-and-earn). Scrim element present with z-index 5 and correct gradient classes. Text is now CLEARLY SEPARATED from gold artwork and fully readable: (1) Welcome Boost - Title 'Welcome Boost' in white (rgb(255,255,255)), description in white/70% opacity, 'LAUNCH PERIOD' badge visible, 'View Promotion' link in gold. Gold gift box with ribbon and NZ coins VISIBLE on RIGHT side of card. (2) Refer & Earn - Title 'Refer & Earn' in white, description readable, 'ONGOING' badge visible, link in gold. Gold network of people nodes and coins VISIBLE on RIGHT side. The scrim creates a clean dark-green surface behind text (gradient from solid #0a2109 to transparent), preventing text from mixing with artwork. DESKTOP (1440x900): Scrim correctly HIDDEN on desktop (display: none via md:hidden). No negative impact - cards display correctly in 2-column grid, text readable, artwork visible. Desktop layout unaffected by mobile-only fix. Screenshots captured for both viewports. Bug fix is working perfectly."
 
   - task: "Poker carousel - auto-scrolling image carousel with 3 slides"
     implemented: true
@@ -213,12 +222,12 @@ frontend:
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 6
+  test_sequence: 7
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Promotions section - redesigned cards with dark green gradient backgrounds and gold SVG artwork"
+    - "Promotions section - mobile text readability fix with dark gradient scrim"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -236,3 +245,5 @@ agent_communication:
     message: "Completed comprehensive testing of new HERO carousel feature at the top of the home page. TESTED: Carousel visibility and positioning (at page top inside hero-section), slide elements (2 slides with correct data-testids), dot buttons (2 dots, clickable), auto-advance functionality (timing and wrap-around), responsive images (desktop vs mobile images), and visual presentation on both desktop (1440x900) and mobile (390x844) viewports. RESULTS: ✅ All requirements met. Hero carousel is fully functional on both viewports. ✅ Auto-advance working correctly - advances every ~3 seconds after initial component mount, wraps from slide 1 back to slide 0. ✅ Dot buttons working - clicking switches slides correctly. ✅ Responsive images working perfectly - desktop viewport loads desktop images (hero-desktop-v2.jpg, hero-desktop2.jpg), mobile viewport loads mobile images (hero-mobile.jpg, hero-mobile2.jpg). Extended timing test (12 seconds) confirmed carousel advances and wraps as expected. Screenshots captured for both viewports. Hero carousel feature is production-ready."
   - agent: "testing"
     message: "Completed comprehensive testing of REDESIGNED Promotions cards. TESTED: Card backgrounds (dark green gradient vs old white/colored), SVG artwork (gold gift box for welcome-boost, gold network for refer-and-earn), removal of old icon tiles, text readability (white text on dark green), card components (yellow bar, validity badges, titles, descriptions, View Promotion links), and responsive behavior on both desktop (1440x900) and mobile (390x844). RESULTS: ✅ All requirements met. Redesign is complete and fully functional. ✅ Both cards have dark green radial gradient backgrounds (NOT white). ✅ Old colored icon tiles have been REMOVED. ✅ New gold SVG artwork present and visible on both cards (gift box with coins for welcome-boost, network of people nodes with coins for refer-and-earn). ✅ All text elements are white and clearly readable on dark green background. ✅ All card components present and correct (thin yellow bar at top, validity badges, bold white titles, white descriptions, gold View Promotion links). ✅ Responsive layout working perfectly - cards stack vertically on mobile. Screenshots captured for both viewports. Promotions redesign is production-ready."
+  - agent: "testing"
+    message: "Completed verification of MOBILE TEXT READABILITY BUG FIX for Promotions cards. ISSUE: User reported text overlapping/mixing with gold artwork on mobile, making it hard to read. FIX: Mobile-only dark gradient scrim added behind text. VERIFICATION RESULTS: ✅ MOBILE (390x844): Scrim successfully implemented on both cards with correct z-index (5) and gradient (linear-gradient from solid #0a2109 to transparent). Text is now CLEARLY SEPARATED from artwork and fully readable - all titles, descriptions, badges, and links visible in white/gold colors. Gold artwork (gift box + coins for welcome-boost, people network + coins for refer-and-earn) remains VISIBLE on RIGHT side of cards. The scrim creates a clean dark-green surface behind text, preventing any mixing with artwork. ✅ DESKTOP (1440x900): Scrim correctly HIDDEN (display: none via md:hidden class). No negative impact - cards display correctly in 2-column grid, text readable, artwork visible. Desktop layout completely unaffected by mobile-only fix. Screenshots captured for both viewports. Bug fix is working perfectly and ready for production."
