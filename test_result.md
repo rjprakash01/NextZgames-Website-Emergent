@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify a redesigned 'Promotions' section on the NextZGames home page (site root /). The section has data-testid='promotions-section'. Check on BOTH viewports: DESKTOP (1440x900) - heading 'More Reasons to Play', 3 promotion cards in 3-column grid with colored icon tiles, validity badges, titles, descriptions, and 'View Promotion' links with colored accent bars. MOBILE (390x844) - cards stack in single column, readable and well-spaced."
+user_problem_statement: "Verify a new auto-scrolling image carousel inside the Poker section of the NextZGames home page (site root /). The carousel has data-testid='poker-carousel' and lives inside the 'Poker' section (data-testid='poker-section'). It cycles through 3 phone-screenshot images (/poker-slide-1.jpg, /poker-slide-2.jpg, /poker-slide-3.jpg) and should AUTO-ADVANCE every 3 seconds. It also has 3 clickable dot buttons: data-testid='poker-carousel-dot-0', 'poker-carousel-dot-1', 'poker-carousel-dot-2'. Verify on DESKTOP (1440x900) AND MOBILE (390x844)."
 
 frontend:
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
@@ -207,17 +207,27 @@ frontend:
         agent: "testing"
         comment: "✅ All 3 promotion cards verified with complete components: (1) Welcome Boost - purple icon, 'Launch period' badge; (2) Refer & Earn - teal icon, 'Ongoing' badge; (3) Weekend Predictions Special - coral icon, 'Every weekend' badge. Each card has thin colored accent bar at top edge, colored rounded icon tile at top-left, validity badge at top-right, bold title, description text, and colored 'View Promotion' link with arrow icon. All visual elements rendering correctly on both desktop and mobile."
 
+  - task: "Poker carousel - auto-scrolling image carousel with 3 slides"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ DESKTOP (1440x900) & MOBILE (390x844): Poker carousel (data-testid='poker-carousel') is visible inside poker-section with rounded phone-like frame and border. All 3 images present (/poker-slide-1.jpg, /poker-slide-2.jpg, /poker-slide-3.jpg). Auto-advance working perfectly - advances every ~3 seconds, wraps from slide 3 back to slide 1, continues after manual clicks. Carousel dimensions correct on mobile (240px width). Minor: Race condition exists with dot click functionality - dot buttons work most of the time but occasionally fail when clicked near the moment auto-advance fires. The interval timer should be reset when user clicks a dot. Core functionality working, this is a UX polish issue."
+
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 3
+  test_sequence: 4
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Promotions section - desktop layout with 3 cards in 3-column grid"
-    - "Promotions section - mobile responsive layout with stacked cards"
-    - "Promotions section - card components and visual elements"
+    - "Poker carousel - auto-scrolling image carousel with 3 slides"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -229,3 +239,5 @@ agent_communication:
     message: "Completed verification of DESKTOP redesign for 'Why Players Trust NextZGames' section. Desktop layout verified at 1440x900 viewport: centered heading, 6 cards in 3-column grid (2 rows), center-aligned cards with gold/yellow icons, bold white titles, centered descriptions, dark green background (#122A0E). Mobile version (390x844) re-confirmed working correctly with 'Play with Confidence' heading and 2-column grid. Desktop redesign successfully implemented without breaking mobile view. Screenshots captured for both viewports."
   - agent: "testing"
     message: "Completed comprehensive testing of redesigned Promotions section. DESKTOP (1440x900): Verified heading 'More Reasons to Play', 3 promotion cards (welcome-boost, refer-and-earn, weekend-predictions) in 3-column grid, all card components present (accent bars, icon tiles, validity badges, titles, descriptions, View Promotion links), and 'View all promotions' link. MOBILE (390x844): Verified cards stack properly in single column, all components readable and well-spaced, responsive behavior working correctly. All visual elements rendering perfectly on both viewports. Screenshots captured. Promotions section is fully functional and matches design requirements."
+  - agent: "testing"
+    message: "Completed comprehensive testing of new Poker carousel feature. TESTED: Auto-scroll functionality (advances every ~3 seconds, wraps correctly), visual presentation (rounded phone-like frame, all 3 images present), responsive behavior (works on both desktop 1440x900 and mobile 390x844), and dot button functionality. RESULTS: ✅ Carousel is fully functional and visible on both viewports. ✅ Auto-advance working perfectly. ⚠️ Minor UX issue found: Race condition with dot click functionality - dot buttons work most of the time but occasionally fail when clicked near the moment auto-advance fires. RECOMMENDATION: Reset the interval timer when user manually clicks a dot to prevent race condition. This is a minor polish issue and does not break core functionality. Core carousel feature is working as expected."

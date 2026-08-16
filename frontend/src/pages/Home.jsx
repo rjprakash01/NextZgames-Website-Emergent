@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
@@ -82,6 +83,48 @@ const BrandStatement = () => (
   </section>
 );
 
+const POKER_SLIDES = ["/poker-slide-1.jpg", "/poker-slide-2.jpg", "/poker-slide-3.jpg"];
+
+const PokerCarousel = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((p) => (p + 1) % POKER_SLIDES.length), 3000);
+    return () => clearInterval(id);
+  }, [index]);
+  return (
+    <div className="relative w-[240px] md:w-[280px] overflow-hidden rounded-[1.8rem] border border-white/15 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" data-testid="poker-carousel">
+      <div
+        className="flex transition-transform duration-700 ease-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {POKER_SLIDES.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`NextZGames Poker app screen ${i + 1}`}
+            loading="lazy"
+            className="w-full shrink-0 object-cover"
+            style={{ aspectRatio: "400 / 806" }}
+          />
+        ))}
+      </div>
+      <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">
+        {POKER_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Show poker screen ${i + 1}`}
+            data-testid={`poker-carousel-dot-${i}`}
+            onClick={() => setIndex(i)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-5 bg-[#D4C942]" : "w-1.5 bg-white/50"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
 const PokerSection = () => (
   <section className="relative overflow-hidden bg-[#163311] py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
@@ -110,7 +153,7 @@ const PokerSection = () => (
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
-          <img src="/creative-poker-v3.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+          <PokerCarousel />
         </Reveal>
       </div>
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
