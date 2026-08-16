@@ -136,7 +136,7 @@ const BrandStatement = () => (
 );
 
 const PokerSection = () => (
-  <section className="relative overflow-hidden bg-plum py-8 md:py-12" data-testid="poker-section">
+  <section className="relative overflow-hidden bg-[#163311] py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
@@ -296,7 +296,7 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-coral-deep py-8 md:py-12" data-testid="promotions-section">
+  <section className="bg-[#0E230B] py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
@@ -372,7 +372,7 @@ const HowItWorksSection = () => (
 );
 
 const TrustSection = () => (
-  <section className="bg-plum py-8 md:py-12" data-testid="trust-section">
+  <section className="bg-[#1A3D15] py-8 md:py-12" data-testid="trust-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Trust & Responsible Gaming" />
       <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
@@ -439,7 +439,7 @@ const FaqSection = () => (
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-teal-deep py-10 md:py-14" data-testid="final-cta">
+  <section className="relative overflow-hidden bg-[#0F260C] py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal delay={0.1}>
         <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
