@@ -432,7 +432,7 @@ const PromotionsSection = () => (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div
                 className="group relative flex h-full min-h-[220px] flex-col overflow-hidden rounded-[1.25rem] p-6 shadow-[0_20px_45px_rgba(10,31,8,0.35)]"
-                style={{ background: "linear-gradient(180deg, #0a2109 0%, #143f16 40%, #4d6a17 72%, #C9A227 100%)" }}
+                style={{ background: "linear-gradient(180deg, #0a2109 0%, #0a2109 80%, #5a9e42 100%)" }}
                 data-testid={`promo-card-${p.slug}`}
               >
                 <span className="self-start rounded-full border border-white/30 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#E3B84A]">

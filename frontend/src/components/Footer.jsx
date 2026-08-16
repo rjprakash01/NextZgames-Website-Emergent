@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 import { Logo } from "./Logo";
 
 const COLS = [
@@ -38,8 +38,6 @@ const COLS = [
 const SOCIALS = [
   { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/nextz_games/" },
   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61593105832190" },
-  { icon: Youtube, label: "YouTube", href: "#" },
-  { icon: Twitter, label: "X", href: "#" },
 ];
 
 export const Footer = () => (
