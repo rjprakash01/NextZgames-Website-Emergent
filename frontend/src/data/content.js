@@ -9,7 +9,6 @@ export const NAV_LINKS = [
 ];
 
 export const MOBILE_EXTRA_LINKS = [
-  { to: "/responsible-gaming", label: "Responsible Gaming" },
   { to: "/contact", label: "Contact" },
 ];
 
