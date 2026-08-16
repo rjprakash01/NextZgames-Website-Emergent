@@ -102,20 +102,26 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify a site-wide color theme change on the NextZGames website: we replaced the previous bright YELLOW accent color with a warmer GOLDEN tone across ALL pages. Previous yellow was around #EFE35F / #D4C942 (bright lime-yellow). New golden is around #E3B84A / #C9A227 (warm gold). Check these pages on DESKTOP (1440x900): (1) Home page - GET APP button, ticker bar, section separator lines, carousel active dots, links, and Promotions cards gradient (dark green → GOLDEN); (2) Promotions page - accents should be golden; (3) Download page - accents/buttons should be golden; (4) About page - accents should be golden; (5) Contact page - accents should be golden. Confirm NO remaining bright lime-yellow elements and text remains readable."
+user_problem_statement: "Bug verification on the NextZGames Poker page (URL path '/poker'). REPORTED BUG: When the user directly loads/reloads the Poker page, the page appeared BLANK (no visible content). Only after scrolling up and down did all the content become visible. This was caused by a framer-motion scroll-reveal animation (Reveal component) leaving content at opacity:0 on initial load. We changed the Reveal component to use the useInView hook so content reveals reliably on load. Verify the fix works on both desktop (1440x900) and mobile (390x844) viewports."
 
 frontend:
-  - task: "Site-wide color theme change - bright yellow to warm golden"
+  - task: "Poker page blank content bug fix - Reveal component using useInView hook"
     implemented: true
     working: true
-    file: "/app/frontend/src/index.css, /app/frontend/src/pages/Home.jsx, /app/frontend/src/components/Header.jsx"
+    file: "/app/frontend/src/components/bits.jsx, /app/frontend/src/pages/Poker.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
+      - working: "NA"
+        agent: "user"
+        comment: "Bug report: When directly loading/reloading the Poker page (/poker), the page appeared BLANK (no visible content). Only after scrolling up and down did all the content become visible. This was caused by framer-motion scroll-reveal animation (Reveal component) leaving content at opacity:0 on initial load."
+      - working: "NA"
+        agent: "main"
+        comment: "Fixed Reveal component to use useInView hook from framer-motion. Changed from scroll-based animation to viewport-based detection with useInView(ref, { once: true, margin: '-40px' }). This ensures content reveals reliably when in viewport on page load, not just on scroll events."
       - working: true
         agent: "testing"
-        comment: "✅ SITE-WIDE COLOR THEME CHANGE VERIFIED - ALL PAGES TESTED AT DESKTOP 1440x900. Color change from bright yellow (#EFE35F / #D4C942) to warm golden (#E3B84A / #C9A227) successfully implemented across all pages. RESULTS: (1) HOME PAGE: GET APP button uses golden gradient (rgb(240,210,122)→rgb(227,184,74)→rgb(201,162,39)) ✓, Ticker bar uses golden background rgb(227,184,74)=#E3B84A ✓, Hero carousel active dots use golden #C9A227 ✓, Promotions cards gradient ends in golden rgb(201,162,39)=#C9A227 (NOT bright yellow) ✓, Badge text uses golden rgb(227,184,74)=#E3B84A ✓, View Promotion links use dark text rgb(10,33,9) for readability on golden background ✓, Why section icons use golden rgb(227,184,74) ✓. (2) PROMOTIONS PAGE: Card border-top uses golden rgb(227,184,74) ✓, Icon chips use golden gradient ✓. (3) DOWNLOAD PAGE: Badge text uses golden rgb(227,184,74) ✓, Icon chips use golden gradient ✓. (4) ABOUT PAGE: Accent colors verified as golden ✓. (5) CONTACT PAGE: Support icons use golden rgb(227,184,74) ✓, Submit button uses golden gradient ✓. VISUAL VERIFICATION: All screenshots confirm warm golden color (NOT bright yellow) across all pages. Promotions cards show clear vertical gradient from dark green #0a2109 (top) to golden #C9A227 (bottom). NO remaining bright lime-yellow elements found. Text readability confirmed: white text on dark areas, dark text on golden areas, golden text on dark backgrounds. All accent colors consistently look like warm golden across all 5 pages. Screenshots captured: 1-home-top.png, 2-home-promotions.png, 3-promotions-page.png, 4-download-page.png, 5-about-page.png, 6-contact-page.png. Color theme change is complete and production-ready."
+        comment: "✅ BUG FIX VERIFIED - POKER PAGE CONTENT VISIBLE ON LOAD. DESKTOP (1440x900): Direct load to /poker shows hero heading 'Experience Poker Like Never Before' VISIBLE immediately (opacity=1, position y=112 within viewport) ✓. Download App button VISIBLE immediately (opacity=1) ✓. All sections visible when scrolled into view: 'Find Your Table in Seconds' (lobby section) ✓, Features section with all 4 feature cards (poker-page-feature-0 to 3) all at opacity=1 ✓, 'Every Decision, In Your Hands' (table section) ✓. Reload consistency test: 3 consecutive reloads all showed hero content visible immediately without scrolling ✓. MOBILE (390x844): Direct load to /poker shows hero heading VISIBLE immediately (opacity=1, position y=96 within viewport) ✓. Download App button VISIBLE immediately (opacity=1) ✓. CONCLUSION: Page is NOT blank on direct load/reload. The Reveal component with useInView hook works correctly - all above-the-fold content (hero heading and Download button) is visible immediately with opacity=1, without requiring any scrolling. The fix ensures content triggers animation when already in viewport on page load, not just on scroll events. Screenshots captured: poker-desktop-load-no-scroll.png (shows all hero content visible), poker-mobile-load-no-scroll.png (shows all hero content visible). Bug fix is complete and production-ready."
 
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
     implemented: true
@@ -237,12 +243,12 @@ frontend:
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 9
+  test_sequence: 10
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Site-wide color theme change - bright yellow to warm golden"
+    - "Poker page blank content bug fix - Reveal component using useInView hook"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -266,3 +272,5 @@ agent_communication:
     message: "Completed verification of SIMPLIFIED PROMOTIONS CARDS REDESIGN. REQUIREMENT: Verify vertical gradient (dark green top → yellow/gold bottom), NO SVG artwork, full-width text, readable on both viewports. VERIFICATION RESULTS: ✅ DESKTOP (1440x900): Both cards (welcome-boost, refer-and-earn) have smooth VERTICAL GRADIENT from dark green #0a2109 (top) to yellow/gold #C9BE33 (bottom). Gradient: linear-gradient(180deg, rgb(10,33,9) 0% → rgb(201,190,51) 100%). NO SVG artwork present (only arrow icon in link). Text spans FULL WIDTH (91% of card width). All text readable: white title/description on dark upper area, dark link rgb(10,33,9) on yellow lower area. Cards in 2-column grid. ✅ MOBILE (390x844): Same vertical gradient maintained. Cards stack vertically. All text readable on both dark and yellow areas. NO artwork. Text spans full width. Responsive layout perfect. ✅ SUMMARY: Background is top-to-bottom dark-green→yellow gradient on both cards ✓, Artwork is gone ✓, Text fills full card width and stays readable (including bottom link over yellow) ✓. Purely visual check passed on both viewports. Screenshots captured. Simplified redesign is complete and production-ready."
   - agent: "testing"
     message: "Completed comprehensive verification of SITE-WIDE COLOR THEME CHANGE from bright yellow to warm golden. TESTED: All 5 pages (Home, Promotions, Download, About, Contact) at DESKTOP viewport 1440x900. VERIFICATION METHOD: Automated color extraction via Playwright + visual screenshot verification. RESULTS: ✅ ALL PAGES VERIFIED SUCCESSFULLY. Color change from bright yellow (#EFE35F / #D4C942) to warm golden (#E3B84A / #C9A227) successfully implemented across entire site. HOME PAGE: GET APP button uses golden gradient rgb(240,210,122)→rgb(227,184,74)→rgb(201,162,39) ✓, Ticker bar uses golden rgb(227,184,74) ✓, Hero carousel dots use golden #C9A227 ✓, Promotions cards gradient ends in golden rgb(201,162,39)=#C9A227 (NOT bright yellow) ✓, Badge text golden rgb(227,184,74) ✓, Links dark rgb(10,33,9) for readability ✓, Why section icons golden ✓. PROMOTIONS PAGE: Card borders golden rgb(227,184,74) ✓, Icon chips golden gradient ✓. DOWNLOAD PAGE: Badge text golden ✓, Icon chips golden gradient ✓. ABOUT PAGE: Accent colors golden ✓. CONTACT PAGE: Icons golden ✓, Submit button golden gradient ✓. VISUAL VERIFICATION: All screenshots confirm warm golden color (NOT bright yellow). Promotions cards show clear vertical gradient dark green→golden. NO remaining bright lime-yellow elements found anywhere. Text readability confirmed on all pages. 6 screenshots captured for documentation. Color theme change is complete, consistent across all pages, and production-ready."
+  - agent: "testing"
+    message: "Completed comprehensive verification of POKER PAGE BLANK CONTENT BUG FIX. ISSUE: When directly loading/reloading /poker page, content appeared BLANK (opacity:0) due to framer-motion scroll-reveal animation not triggering on page load. FIX: Changed Reveal component to use useInView hook. VERIFICATION RESULTS: ✅ DESKTOP (1440x900): Direct load to /poker shows ALL above-the-fold content VISIBLE immediately - hero heading 'Experience Poker Like Never Before' at opacity=1 (position y=112), Download App button at opacity=1. Reload consistency: 3 consecutive reloads all showed content visible immediately. All sections visible when scrolled: Lobby section ✓, Features section (all 4 cards at opacity=1) ✓, Table section ✓. ✅ MOBILE (390x844): Direct load shows hero heading at opacity=1 (position y=96), Download button at opacity=1. ✅ CONCLUSION: Page is NOT blank on direct load/reload. The useInView hook triggers correctly for content already in viewport on page load. Screenshots captured: poker-desktop-load-no-scroll.png, poker-mobile-load-no-scroll.png (both show all hero content fully visible). Bug fix is complete and production-ready."

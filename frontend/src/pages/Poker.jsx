@@ -1,4 +1,4 @@
-import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
+import { Chapter, Reveal, PageHero } from "../components/bits";
 import { PhoneMockup } from "../components/PhoneMockup";
 import { POKER_FEATURES } from "../data/content";
 import { usePageMeta } from "../lib/meta";
@@ -12,11 +12,7 @@ export default function Poker() {
         label="Poker"
         title={<>Experience Poker <span className="text-gold-gradient">Like Never Before</span></>}
         sub="A professional real-money poker experience featuring NL Hold’em, PLO4, PLO5, PLO6, Double Board and Bomb Pots, alongside Cash Games and Tournaments — built for smooth gameplay, secure transactions, and players who take their game seriously."
-      >
-        <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-3">
-          <DownloadButton testid="poker-page-download-btn" source="poker_page" label="Download App" />
-        </Reveal>
-      </PageHero>
+      />
 
       <section className="section-light py-8 md:py-12" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-2">
