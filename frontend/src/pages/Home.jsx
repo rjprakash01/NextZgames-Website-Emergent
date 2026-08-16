@@ -72,9 +72,12 @@ const BrandStatement = () => (
         className="gold-line mt-5 w-44 origin-left"
       />
       <Reveal delay={0.25}>
-        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#122A0E]/70">
-          NextZGames brings Poker and Predictions together in one crafted mobile experience. Poker rewards patience; predictions reward instinct — we built a home for both, fast to learn and deep enough to master.
-        </p>
+        <div className="mt-5 max-w-2xl space-y-3 text-sm md:text-base text-[#122A0E]/70">
+          <p>NextZGames is a technology-driven real-money gaming platform built for Poker and Predictions. We combine gaming expertise, technology, and player-focused design to deliver a secure, reliable, and seamless real-money gaming experience.</p>
+          <p>From intuitive gameplay and secure account management to protected data, secure transactions, fast withdrawals, and reliable support, every part of our platform is designed with trust and performance in mind.</p>
+          <p>Our focus is simple: build better gaming technology, deliver great player experiences, and create a platform players can trust.</p>
+          <p className="font-semibold text-[#122A0E]">Technology Driven. Gaming Focused. Built on Trust.</p>
+        </div>
       </Reveal>
     </div>
   </section>
@@ -104,8 +107,7 @@ const PokerSection = () => (
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
-            <Link to="/poker" data-testid="poker-section-explore-btn" onClick={() => track("cta_click", { source: "home_poker" })} className="btn-outline">Explore Poker</Link>
-            <DownloadButton testid="poker-section-download-btn" source="home_poker" />
+            <Link to="/poker" data-testid="poker-section-explore-btn" onClick={() => track("cta_click", { source: "home_poker" })} className="inline-flex items-center gap-2 rounded-full bg-[#D4C942] px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#e2d84f]">Explore Poker</Link>
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
