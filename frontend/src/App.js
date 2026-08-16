@@ -28,7 +28,7 @@ const ScrollToTop = () => {
 
 const StickyMobileCTA = () => {
   const { pathname } = useLocation();
-  if (pathname === "/download" || pathname === "/contact") return null;
+  if (pathname === "/download" || pathname === "/contact" || pathname === "/predictions") return null;
   return (
     <div className="fixed inset-x-4 bottom-4 z-40 md:hidden" data-testid="sticky-mobile-cta">
       <Link
