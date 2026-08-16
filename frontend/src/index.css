@@ -179,47 +179,47 @@ body {
     .float-slow { animation: none; }
 }
 
-/* Golden theme — brand green becomes the foreground on gold backgrounds */
+/* Dark green theme — gold is the accent on green */
 body {
-    background: #EFE35F;
-    color: #254F1F;
+    background: var(--green-darker);
+    color: #ffffff;
 }
 
 ::selection {
-    background: #254F1F;
-    color: #EFE35F;
+    background: var(--gold);
+    color: var(--green-darker);
 }
 
 .btn-gold {
-    background: linear-gradient(135deg, #2E5F29 0%, #254F1F 100%);
-    color: #EFE35F;
-    box-shadow: 0 8px 24px rgba(37, 79, 31, 0.35);
+    background: linear-gradient(135deg, #F2E77E 0%, #EFE35F 55%, #D9CE57 100%);
+    color: #254F1F;
+    box-shadow: 0 8px 24px rgba(239, 227, 95, 0.28);
 }
 .btn-gold:hover {
-    filter: brightness(1.12);
-    box-shadow: 0 14px 36px rgba(37, 79, 31, 0.45);
+    filter: brightness(1.06);
+    box-shadow: 0 14px 36px rgba(239, 227, 95, 0.4);
 }
 
 .btn-outline {
-    border-color: #254F1F;
-    color: #254F1F;
+    border-color: var(--gold);
+    color: var(--gold);
 }
 .btn-outline:hover {
-    background: rgba(37, 79, 31, 0.1);
+    background: rgba(239, 227, 95, 0.12);
 }
 
 .icon-chip {
-    background: linear-gradient(135deg, #2E5F29, #254F1F);
-    color: #EFE35F;
-    box-shadow: 0 8px 20px rgba(37, 79, 31, 0.3);
+    background: linear-gradient(135deg, #F2E77E, #D9CE57);
+    color: #254F1F;
+    box-shadow: 0 8px 20px rgba(239, 227, 95, 0.3);
 }
 
 .card-green {
-    background: #ffffff;
-    border: 1px solid rgba(37, 79, 31, 0.14);
+    background: linear-gradient(160deg, rgba(48, 81, 45, 0.55), rgba(37, 79, 31, 0.85));
+    border: 1px solid rgba(239, 227, 95, 0.14);
 }
 .card-green:hover {
-    border-color: rgba(37, 79, 31, 0.35);
+    border-color: rgba(239, 227, 95, 0.45);
 }
 
 /* Light editorial sections */

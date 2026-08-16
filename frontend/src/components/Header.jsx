@@ -25,7 +25,7 @@ export const Header = () => {
         data-testid="site-header"
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500 ${
           scrolled || open
-            ? "bg-[#EFE35F]/90 backdrop-blur-md border-b border-[#254F1F]/15"
+            ? "bg-[#254F1F]/90 backdrop-blur-md border-b border-[#EFE35F]/15"
             : "bg-transparent border-b border-transparent"
         }`}
       >
@@ -39,7 +39,7 @@ export const Header = () => {
                 data-testid={`nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
                 className={({ isActive }) =>
                   `text-[13px] font-medium tracking-wide transition-colors duration-300 ${
-                    isActive ? "text-[#254F1F]" : "text-[#254F1F]/75 hover:text-[#254F1F]"
+                    isActive ? "text-[#EFE35F]" : "text-white/75 hover:text-white"
                   }`
                 }
               >
@@ -62,7 +62,7 @@ export const Header = () => {
               data-testid="mobile-menu-toggle"
               aria-label={open ? "Close menu" : "Open menu"}
               onClick={() => setOpen((v) => !v)}
-              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-[#254F1F]/15 text-[#254F1F] transition-colors duration-300 hover:border-[#254F1F]/40"
+              className="lg:hidden flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition-colors duration-300 hover:border-[#EFE35F]/60"
             >
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -78,7 +78,7 @@ export const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 top-[72px] z-40 lg:hidden bg-[#EFE35F]/95 backdrop-blur-md border-b border-[#254F1F]/15"
+            className="fixed inset-x-0 top-[72px] z-40 lg:hidden bg-[#254F1F]/95 backdrop-blur-md border-b border-[#EFE35F]/15"
           >
             <nav className="flex flex-col px-6 py-6" aria-label="Mobile">
               {[...NAV_LINKS, ...MOBILE_EXTRA_LINKS].map((l, i) => (
@@ -92,13 +92,13 @@ export const Header = () => {
                     to={l.to}
                     data-testid={`mobile-nav-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
                     className={({ isActive }) =>
-                      `flex items-center justify-between border-b border-[#254F1F]/10 py-4 font-heading text-lg font-bold tracking-wide ${
-                        isActive ? "text-[#254F1F]" : "text-[#254F1F]"
+                      `flex items-center justify-between border-b border-white/10 py-4 font-heading text-lg font-bold tracking-wide ${
+                        isActive ? "text-[#EFE35F]" : "text-white"
                       }`
                     }
                   >
                     {l.label}
-                    <span className="text-[#254F1F]/50 text-xs font-normal">0{i + 1}</span>
+                    <span className="text-[#EFE35F]/50 text-xs font-normal">0{i + 1}</span>
                   </NavLink>
                 </motion.div>
               ))}

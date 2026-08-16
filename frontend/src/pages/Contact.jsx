@@ -67,14 +67,14 @@ export default function Contact() {
             <Reveal delay={0.1}>
               <div className="mt-6 space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EFE35F] text-[#254F1F]"><Mail size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#254F1F] text-[#EFE35F]"><Mail size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#254F1F]/50">Support Email</p>
                     <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#254F1F] hover:text-[#254F1F]">support@nextzgames.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EFE35F] text-[#254F1F]"><Clock size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#254F1F] text-[#EFE35F]"><Clock size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#254F1F]/50">Support Hours</p>
                     <p className="mt-1 font-heading font-bold text-[#254F1F]">Mon – Sun, 9:00 – 21:00 IST</p>

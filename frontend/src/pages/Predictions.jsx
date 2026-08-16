@@ -1,5 +1,4 @@
 import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
-import { PhoneMockup } from "../components/PhoneMockup";
 import { PREDICTION_STEPS } from "../data/content";
 import { usePageMeta } from "../lib/meta";
 
@@ -10,7 +9,7 @@ export default function Predictions() {
       <PageHero
         chapter="PR"
         label="Predictions"
-        title={<>Predict the Outcome. <span className="text-[#254F1F]">Own the Moment.</span></>}
+        title={<>Predict the Outcome. <span className="text-gold-gradient">Own the Moment.</span></>}
         sub="Back your instincts on live sports and events — clear options, transparent outcomes and settlement the moment the game is decided."
       >
         <Reveal delay={0.3} className="mt-6">
@@ -20,9 +19,9 @@ export default function Predictions() {
 
       <section className="section-light py-8 md:py-12" data-testid="predictions-steps-section">
         <div className="mx-auto max-w-6xl px-6">
-          <Chapter n="01" label="How Predictions Work" tone="light" />
+          <Chapter label="How Predictions Work" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
               Four Steps. <span className="gold-strong">One Moment.</span>
             </h2>
           </Reveal>
@@ -31,38 +30,38 @@ export default function Predictions() {
               <Reveal key={s.n} delay={0.07 * i}>
                 <div className="card-light h-full p-5" data-testid={`predictions-step-${s.n}`}>
                   <span className="font-heading text-2xl font-extrabold gold-strong">{s.n}</span>
-                  <h3 className="mt-3 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
+                  <h3 className="mt-2 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
                   <p className="mt-1.5 text-sm text-[#254F1F]/60">{s.desc}</p>
                 </div>
               </Reveal>
             ))}
           </div>
-          <Reveal delay={0.25} className="mt-6">
+          <Reveal delay={0.25} className="mt-7">
             <DownloadButton testid="predictions-steps-download-btn" source="predictions_steps" />
           </Reveal>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#EFE35F] py-8 md:py-12" data-testid="predictions-experience-section">
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-[#254F1F] py-8 md:py-12" data-testid="predictions-experience-section">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-2">
           <div>
-            <Chapter n="02" label="The Experience" />
+            <Chapter label="The Experience" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
-                From Event List <span className="text-[#254F1F]">to Result</span>
+              <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
+                From Event List <span className="text-gold-gradient">to Result</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#254F1F]/70">
+              <p className="mt-3 max-w-md text-sm md:text-base text-white/70">
                 Browse available events, review prediction options, confirm your selection and follow the outcome — every step designed to be clear and fast on mobile.
               </p>
             </Reveal>
-            <Reveal delay={0.3} className="mt-6">
+            <Reveal delay={0.3} className="mt-5">
               <DownloadButton testid="predictions-experience-download-btn" source="predictions_experience" />
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
-            <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#254F1F]/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+            <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function HowItWorks() {
             {HOW_IT_WORKS_STEPS.map((s, i) => (
               <Reveal key={s.n} delay={0.06 * i}>
                 <div className="relative flex gap-6 md:gap-8" data-testid={`how-page-step-${s.n}`}>
-                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#254F1F] bg-[#EFE35F] font-heading text-base font-extrabold text-[#254F1F] shadow-[0_10px_24px_rgba(24,43,23,0.25)]">
+                  <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#254F1F] bg-[#254F1F] font-heading text-base font-extrabold text-[#EFE35F] shadow-[0_10px_24px_rgba(24,43,23,0.25)]">
                     {s.n}
                   </span>
                   <div className="pt-1.5">
