@@ -103,7 +103,7 @@ const PokerSection = () => (
           />
           <Reveal delay={0.2}>
             <p className="mt-3 max-w-md text-sm md:text-base text-white/70">
-              Cash games, tournaments and classic formats at every stake — every hand plays fast, fair and beautifully on your phone. This is poker built for the mobile generation.
+              From NL Hold’em to PLO4, PLO5 and PLO6, experience a wide range of poker formats including Double Board, Bomb Pots, Cash Games and Tournaments — all designed for players who want more action, more variety, and more ways to play.
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
