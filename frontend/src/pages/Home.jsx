@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  Users, Smartphone, Layers, Compass, ShieldCheck, Headphones,
-  Lock, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
+  ShieldCheck, Headphones,
+  Users, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
 } from "lucide-react";
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
 import {
-  POKER_FEATURES, PREDICTION_STEPS, WHY_CARDS, TRUST_ITEMS,
+  POKER_FEATURES, PREDICTION_STEPS, WHY_CARDS,
   HOW_IT_WORKS_STEPS, PROMOTIONS, FAQ_GROUPS,
 } from "../data/content";
 import { track } from "../lib/track";
@@ -17,8 +17,7 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "../components/ui/accordion";
 
-const WHY_ICONS = { users: Users, smartphone: Smartphone, layers: Layers, compass: Compass, shield: ShieldCheck, headphones: Headphones };
-const TRUST_ICONS = { lock: Lock, database: Database, card: CreditCard, scale: Scale };
+const WHY_ICONS = { scale: Scale, database: Database, card: CreditCard, zap: Zap, shield: ShieldCheck, headphones: Headphones };
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
 const CHIP_COLORS = ["#EFE35F", "#FF7A59", "#5EC8F2", "#9B7FE0", "#4ADE80", "#F2C94C"];
 const STEP_COLORS = ["#8C7A0F", "#0E7C6B", "#D65A3A", "#6A4FA3"];
@@ -371,44 +370,6 @@ const HowItWorksSection = () => (
   </section>
 );
 
-const TrustSection = () => (
-  <section className="bg-[#1A3D15] py-8 md:py-12" data-testid="trust-section">
-    <div className="mx-auto max-w-6xl px-6">
-      <Chapter label="Trust & Responsible Gaming" />
-      <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
-        <div>
-          <Reveal delay={0.1}>
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-              Play With <span className="text-gold-gradient">Confidence</span>
-            </h2>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-3 text-sm md:text-base text-white/70">
-              Real-money gaming demands real trust. NextZGames is built on verified accounts, encrypted transactions and clear rules — and on the belief that gaming should stay entertainment. Set limits, take breaks, and never chase losses.
-            </p>
-          </Reveal>
-          <Reveal delay={0.3} className="mt-5">
-            <Link to="/responsible-gaming" data-testid="trust-responsible-gaming-link" className="btn-outline">Responsible Gaming</Link>
-          </Reveal>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {TRUST_ITEMS.map((t, i) => {
-            const Icon = TRUST_ICONS[t.icon];
-            return (
-              <Reveal key={t.title} delay={0.06 * i}>
-                <div className="rounded-[1.25rem] border border-white/15 bg-white/10 h-full p-5" data-testid={`trust-card-${i}`}>
-                  <span className="icon-chip !h-10 !w-10" style={{ background: ["#EFE35F", "#5EC8F2", "#4ADE80", "#9B7FE0"][i % 4], color: "#122A0E" }}><Icon size={17} /></span>
-                  <h3 className="mt-3 font-heading text-base font-bold text-white">{t.title}</h3>
-                  <p className="mt-1.5 text-sm text-white/60">{t.desc}</p>
-                </div>
-              </Reveal>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  </section>
-);
 
 const FaqSection = () => (
   <section className="section-light py-8 md:py-12" data-testid="faq-section">
@@ -471,7 +432,6 @@ export default function Home() {
       <AppShowcase />
       <PromotionsSection />
       <HowItWorksSection />
-      <TrustSection />
       <FaqSection />
       <FinalCTA />
     </>

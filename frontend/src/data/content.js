@@ -28,12 +28,12 @@ export const PREDICTION_STEPS = [
 ];
 
 export const WHY_CARDS = [
-  { icon: "users", title: "Built for Players", desc: "Every screen is shaped around real player behaviour — fewer taps, clearer choices, zero clutter." },
-  { icon: "smartphone", title: "Mobile First", desc: "Not a website squeezed onto a phone — an app engineered for one-handed, on-the-move play." },
-  { icon: "layers", title: "Poker + Predictions", desc: "Two ways to play, one account, one balance. Move between the table and the action seamlessly." },
-  { icon: "compass", title: "Simple Experience", desc: "If you can follow the game, you can play. Plain language, clean navigation, instant orientation." },
-  { icon: "shield", title: "Secure Platform", desc: "Encrypted transactions, verified accounts and protected balances — security built in, not bolted on." },
-  { icon: "headphones", title: "Player Support", desc: "Real people, real answers. Reach support any day of the week and get help that actually helps." },
+  { icon: "scale", title: "Fair Play, Always", desc: "Transparent gameplay and fair outcomes, because trust comes first." },
+  { icon: "database", title: "Your Data, Protected", desc: "Strong security measures keep your personal and account information protected." },
+  { icon: "card", title: "Secure Transactions", desc: "Safe, encrypted payments and withdrawals designed to keep your money secure." },
+  { icon: "zap", title: "Fast Withdrawals", desc: "Get access to your winnings with quick and hassle-free withdrawals." },
+  { icon: "shield", title: "Built on Trust", desc: "A platform designed around transparency, security, and responsible play." },
+  { icon: "headphones", title: "24/7 Player Support", desc: "Need help? Our support team is available around the clock, whenever you need us." },
 ];
 
 export const TRUST_ITEMS = [
