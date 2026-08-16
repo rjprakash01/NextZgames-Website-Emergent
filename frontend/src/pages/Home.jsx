@@ -36,7 +36,7 @@ const Hero = () => (
         src="/hero-mobile.jpg"
         alt="The Thrill of Poker & Predictions — NextZGames app with poker tables, tournaments and game modes"
         data-testid="hero-image"
-        className="block h-auto w-full"
+        className="block h-auto w-full md:h-[78vh] md:object-cover md:object-top"
       />
     </picture>
   </section>
