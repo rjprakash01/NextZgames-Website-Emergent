@@ -12,7 +12,7 @@ export default function Faq() {
       <PageHero
         chapter="FAQ"
         label="Help Centre"
-        title={<>Questions? <span className="text-[#254F1F]">Answered.</span></>}
+        title={<>Questions? <span className="text-[#1B3A17]">Answered.</span></>}
         sub="Everything about NextZGames, Poker, Predictions, accounts, payments and the app."
       />
       <section className="section-light py-8 md:py-12" data-testid="faq-groups">
@@ -23,14 +23,14 @@ export default function Faq() {
               <Reveal delay={0.1} className="mt-4">
                 <Accordion type="single" collapsible className="w-full">
                   {g.items.map((f, i) => (
-                    <AccordionItem key={f.q} value={`${gi}-${i}`} className="border-[#254F1F]/15">
+                    <AccordionItem key={f.q} value={`${gi}-${i}`} className="border-[#1B3A17]/15">
                       <AccordionTrigger
                         data-testid={`faq-q-${g.group.toLowerCase()}-${i}`}
-                        className="text-left font-heading text-sm md:text-base font-bold text-[#254F1F] hover:text-[#254F1F] hover:no-underline"
+                        className="text-left font-heading text-sm md:text-base font-bold text-[#1B3A17] hover:text-[#1B3A17] hover:no-underline"
                       >
                         {f.q}
                       </AccordionTrigger>
-                      <AccordionContent className="text-sm text-[#254F1F]/65">{f.a}</AccordionContent>
+                      <AccordionContent className="text-sm text-[#1B3A17]/65">{f.a}</AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>

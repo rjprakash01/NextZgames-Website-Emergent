@@ -21,7 +21,7 @@ export default function Predictions() {
         <div className="mx-auto max-w-6xl px-6">
           <Chapter label="How Predictions Work" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1B3A17]">
               Four Steps. <span className="gold-strong">One Moment.</span>
             </h2>
           </Reveal>
@@ -30,8 +30,8 @@ export default function Predictions() {
               <Reveal key={s.n} delay={0.07 * i}>
                 <div className="card-light h-full p-5" data-testid={`predictions-step-${s.n}`}>
                   <span className="font-heading text-2xl font-extrabold gold-strong">{s.n}</span>
-                  <h3 className="mt-2 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
-                  <p className="mt-1.5 text-sm text-[#254F1F]/60">{s.desc}</p>
+                  <h3 className="mt-2 font-heading text-base font-bold text-[#1B3A17]">{s.title}</h3>
+                  <p className="mt-1.5 text-sm text-[#1B3A17]/60">{s.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -42,7 +42,7 @@ export default function Predictions() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#254F1F] py-8 md:py-12" data-testid="predictions-experience-section">
+      <section className="relative overflow-hidden bg-[#1B3A17] py-8 md:py-12" data-testid="predictions-experience-section">
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-2">
           <div>
             <Chapter label="The Experience" />
