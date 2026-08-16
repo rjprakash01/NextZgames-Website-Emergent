@@ -11,10 +11,10 @@ export default function Poker() {
         chapter="P"
         label="Poker"
         title={<>Experience Poker <span className="text-gold-gradient">Like Never Before</span></>}
-        sub="Cash games, tournaments and classic formats at every stake — a poker room engineered for the way the mobile generation thinks, reads and plays."
+        sub="A professional real-money poker experience featuring NL Hold’em, PLO4, PLO5, PLO6, Double Board and Bomb Pots, alongside Cash Games and Tournaments — built for smooth gameplay, secure transactions, and players who take their game seriously."
       >
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-3">
-          <DownloadButton testid="poker-page-download-btn" source="poker_page" />
+          <DownloadButton testid="poker-page-download-btn" source="poker_page" label="Download App" />
         </Reveal>
       </PageHero>
 
@@ -45,7 +45,7 @@ export default function Poker() {
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {POKER_FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={0.07 * i}>
-                <div className="h-full rounded-2xl bg-[#C9A227] p-5" data-testid={`poker-page-feature-${i}`}>
+                <div className="h-full rounded-2xl bg-white p-5" data-testid={`poker-page-feature-${i}`}>
                   <h3 className="font-heading text-base font-bold text-black">{f.title}</h3>
                   <p className="mt-1.5 text-sm text-black/70">{f.desc}</p>
                 </div>
@@ -66,12 +66,12 @@ export default function Poker() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="mt-3 max-w-md text-sm md:text-base text-[#122A0E]/65">
-                A clean, responsive table interface built for focus — your cards, the pot and your actions always front and centre.
+                Every hand is a new opportunity to read the table, trust your strategy, and make the right move. Play with confidence, manage your stack, and make every decision count.
               </p>
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
-            <PhoneMockup screen="table" className="relative w-[220px] -rotate-2" />
+            <PhoneMockup screen="table" className="relative w-[220px]" />
           </Reveal>
         </div>
       </section>
