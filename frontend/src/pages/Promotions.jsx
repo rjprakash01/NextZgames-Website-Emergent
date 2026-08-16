@@ -12,7 +12,7 @@ export default function Promotions() {
       <PageHero
         chapter="%"
         label="Promotions"
-        title={<>More Reasons <span className="text-gold-gradient">to Play</span></>}
+        title={<>More Reasons <span className="text-[#254F1F]">to Play</span></>}
         sub="Real value, clear terms, no fine-print games. Every promotion lives inside the NextZGames app — download it to take part."
       />
       <section className="section-light py-8 md:py-12" data-testid="promotions-list">

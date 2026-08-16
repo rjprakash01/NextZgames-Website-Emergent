@@ -29,7 +29,7 @@ export default function DownloadPage() {
       className={`card-light relative h-full p-5 ${primary ? "!border-[#254F1F]" : ""}`}
     >
       {primary && (
-        <span className="absolute right-4 top-4 rounded-full bg-[#254F1F] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
+        <span className="absolute right-4 top-4 rounded-full bg-[#EFE35F] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#254F1F]">
           Your device
         </span>
       )}
@@ -53,7 +53,7 @@ export default function DownloadPage() {
       <PageHero
         chapter="↓"
         label="Download"
-        title={<>Get NextZGames <span className="text-gold-gradient">on Your Phone</span></>}
+        title={<>Get NextZGames <span className="text-[#254F1F]">on Your Phone</span></>}
         sub="Poker and Predictions. One app. One experience."
       />
       <section className="section-light py-8 md:py-12" data-testid="download-options">
@@ -68,7 +68,7 @@ export default function DownloadPage() {
             <Reveal delay={0.2}>
               <div data-testid="download-card-qr" className={`card-light relative h-full p-5 ${device === "desktop" ? "!border-[#254F1F]" : ""}`}>
                 {device === "desktop" && (
-                  <span className="absolute right-4 top-4 rounded-full bg-[#254F1F] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
+                  <span className="absolute right-4 top-4 rounded-full bg-[#EFE35F] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#254F1F]">
                     Your device
                   </span>
                 )}
@@ -87,18 +87,18 @@ export default function DownloadPage() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-[#254F1F] py-16 md:py-20" data-testid="download-showcase">
+      <section className="relative overflow-hidden bg-[#EFE35F] py-16 md:py-20" data-testid="download-showcase">
         <div className="mx-auto grid max-w-5xl items-center gap-8 px-6 lg:grid-cols-2">
           <Reveal>
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-              The Table Is Set. <span className="text-gold-gradient">Your Seat Is Waiting.</span>
+            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
+              The Table Is Set. <span className="text-[#254F1F]">Your Seat Is Waiting.</span>
             </h2>
-            <p className="mt-4 max-w-md text-sm md:text-base text-white/70">
+            <p className="mt-4 max-w-md text-sm md:text-base text-[#254F1F]/70">
               Be among the first to play. The download links on this page activate the moment the NextZGames app goes live.
             </p>
           </Reveal>
           <Reveal delay={0.15} className="mx-auto">
-            <img src="/creative-predictions.jpg" alt="NextZGames app predictions screen" loading="lazy" className="w-[230px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+            <img src="/creative-predictions.jpg" alt="NextZGames app predictions screen" loading="lazy" className="w-[230px] rounded-[1.8rem] border border-[#254F1F]/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
         </div>
       </section>

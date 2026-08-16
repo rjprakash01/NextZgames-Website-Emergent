@@ -43,14 +43,14 @@ const SOCIALS = [
 ];
 
 export const Footer = () => (
-  <footer data-testid="site-footer" className="relative bg-[#254F1F] border-t border-[#EFE35F]/15">
-    <div className="h-[3px] w-full bg-gradient-to-r from-[#EFE35F] via-[#EFE35F]/50 to-transparent" />
+  <footer data-testid="site-footer" className="relative bg-[#EFE35F] border-t border-[#254F1F]/15">
+    <div className="h-[3px] w-full bg-gradient-to-r from-[#254F1F] via-[#254F1F]/50 to-transparent" />
     <div className="mx-auto max-w-6xl px-6 py-8 md:py-12">
       <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
           <Logo />
-          <p className="mt-6 font-heading text-lg font-bold text-white">Poker. Predictions. Your Next Move.</p>
-          <p className="mt-3 max-w-xs text-sm text-white/55">
+          <p className="mt-6 font-heading text-lg font-bold text-[#254F1F]">Poker. Predictions. Your Next Move.</p>
+          <p className="mt-3 max-w-xs text-sm text-[#254F1F]/55">
             The official home of NextZGames — Poker and Predictions in one mobile experience.
           </p>
           <div className="mt-6 flex gap-3">
@@ -60,7 +60,7 @@ export const Footer = () => (
                 href="#"
                 aria-label={label}
                 data-testid={`social-${label.toLowerCase()}`}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#EFE35F] hover:text-[#EFE35F]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-[#254F1F]/15 text-[#254F1F]/70 transition-colors duration-300 hover:border-[#EFE35F] hover:text-[#254F1F]"
               >
                 <Icon size={16} />
               </a>
@@ -69,14 +69,14 @@ export const Footer = () => (
         </div>
         {COLS.map((col) => (
           <div key={col.title}>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">{col.title}</h4>
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#254F1F]">{col.title}</h4>
             <ul className="mt-5 space-y-3">
               {col.links.map((l) => (
                 <li key={l.label}>
                   <Link
                     to={l.to}
                     data-testid={`footer-${l.label.toLowerCase().replace(/[^a-z]+/g, "-")}`}
-                    className="text-sm text-white/60 transition-colors duration-300 hover:text-white"
+                    className="text-sm text-[#254F1F]/60 transition-colors duration-300 hover:text-[#254F1F]"
                   >
                     {l.label}
                   </Link>
@@ -86,7 +86,7 @@ export const Footer = () => (
           </div>
         ))}
       </div>
-      <div className="mt-7 flex flex-col gap-4 border-t border-white/8 pt-8 text-xs text-white/45 md:flex-row md:items-center md:justify-between">
+      <div className="mt-7 flex flex-col gap-4 border-t border-[#254F1F]/10 pt-8 text-xs text-[#254F1F]/45 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} NextZGames. All rights reserved.</p>
         <p className="max-w-xl">
           NextZGames involves real-money gaming and may be habit-forming or financially risky. Play responsibly.

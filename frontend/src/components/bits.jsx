@@ -22,13 +22,13 @@ export const Chapter = ({ n, label, tone = "dark" }) => (
       className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 ${
         tone === "light"
           ? "border-[#254F1F]/20 bg-white text-[#254F1F]"
-          : "border-[#EFE35F]/30 bg-[#EFE35F]/8 text-[#EFE35F]"
+          : "border-[#254F1F]/30 bg-[#254F1F]/8 text-[#254F1F]"
       }`}
     >
       {n && (
         <>
           <span className="font-heading text-[11px] font-extrabold tracking-[0.2em]">{n}</span>
-          <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#254F1F]/25" : "bg-[#EFE35F]/40"}`} />
+          <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#EFE35F]/25" : "bg-[#EFE35F]/40"}`} />
         </>
       )}
       <span className="text-[10px] font-semibold uppercase tracking-[0.28em]">{label}</span>
@@ -49,17 +49,17 @@ export const DownloadButton = ({ testid = "download-btn", label = "Download the 
 );
 
 export const PageHero = ({ chapter, label, title, sub, children }) => (
-  <section className="relative overflow-hidden bg-[#254F1F] pt-20 pb-8 md:pt-24 md:pb-10">
+  <section className="relative overflow-hidden bg-[#EFE35F] pt-20 pb-8 md:pt-24 md:pb-10">
     <div className="relative mx-auto max-w-6xl px-6">
       <Chapter n={chapter} label={label} />
       <Reveal delay={0.1}>
-        <h1 className="mt-4 max-w-3xl font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+        <h1 className="mt-4 max-w-3xl font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#254F1F]">
           {title}
         </h1>
       </Reveal>
       {sub && (
         <Reveal delay={0.2}>
-          <p className="mt-3 max-w-xl text-sm md:text-base text-white/70">{sub}</p>
+          <p className="mt-3 max-w-xl text-sm md:text-base text-[#254F1F]/70">{sub}</p>
         </Reveal>
       )}
       {children}

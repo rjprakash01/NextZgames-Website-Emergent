@@ -16,7 +16,7 @@ export default function About() {
       <PageHero
         chapter="NZ"
         label="About Us"
-        title={<>Built for the <span className="text-gold-gradient">Next Generation</span> of Players</>}
+        title={<>Built for the <span className="text-[#254F1F]">Next Generation</span> of Players</>}
         sub="We are a team of gamers, engineers and designers building a real-money gaming experience that is fast, fair and genuinely enjoyable."
       />
       <section className="section-light py-8 md:py-12" data-testid="about-pillars">
@@ -35,20 +35,20 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="bg-[#254F1F] py-8 md:py-12" data-testid="about-vision">
+      <section className="bg-[#EFE35F] py-8 md:py-12" data-testid="about-vision">
         <div className="mx-auto grid max-w-5xl gap-6 px-6 md:grid-cols-2">
           <Reveal>
             <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-vision-card">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">Vision</span>
-              <p className="mt-3 font-heading text-xl font-bold leading-snug text-white">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#254F1F]">Vision</span>
+              <p className="mt-3 font-heading text-xl font-bold leading-snug text-[#254F1F]">
                 To build a trusted and exciting destination for modern players.
               </p>
             </div>
           </Reveal>
           <Reveal delay={0.12}>
             <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-mission-card">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">Mission</span>
-              <p className="mt-3 font-heading text-xl font-bold leading-snug text-white">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#254F1F]">Mission</span>
+              <p className="mt-3 font-heading text-xl font-bold leading-snug text-[#254F1F]">
                 To create engaging, accessible and responsible digital gaming experiences through technology.
               </p>
             </div>

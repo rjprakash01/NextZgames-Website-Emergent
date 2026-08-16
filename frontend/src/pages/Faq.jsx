@@ -12,7 +12,7 @@ export default function Faq() {
       <PageHero
         chapter="FAQ"
         label="Help Centre"
-        title={<>Questions? <span className="text-gold-gradient">Answered.</span></>}
+        title={<>Questions? <span className="text-[#254F1F]">Answered.</span></>}
         sub="Everything about NextZGames, Poker, Predictions, accounts, payments and the app."
       />
       <section className="section-light py-8 md:py-12" data-testid="faq-groups">

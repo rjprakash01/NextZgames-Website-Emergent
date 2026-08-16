@@ -40,17 +40,17 @@ const Hero = () => {
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
 
   return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#254F1F]">
+    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#EFE35F]">
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
-            <MaskedLine delay={0.25} className="text-gold-gradient">Your Next Move.</MaskedLine>
+            <MaskedLine delay={0.25} className="text-[#254F1F]">Your Next Move.</MaskedLine>
           </h1>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7 }}
-            className="mt-4 max-w-md text-sm md:text-base text-white/70"
+            className="mt-4 max-w-md text-sm md:text-base text-[#254F1F]/70"
           >
             Experience Poker and Predictions through the NextZGames app — one home for players who read the game before they play it.
           </motion.p>
@@ -69,7 +69,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 1 }}
-            className="mt-4 text-[10px] uppercase tracking-[0.25em] text-white/40"
+            className="mt-4 text-[10px] uppercase tracking-[0.25em] text-[#254F1F]/55"
           >
             Android & iOS — Launching Soon
           </motion.p>
@@ -85,7 +85,7 @@ const Hero = () => {
               src="/creative-poker.jpg"
               alt="NextZGames Poker app — cash games and tournaments"
               data-testid="hero-phone"
-              className="w-[260px] md:w-[320px] rounded-[2rem] border border-white/15 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+              className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#254F1F]/15 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
             />
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
@@ -96,12 +96,12 @@ const Hero = () => {
 };
 
 const Ticker = () => (
-  <div className="bg-[#EFE35F] py-3" data-testid="ticker">
+  <div className="bg-[#254F1F] py-3" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
       {["Poker", "Predictions", "Your Next Move", "One App", "Mobile First", "Download NextZGames"].map((t) => (
-        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#254F1F]">
+        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#EFE35F]">
           {t}
-          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#254F1F]" />
+          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#EFE35F]" />
         </span>
       ))}
     </Marquee>
@@ -134,18 +134,18 @@ const BrandStatement = () => (
 );
 
 const PokerSection = () => (
-  <section className="relative overflow-hidden bg-[#254F1F] py-8 md:py-12" data-testid="poker-section">
+  <section className="relative overflow-hidden bg-[#EFE35F] py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
           <Chapter label="Poker" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#254F1F]">
               Experience Poker<br />Like Never Before
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-3 max-w-md text-sm md:text-base text-white/70">
+            <p className="mt-3 max-w-md text-sm md:text-base text-[#254F1F]/70">
               Cash games, tournaments and classic formats at every stake — every hand plays fast, fair and beautifully on your phone. This is poker built for the mobile generation.
             </p>
           </Reveal>
@@ -155,21 +155,21 @@ const PokerSection = () => (
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
-          <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+          <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#254F1F]/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
         </Reveal>
       </div>
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {POKER_FEATURES.map((f, i) => (
           <Reveal key={f.title} delay={0.07 * i}>
-            <div className="border-t-2 border-[#EFE35F]/60 pt-4" data-testid={`poker-feature-${i}`}>
-              <h3 className="font-heading text-base font-bold text-white">{f.title}</h3>
-              <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
+            <div className="border-t-2 border-[#254F1F]/40 pt-4" data-testid={`poker-feature-${i}`}>
+              <h3 className="font-heading text-base font-bold text-[#254F1F]">{f.title}</h3>
+              <p className="mt-1.5 text-sm text-[#254F1F]/60">{f.desc}</p>
             </div>
           </Reveal>
         ))}
       </div>
       <Reveal delay={0.15} className="mt-7 text-center">
-        <p className="font-heading text-lg md:text-xl font-bold text-white">Ready for the table?</p>
+        <p className="font-heading text-lg md:text-xl font-bold text-[#254F1F]">Ready for the table?</p>
         <div className="mt-4">
           <DownloadButton testid="poker-ready-download-btn" source="poker_ready" label="Download the NextZGames App" />
         </div>
@@ -219,12 +219,12 @@ const PredictionsSection = () => (
 );
 
 const WhySection = () => (
-  <section className="bg-[#254F1F] py-8 md:py-12" data-testid="why-section">
+  <section className="bg-[#EFE35F] py-8 md:py-12" data-testid="why-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-          Why <span className="text-gold-gradient">NextZGames?</span>
+        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#254F1F]">
+          Why <span className="text-[#254F1F]">NextZGames?</span>
         </h2>
       </Reveal>
       <div className="mt-7 grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
@@ -235,8 +235,8 @@ const WhySection = () => (
               <div className="flex gap-4" data-testid={`why-card-${i}`}>
                 <span className="icon-chip shrink-0"><Icon size={19} /></span>
                 <div>
-                  <h3 className="font-heading text-base font-bold text-white">{c.title}</h3>
-                  <p className="mt-1 text-sm text-white/60">{c.desc}</p>
+                  <h3 className="font-heading text-base font-bold text-[#254F1F]">{c.title}</h3>
+                  <p className="mt-1 text-sm text-[#254F1F]/60">{c.desc}</p>
                 </div>
               </div>
             </Reveal>
@@ -293,19 +293,19 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-[#254F1F] py-8 md:py-12" data-testid="promotions-section">
+  <section className="bg-[#EFE35F] py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
           <Chapter label="Promotions" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-              More Reasons <span className="text-gold-gradient">to Play</span>
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#254F1F]">
+              More Reasons <span className="text-[#254F1F]">to Play</span>
             </h2>
           </Reveal>
         </div>
         <Reveal delay={0.2}>
-          <Link to="/promotions" data-testid="promotions-view-all" className="group inline-flex items-center gap-2 text-sm font-semibold text-[#EFE35F]">
+          <Link to="/promotions" data-testid="promotions-view-all" className="group inline-flex items-center gap-2 text-sm font-semibold text-[#254F1F]">
             View all promotions
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
@@ -318,13 +318,13 @@ const PromotionsSection = () => (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div className="card-green group relative h-full overflow-hidden p-5" data-testid={`promo-card-${p.slug}`}>
                 <span className="icon-chip"><Icon size={19} /></span>
-                <h3 className="mt-3 font-heading text-lg font-bold text-white">{p.title}</h3>
-                <p className="mt-1.5 text-sm text-white/60">{p.desc}</p>
-                <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-[#EFE35F]/80">{p.validity}</p>
+                <h3 className="mt-3 font-heading text-lg font-bold text-[#254F1F]">{p.title}</h3>
+                <p className="mt-1.5 text-sm text-[#254F1F]/60">{p.desc}</p>
+                <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-[#254F1F]/80">{p.validity}</p>
                 <Link
                   to="/promotions"
                   data-testid={`promo-view-${p.slug}`}
-                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-300 group-hover:text-[#EFE35F]"
+                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#254F1F] transition-colors duration-300 group-hover:text-[#254F1F]"
                 >
                   View Promotion <ArrowUpRight size={15} />
                 </Link>
@@ -334,7 +334,7 @@ const PromotionsSection = () => (
         })}
       </div>
       <Reveal delay={0.2}>
-        <p className="mt-5 text-xs text-white/40">Sample promotions shown for preview. Final offers, eligibility and terms will be published before launch.</p>
+        <p className="mt-5 text-xs text-[#254F1F]/55">Sample promotions shown for preview. Final offers, eligibility and terms will be published before launch.</p>
       </Reveal>
     </div>
   </section>
@@ -368,18 +368,18 @@ const HowItWorksSection = () => (
 );
 
 const TrustSection = () => (
-  <section className="bg-[#254F1F] py-8 md:py-12" data-testid="trust-section">
+  <section className="bg-[#EFE35F] py-8 md:py-12" data-testid="trust-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Trust & Responsible Gaming" />
       <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
         <div>
           <Reveal delay={0.1}>
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-              Play With <span className="text-gold-gradient">Confidence</span>
+            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
+              Play With <span className="text-[#254F1F]">Confidence</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-3 text-sm md:text-base text-white/70">
+            <p className="mt-3 text-sm md:text-base text-[#254F1F]/70">
               Real-money gaming demands real trust. NextZGames is built on verified accounts, encrypted transactions and clear rules — and on the belief that gaming should stay entertainment. Set limits, take breaks, and never chase losses.
             </p>
           </Reveal>
@@ -394,8 +394,8 @@ const TrustSection = () => (
               <Reveal key={t.title} delay={0.06 * i}>
                 <div className="card-green h-full p-5" data-testid={`trust-card-${i}`}>
                   <span className="icon-chip !h-10 !w-10"><Icon size={17} /></span>
-                  <h3 className="mt-3 font-heading text-base font-bold text-white">{t.title}</h3>
-                  <p className="mt-1.5 text-sm text-white/60">{t.desc}</p>
+                  <h3 className="mt-3 font-heading text-base font-bold text-[#254F1F]">{t.title}</h3>
+                  <p className="mt-1.5 text-sm text-[#254F1F]/60">{t.desc}</p>
                 </div>
               </Reveal>
             );
@@ -435,20 +435,20 @@ const FaqSection = () => (
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-[#254F1F] py-10 md:py-14" data-testid="final-cta">
+  <section className="relative overflow-hidden bg-[#EFE35F] py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal>
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#EFE35F]/35 bg-[#EFE35F]/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EFE35F]">
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#254F1F]/30 bg-[#254F1F]/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#254F1F]">
           Download
         </span>
       </Reveal>
       <Reveal delay={0.1}>
-        <h2 className="mt-5 font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-          Your Next Move<br />Starts <span className="text-gold-gradient">Here.</span>
+        <h2 className="mt-5 font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#254F1F]">
+          Your Next Move<br />Starts <span className="text-[#254F1F]">Here.</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2}>
-        <p className="mx-auto mt-3 max-w-md text-sm md:text-base text-white/70">
+        <p className="mx-auto mt-3 max-w-md text-sm md:text-base text-[#254F1F]/70">
           Download NextZGames and discover Poker and Predictions in one mobile experience.
         </p>
       </Reveal>
