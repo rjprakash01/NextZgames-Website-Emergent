@@ -21,7 +21,7 @@ export default function Poker() {
       <section className="section-light py-8 md:py-12" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
-            <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#122A0E]/15 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
+            <img src="/poker-tables.jpg" alt="NextZGames Poker lobby — cash game tables" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#122A0E]/15 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
           </Reveal>
           <div className="order-1 lg:order-2">
             <Chapter label="The Lobby" tone="light" />
@@ -71,18 +71,7 @@ export default function Poker() {
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
-            <PhoneMockup screen="table" className="relative w-[220px]" />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="bg-[#122A0E] py-16 text-center" data-testid="poker-cta">
-        <div className="mx-auto max-w-2xl px-6">
-          <Reveal>
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Ready for the table?</h2>
-          </Reveal>
-          <Reveal delay={0.15} className="mt-6">
-            <DownloadButton testid="poker-final-download-btn" source="poker_page_bottom" label="Download the NextZGames App" className="!px-9 !py-4 !text-sm" />
+            <PhoneMockup image="/poker-decision.jpg" alt="NextZGames Poker table — every decision matters" className="relative w-[220px]" />
           </Reveal>
         </div>
       </section>

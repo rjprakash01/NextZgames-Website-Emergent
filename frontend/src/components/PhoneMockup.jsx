@@ -144,13 +144,13 @@ const screens = {
   ),
 };
 
-export const PhoneMockup = ({ screen = "home", className = "", testid }) => (
+export const PhoneMockup = ({ screen = "home", image, alt = "", className = "", testid }) => (
   <div
     data-testid={testid || `phone-${screen}`}
     className={`relative w-[230px] shrink-0 rounded-[2.8rem] border border-white/15 bg-[#163010] p-[6px] shadow-[0_40px_80px_rgba(0,0,0,0.5)] ${className}`}
   >
     <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[2.4rem] bg-[#122A0E] flex flex-col">
-      {screens[screen]}
+      {image ? <img src={image} alt={alt} loading="lazy" className="h-full w-full object-cover" /> : screens[screen]}
     </div>
   </div>
 );
