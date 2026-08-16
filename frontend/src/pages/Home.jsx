@@ -161,8 +161,7 @@ const PredictionsSection = () => (
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
-            <Link to="/predictions" data-testid="predictions-section-explore-btn" onClick={() => track("cta_click", { source: "home_predictions" })} className="btn-outline-dark">Explore Predictions</Link>
-            <DownloadButton testid="predictions-section-download-btn" source="home_predictions" />
+            <Link to="/predictions" data-testid="predictions-section-explore-btn" onClick={() => track("cta_click", { source: "home_predictions" })} className="inline-flex items-center gap-2 rounded-full bg-[#D4C942] px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#e2d84f]">Explore Predictions</Link>
           </Reveal>
         </div>
       </div>
