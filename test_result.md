@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify a new auto-scrolling HERO carousel at the top of the NextZGames home page (site root /). The hero carousel has data-testid='hero-carousel' and is inside data-testid='hero-section'. It has 2 slides and should AUTO-ADVANCE every 3 seconds. Each slide is responsive: Slide 0 (data-testid='hero-slide-0'): mobile image /hero-mobile.jpg, desktop image /hero-desktop-v2.jpg; Slide 1 (data-testid='hero-slide-1'): mobile image /hero-mobile2.jpg, desktop image /hero-desktop2.jpg. There are 2 dot buttons: data-testid='hero-carousel-dot-0' and 'hero-carousel-dot-1'. Verify on DESKTOP (1440x900) AND MOBILE (390x844)."
+user_problem_statement: "Verify the redesigned Promotions cards on the NextZGames home page (site root /). The Promotions section has data-testid='promotions-section' with 2 cards: data-testid='promo-card-welcome-boost' and data-testid='promo-card-refer-and-earn'. Each card has a DARK GREEN gradient background with GOLD decorative SVG artwork (no icon tiles anymore). The welcome-boost card shows a gold GIFT BOX with ribbon/bow and gold 'NZ' coins on the right side, plus faint card-suit symbols. The refer-and-earn card shows a gold NETWORK of connected people nodes and gold coins on the right side. Each card has a thin yellow bar at the top, a pill badge with validity text, a bold white title, a white description, and a gold 'View Promotion' link. Verify on DESKTOP (1440x900) AND MOBILE (390x844)."
 
 frontend:
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
@@ -171,7 +171,7 @@ frontend:
         agent: "testing"
         comment: "✅ Mobile section has white background (bg-white class) with dark text (text-[#122A0E]). Visual styling matches clean light layout as expected."
 
-  - task: "Promotions section - desktop layout with 3 cards in 3-column grid"
+  - task: "Promotions section - redesigned cards with dark green gradient backgrounds and gold SVG artwork"
     implemented: true
     working: true
     file: "/app/frontend/src/pages/Home.jsx"
@@ -181,31 +181,10 @@ frontend:
     status_history:
       - working: true
         agent: "testing"
-        comment: "✅ DESKTOP VIEWPORT (1440x900): Promotions section verified with heading 'More Reasons to Play'. All 3 cards present (promo-card-welcome-boost, promo-card-refer-and-earn, promo-card-weekend-predictions) in 3-column grid layout (lg:grid-cols-3). Each card has colored accent bar at top, colored rounded icon tile, validity badge (Launch period/Ongoing/Every weekend), bold title, description, and colored 'View Promotion' link with arrow. 'View all promotions' link visible at top-right. Layout is clean and professional."
-
-  - task: "Promotions section - mobile responsive layout with stacked cards"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/pages/Home.jsx"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
+        comment: "✅ DESKTOP VIEWPORT (1440x900): Redesigned Promotions section verified with 2 cards (promo-card-welcome-boost and promo-card-refer-and-earn) in 2-column grid layout (sm:grid-cols-2). Both cards have DARK GREEN radial gradient backgrounds (NOT white) with radial-gradient(120% 130% at 88% 45%, rgb(28, 74, 30) 0%, rgb(16, 51, 18) 42%, rgb(10, 33, 9) 100%). OLD icon tiles have been REMOVED. NEW gold SVG artwork present: (1) Welcome Boost - gold gift box with ribbon/bow and stack of gold 'NZ' coins on right side, plus faint card-suit symbols (♠ ♣ ♥ ♦); (2) Refer & Earn - gold network of connected people nodes (circles with person glyphs joined by lines) and gold 'NZ' coins on right side. Each card has thin yellow bar at top (h-1 bg-[#D4C942]), pill badge with validity text ('Launch period' / 'Ongoing'), bold white title (rgb(255, 255, 255)), white description (rgba(255, 255, 255, 0.7)), and gold 'View Promotion' link (rgb(239, 227, 95)). Text is clearly readable on dark green background. Screenshot captured."
       - working: true
         agent: "testing"
-        comment: "✅ MOBILE VIEWPORT (390x844): All 3 promotion cards stack properly in single column. Heading 'More Reasons to Play' is visible and centered. All card components (icon tiles, validity badges, titles, descriptions, View Promotion links) are readable and well-spaced. 'View all promotions' link visible. Responsive behavior working correctly."
-
-  - task: "Promotions section - card components and visual elements"
-    implemented: true
-    working: true
-    file: "/app/frontend/src/pages/Home.jsx"
-    stuck_count: 0
-    priority: "high"
-    needs_retesting: false
-    status_history:
-      - working: true
-        agent: "testing"
-        comment: "✅ All 3 promotion cards verified with complete components: (1) Welcome Boost - purple icon, 'Launch period' badge; (2) Refer & Earn - teal icon, 'Ongoing' badge; (3) Weekend Predictions Special - coral icon, 'Every weekend' badge. Each card has thin colored accent bar at top edge, colored rounded icon tile at top-left, validity badge at top-right, bold title, description text, and colored 'View Promotion' link with arrow icon. All visual elements rendering correctly on both desktop and mobile."
+        comment: "✅ MOBILE VIEWPORT (390x844): Both promotion cards stack vertically (refer card below welcome card at y=465.96875 vs y=155.21875). Dark green gradient backgrounds maintained on mobile. Gold SVG artwork visible on both cards. All text elements readable (titles, descriptions, validity badges, View Promotion links). Responsive layout working correctly. Screenshot captured. Redesign is complete and fully functional on both desktop and mobile viewports."
 
   - task: "Poker carousel - auto-scrolling image carousel with 3 slides"
     implemented: true
@@ -234,12 +213,12 @@ frontend:
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 5
+  test_sequence: 6
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Hero carousel - auto-scrolling image carousel with 2 slides at page top"
+    - "Promotions section - redesigned cards with dark green gradient backgrounds and gold SVG artwork"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -255,3 +234,5 @@ agent_communication:
     message: "Completed comprehensive testing of new Poker carousel feature. TESTED: Auto-scroll functionality (advances every ~3 seconds, wraps correctly), visual presentation (rounded phone-like frame, all 3 images present), responsive behavior (works on both desktop 1440x900 and mobile 390x844), and dot button functionality. RESULTS: ✅ Carousel is fully functional and visible on both viewports. ✅ Auto-advance working perfectly. ⚠️ Minor UX issue found: Race condition with dot click functionality - dot buttons work most of the time but occasionally fail when clicked near the moment auto-advance fires. RECOMMENDATION: Reset the interval timer when user manually clicks a dot to prevent race condition. This is a minor polish issue and does not break core functionality. Core carousel feature is working as expected."
   - agent: "testing"
     message: "Completed comprehensive testing of new HERO carousel feature at the top of the home page. TESTED: Carousel visibility and positioning (at page top inside hero-section), slide elements (2 slides with correct data-testids), dot buttons (2 dots, clickable), auto-advance functionality (timing and wrap-around), responsive images (desktop vs mobile images), and visual presentation on both desktop (1440x900) and mobile (390x844) viewports. RESULTS: ✅ All requirements met. Hero carousel is fully functional on both viewports. ✅ Auto-advance working correctly - advances every ~3 seconds after initial component mount, wraps from slide 1 back to slide 0. ✅ Dot buttons working - clicking switches slides correctly. ✅ Responsive images working perfectly - desktop viewport loads desktop images (hero-desktop-v2.jpg, hero-desktop2.jpg), mobile viewport loads mobile images (hero-mobile.jpg, hero-mobile2.jpg). Extended timing test (12 seconds) confirmed carousel advances and wraps as expected. Screenshots captured for both viewports. Hero carousel feature is production-ready."
+  - agent: "testing"
+    message: "Completed comprehensive testing of REDESIGNED Promotions cards. TESTED: Card backgrounds (dark green gradient vs old white/colored), SVG artwork (gold gift box for welcome-boost, gold network for refer-and-earn), removal of old icon tiles, text readability (white text on dark green), card components (yellow bar, validity badges, titles, descriptions, View Promotion links), and responsive behavior on both desktop (1440x900) and mobile (390x844). RESULTS: ✅ All requirements met. Redesign is complete and fully functional. ✅ Both cards have dark green radial gradient backgrounds (NOT white). ✅ Old colored icon tiles have been REMOVED. ✅ New gold SVG artwork present and visible on both cards (gift box with coins for welcome-boost, network of people nodes with coins for refer-and-earn). ✅ All text elements are white and clearly readable on dark green background. ✅ All card components present and correct (thin yellow bar at top, validity badges, bold white titles, white descriptions, gold View Promotion links). ✅ Responsive layout working perfectly - cards stack vertically on mobile. Screenshots captured for both viewports. Promotions redesign is production-ready."
