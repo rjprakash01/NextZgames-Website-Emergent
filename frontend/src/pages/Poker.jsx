@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
 import { PhoneMockup } from "../components/PhoneMockup";
 import { POKER_FEATURES } from "../data/content";
@@ -16,14 +15,13 @@ export default function Poker() {
       >
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-3">
           <DownloadButton testid="poker-page-download-btn" source="poker_page" />
-          <Link to="/how-it-works" data-testid="poker-page-how-btn" className="btn-outline">How It Works</Link>
         </Reveal>
       </PageHero>
 
       <section className="section-light py-8 md:py-12" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
-            <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#122A0E]/15 rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
+            <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#122A0E]/15 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
           </Reveal>
           <div className="order-1 lg:order-2">
             <Chapter label="The Lobby" tone="light" />
@@ -41,15 +39,15 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-teal-deep py-8 md:py-12" data-testid="poker-features-section">
+      <section className="bg-[#122A0E] py-8 md:py-12" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter label="Features" />
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {POKER_FEATURES.map((f, i) => (
               <Reveal key={f.title} delay={0.07 * i}>
-                <div className="card-green h-full p-5" data-testid={`poker-page-feature-${i}`}>
-                  <h3 className="font-heading text-base font-bold text-white">{f.title}</h3>
-                  <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
+                <div className="h-full rounded-2xl bg-[#C9A227] p-5" data-testid={`poker-page-feature-${i}`}>
+                  <h3 className="font-heading text-base font-bold text-black">{f.title}</h3>
+                  <p className="mt-1.5 text-sm text-black/70">{f.desc}</p>
                 </div>
               </Reveal>
             ))}
