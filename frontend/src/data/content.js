@@ -67,14 +67,6 @@ export const PROMOTIONS = [
     validity: "Ongoing",
     terms: "Reward credited after referred player completes verification. In-app terms apply.",
   },
-  {
-    slug: "weekend-predictions",
-    icon: "zap",
-    title: "Weekend Predictions Special",
-    desc: "Weekends hit different. Featured prediction events with special pools land every weekend inside the app.",
-    validity: "Every weekend",
-    terms: "Available on selected events only. In-app terms apply.",
-  },
 ];
 
 export const FAQ_GROUPS = [
