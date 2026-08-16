@@ -1,5 +1,5 @@
 const StatusBar = () => (
-  <div className="flex items-center justify-between px-5 pt-3 text-[8px] text-white/60">
+  <div className="flex items-center justify-between px-5 pt-3 pb-2 text-[8px] text-white/60 bg-[#1B3A17]">
     <span>9:41</span>
     <span className="h-3 w-14 rounded-full bg-black/50" />
     <span className="tracking-tight">5G ▮▮▮</span>
@@ -70,7 +70,7 @@ const screens = {
   table: (
     <>
       <StatusBar />
-      <div className="relative mx-3 mt-3 flex-1 rounded-2xl border border-white/15 bg-[radial-gradient(circle_at_center,#35602F_0%,#1B3A17_55%,#1B3A17_100%)]">
+      <div className="relative mx-3 mt-2 flex-1 rounded-2xl border border-white/15 bg-[radial-gradient(circle_at_center,#2A4C25_0%,#1B3A17_60%,#142C11_100%)]">
         <div className="absolute left-1/2 top-6 -translate-x-1/2 rounded-full bg-black/40 px-3 py-1 text-center">
           <p className="text-[6px] uppercase tracking-widest text-white/50">Pot</p>
           <p className="font-heading text-[10px] font-extrabold text-[#EFE35F]">₹ 1,280</p>
