@@ -15,26 +15,7 @@ export const Reveal = ({ children, delay = 0, className = "", y = 22 }) => (
   </motion.div>
 );
 
-export const Chapter = ({ n, label, tone = "dark" }) => (
-  <Reveal>
-    <div
-      data-testid={`chapter-${(n || label).toString().toLowerCase().replace(/\s+/g, "-")}`}
-      className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 ${
-        tone === "light"
-          ? "border-[#1B3A17]/20 bg-white text-[#1B3A17]"
-          : "border-[#EFE35F]/30 bg-[#EFE35F]/10 text-[#EFE35F]"
-      }`}
-    >
-      {n && (
-        <>
-          <span className="font-heading text-[11px] font-extrabold tracking-[0.2em]">{n}</span>
-          <span className={`h-2.5 w-px ${tone === "light" ? "bg-[#1B3A17]/25" : "bg-[#EFE35F]/40"}`} />
-        </>
-      )}
-      <span className="text-[10px] font-semibold uppercase tracking-[0.28em]">{label}</span>
-    </div>
-  </Reveal>
-);
+export const Chapter = () => null;
 
 export const DownloadButton = ({ testid = "download-btn", label = "Download the App", className = "", source = "site" }) => (
   <Link

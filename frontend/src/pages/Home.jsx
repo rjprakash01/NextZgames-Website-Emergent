@@ -437,13 +437,8 @@ const FaqSection = () => (
 const FinalCTA = () => (
   <section className="relative overflow-hidden bg-[#1B3A17] py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
-      <Reveal>
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#EFE35F]/35 bg-[#EFE35F]/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EFE35F]">
-          Download
-        </span>
-      </Reveal>
       <Reveal delay={0.1}>
-        <h2 className="mt-5 font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
           Your Next Move<br />Starts <span className="text-gold-gradient">Here.</span>
         </h2>
       </Reveal>
