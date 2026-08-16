@@ -406,95 +406,6 @@ const AppShowcase = () => {
   );
 };
 
-const PromoDefs = () => (
-  <svg width="0" height="0" className="absolute" aria-hidden="true">
-    <defs>
-      <linearGradient id="promoGold" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stopColor="#F6E98A" />
-        <stop offset="0.5" stopColor="#E7C64B" />
-        <stop offset="1" stopColor="#B8901F" />
-      </linearGradient>
-      <linearGradient id="promoBoxGreen" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stopColor="#22662a" />
-        <stop offset="1" stopColor="#0f3c17" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
-
-const WelcomeDecor = () => (
-  <div className="pointer-events-none absolute inset-y-0 right-0 w-3/5 overflow-hidden">
-    <div className="absolute right-2 top-1/2 h-44 w-44 -translate-y-1/2 rounded-full bg-[#EFE35F]/20 blur-3xl" />
-    {/* faint card suits */}
-    <span className="absolute right-6 top-4 select-none text-2xl leading-none text-[#EFE35F]/10">&#9824; &#9827;</span>
-    <span className="absolute right-16 top-10 select-none text-lg leading-none text-[#EFE35F]/10">&#9829; &#9830;</span>
-    {/* gift box + coins */}
-    <svg viewBox="0 0 140 120" className="absolute bottom-1 right-3 h-[85%] w-auto drop-shadow-[0_10px_18px_rgba(0,0,0,0.4)]">
-      {/* podium */}
-      <ellipse cx="70" cy="104" rx="60" ry="10" fill="url(#promoGold)" opacity="0.18" />
-      {/* box body */}
-      <rect x="42" y="52" width="56" height="46" rx="4" fill="url(#promoBoxGreen)" stroke="url(#promoGold)" strokeWidth="1.2" />
-      {/* lid */}
-      <rect x="36" y="42" width="68" height="14" rx="4" fill="url(#promoBoxGreen)" stroke="url(#promoGold)" strokeWidth="1.2" />
-      {/* vertical ribbon */}
-      <rect x="65" y="42" width="10" height="56" fill="url(#promoGold)" />
-      {/* horizontal ribbon */}
-      <rect x="36" y="46" width="68" height="6" fill="url(#promoGold)" opacity="0.9" />
-      {/* bow */}
-      <path d="M70 42 C58 24, 38 28, 50 40 C56 45, 66 43, 70 42 Z" fill="url(#promoGold)" />
-      <path d="M70 42 C82 24, 102 28, 90 40 C84 45, 74 43, 70 42 Z" fill="url(#promoGold)" />
-      <circle cx="70" cy="41" r="4.5" fill="url(#promoGold)" />
-      {/* coins */}
-      <g transform="translate(104,74)">
-        <ellipse cx="0" cy="18" rx="16" ry="6" fill="url(#promoGold)" />
-        <ellipse cx="0" cy="14" rx="16" ry="6" fill="#0f3c17" stroke="url(#promoGold)" strokeWidth="1.4" />
-        <ellipse cx="0" cy="10" rx="16" ry="6" fill="url(#promoGold)" />
-        <ellipse cx="0" cy="6" rx="16" ry="6" fill="#0f3c17" stroke="url(#promoGold)" strokeWidth="1.4" />
-        <text x="0" y="9" textAnchor="middle" fontSize="7" fontWeight="700" fill="#EFE35F">NZ</text>
-      </g>
-    </svg>
-  </div>
-);
-
-const ReferDecor = () => (
-  <div className="pointer-events-none absolute inset-y-0 right-0 w-3/5 overflow-hidden">
-    <div className="absolute right-4 top-1/2 h-44 w-44 -translate-y-1/2 rounded-full bg-[#EFE35F]/20 blur-3xl" />
-    <svg viewBox="0 0 150 120" className="absolute bottom-1 right-1 h-[92%] w-auto drop-shadow-[0_10px_18px_rgba(0,0,0,0.4)]">
-      {/* connecting lines */}
-      <g stroke="url(#promoGold)" strokeWidth="1.2" opacity="0.55">
-        <line x1="70" y1="60" x2="34" y2="30" />
-        <line x1="70" y1="60" x2="112" y2="26" />
-        <line x1="70" y1="60" x2="40" y2="96" />
-        <line x1="70" y1="60" x2="116" y2="92" />
-      </g>
-      {/* small nodes with person glyphs */}
-      {[[34,30,10],[112,26,10],[40,96,10],[116,92,10]].map(([cx,cy,r],idx)=>(
-        <g key={idx}>
-          <circle cx={cx} cy={cy} r={r} fill="#0f3c17" stroke="url(#promoGold)" strokeWidth="1.6" />
-          <circle cx={cx} cy={cy-2.5} r="2.6" fill="url(#promoGold)" />
-          <path d={`M${cx-4.5} ${cy+5.5} a4.5 4.5 0 0 1 9 0 Z`} fill="url(#promoGold)" />
-        </g>
-      ))}
-      {/* central node */}
-      <circle cx="70" cy="60" r="18" fill="#0f3c17" stroke="url(#promoGold)" strokeWidth="2.2" />
-      <circle cx="70" cy="55" r="5" fill="url(#promoGold)" />
-      <path d="M62 70 a8 8 0 0 1 16 0 Z" fill="url(#promoGold)" />
-      {/* coins */}
-      <g transform="translate(120,78)">
-        <ellipse cx="0" cy="14" rx="15" ry="5.5" fill="url(#promoGold)" />
-        <ellipse cx="0" cy="10" rx="15" ry="5.5" fill="#0f3c17" stroke="url(#promoGold)" strokeWidth="1.4" />
-        <ellipse cx="0" cy="6" rx="15" ry="5.5" fill="url(#promoGold)" />
-        <text x="0" y="9" textAnchor="middle" fontSize="6.5" fontWeight="700" fill="#EFE35F">NZ</text>
-      </g>
-    </svg>
-  </div>
-);
-
-const PROMO_THEMES = {
-  "welcome-boost": WelcomeDecor,
-  "refer-and-earn": ReferDecor,
-};
-
 const PromotionsSection = () => (
   <section className="section-light py-10 md:py-14" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
@@ -515,36 +426,28 @@ const PromotionsSection = () => (
         </Reveal>
       </div>
 
-      <PromoDefs />
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         {PROMOTIONS.map((p, i) => {
-          const Decor = PROMO_THEMES[p.slug];
           return (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div
                 className="group relative flex h-full min-h-[220px] flex-col overflow-hidden rounded-[1.25rem] p-6 shadow-[0_20px_45px_rgba(10,31,8,0.35)]"
-                style={{ background: "radial-gradient(120% 130% at 88% 45%, #1c4a1e 0%, #103312 42%, #0a2109 100%)" }}
+                style={{ background: "linear-gradient(180deg, #0a2109 0%, #143f16 40%, #4d6a17 72%, #C9BE33 100%)" }}
                 data-testid={`promo-card-${p.slug}`}
               >
-                <span className="absolute inset-x-0 top-0 z-10 h-1 bg-[#D4C942]" />
-                {Decor ? <Decor /> : null}
-                {/* mobile-only scrim so text stays clean over artwork */}
-                <div className="absolute inset-0 z-[5] bg-[linear-gradient(to_right,#0a2109_0%,#0a2109_58%,rgba(10,33,9,0.55)_78%,transparent_100%)] md:hidden" />
-                <div className="relative z-10 flex h-full flex-col">
-                  <span className="self-start rounded-full border border-[#D4C942]/40 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#EFE35F]">
-                    {p.validity}
-                  </span>
-                  <h3 className="mt-6 max-w-[62%] font-heading text-xl font-bold text-white">{p.title}</h3>
-                  <p className="mt-2 max-w-[58%] flex-1 text-sm leading-relaxed text-white/70">{p.desc}</p>
-                  <Link
-                    to="/promotions"
-                    data-testid={`promo-view-${p.slug}`}
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#EFE35F]"
-                  >
-                    View Promotion
-                    <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </Link>
-                </div>
+                <span className="self-start rounded-full border border-white/30 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#EFE35F]">
+                  {p.validity}
+                </span>
+                <h3 className="mt-6 font-heading text-xl font-bold text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35)]">{p.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-white/85 [text-shadow:0_1px_3px_rgba(0,0,0,0.3)]">{p.desc}</p>
+                <Link
+                  to="/promotions"
+                  data-testid={`promo-view-${p.slug}`}
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#0a2109]"
+                >
+                  View Promotion
+                  <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Link>
               </div>
             </Reveal>
           );

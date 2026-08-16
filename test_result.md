@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Bug verification (MOBILE ONLY): On the NextZGames home page (site root /), a user reported that on MOBILE the Promotions card text was overlapping/mixing with the gold background artwork, making it hard to read. A mobile-only dark gradient scrim was added behind the text to fix this. Verify on MOBILE (390x844) that text is clearly separated from artwork and readable, and on DESKTOP (1440x900) that the fix did not negatively impact the cards."
+user_problem_statement: "Verify the simplified Promotions cards redesign on the NextZGames home page. The cards now have a smooth vertical gradient from dark green (top) to yellow/gold (bottom), with NO SVG artwork. Text spans full width of cards. Verify on DESKTOP (1440x900) and MOBILE (390x844) that: (1) background is vertical gradient dark green → yellow/gold with no artwork, (2) text spans full card width and is readable (white on dark upper area), (3) 'View Promotion' link is readable (dark text on yellow lower area)."
 
 frontend:
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
@@ -171,7 +171,7 @@ frontend:
         agent: "testing"
         comment: "✅ Mobile section has white background (bg-white class) with dark text (text-[#122A0E]). Visual styling matches clean light layout as expected."
 
-  - task: "Promotions section - mobile text readability fix with dark gradient scrim"
+  - task: "Promotions section - simplified redesign with vertical gradient and no artwork"
     implemented: true
     working: true
     file: "/app/frontend/src/pages/Home.jsx"
@@ -194,6 +194,9 @@ frontend:
       - working: true
         agent: "testing"
         comment: "✅ BUG FIX VERIFIED - MOBILE TEXT READABILITY: MOBILE (390x844): Mobile-only scrim successfully implemented on both promo cards (welcome-boost and refer-and-earn). Scrim element present with z-index 5 and correct gradient classes. Text is now CLEARLY SEPARATED from gold artwork and fully readable: (1) Welcome Boost - Title 'Welcome Boost' in white (rgb(255,255,255)), description in white/70% opacity, 'LAUNCH PERIOD' badge visible, 'View Promotion' link in gold. Gold gift box with ribbon and NZ coins VISIBLE on RIGHT side of card. (2) Refer & Earn - Title 'Refer & Earn' in white, description readable, 'ONGOING' badge visible, link in gold. Gold network of people nodes and coins VISIBLE on RIGHT side. The scrim creates a clean dark-green surface behind text (gradient from solid #0a2109 to transparent), preventing text from mixing with artwork. DESKTOP (1440x900): Scrim correctly HIDDEN on desktop (display: none via md:hidden). No negative impact - cards display correctly in 2-column grid, text readable, artwork visible. Desktop layout unaffected by mobile-only fix. Screenshots captured for both viewports. Bug fix is working perfectly."
+      - working: true
+        agent: "testing"
+        comment: "✅ SIMPLIFIED REDESIGN VERIFIED - VERTICAL GRADIENT, NO ARTWORK: DESKTOP (1440x900): Both promo cards (welcome-boost and refer-and-earn) now have SMOOTH VERTICAL GRADIENT backgrounds going from DARK GREEN at top to YELLOW/GOLD at bottom. Gradient: linear-gradient(180deg, rgb(10,33,9) 0%, rgb(20,63,22) 40%, rgb(77,106,23) 72%, rgb(201,190,51) 100%) = #0a2109 → #C9BE33. NO SVG ARTWORK present (only arrow icon in link). Text spans FULL WIDTH of cards (492px out of 540px = 91%). All text readable: (1) Title in white rgb(255,255,255) on dark green upper area, (2) Description in white rgba(255,255,255,0.85) on dark green, (3) 'View Promotion' link in DARK color rgb(10,33,9) on yellow lower area for readability. Cards display side-by-side in 2-column grid. MOBILE (390x844): Same vertical gradient background maintained. Cards stack vertically (welcome at y=201, refer at y=466). All text elements remain readable on both dark upper and yellow lower areas. NO artwork visible. Text spans full card width. Responsive layout working perfectly. Screenshots captured for both viewports. Simplified redesign is complete and fully functional - gradient is smooth, artwork removed, text fills full width, all elements readable on both viewports."
 
   - task: "Poker carousel - auto-scrolling image carousel with 3 slides"
     implemented: true
@@ -222,12 +225,12 @@ frontend:
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 7
+  test_sequence: 8
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Promotions section - mobile text readability fix with dark gradient scrim"
+    - "Promotions section - simplified redesign with vertical gradient and no artwork"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -247,3 +250,5 @@ agent_communication:
     message: "Completed comprehensive testing of REDESIGNED Promotions cards. TESTED: Card backgrounds (dark green gradient vs old white/colored), SVG artwork (gold gift box for welcome-boost, gold network for refer-and-earn), removal of old icon tiles, text readability (white text on dark green), card components (yellow bar, validity badges, titles, descriptions, View Promotion links), and responsive behavior on both desktop (1440x900) and mobile (390x844). RESULTS: ✅ All requirements met. Redesign is complete and fully functional. ✅ Both cards have dark green radial gradient backgrounds (NOT white). ✅ Old colored icon tiles have been REMOVED. ✅ New gold SVG artwork present and visible on both cards (gift box with coins for welcome-boost, network of people nodes with coins for refer-and-earn). ✅ All text elements are white and clearly readable on dark green background. ✅ All card components present and correct (thin yellow bar at top, validity badges, bold white titles, white descriptions, gold View Promotion links). ✅ Responsive layout working perfectly - cards stack vertically on mobile. Screenshots captured for both viewports. Promotions redesign is production-ready."
   - agent: "testing"
     message: "Completed verification of MOBILE TEXT READABILITY BUG FIX for Promotions cards. ISSUE: User reported text overlapping/mixing with gold artwork on mobile, making it hard to read. FIX: Mobile-only dark gradient scrim added behind text. VERIFICATION RESULTS: ✅ MOBILE (390x844): Scrim successfully implemented on both cards with correct z-index (5) and gradient (linear-gradient from solid #0a2109 to transparent). Text is now CLEARLY SEPARATED from artwork and fully readable - all titles, descriptions, badges, and links visible in white/gold colors. Gold artwork (gift box + coins for welcome-boost, people network + coins for refer-and-earn) remains VISIBLE on RIGHT side of cards. The scrim creates a clean dark-green surface behind text, preventing any mixing with artwork. ✅ DESKTOP (1440x900): Scrim correctly HIDDEN (display: none via md:hidden class). No negative impact - cards display correctly in 2-column grid, text readable, artwork visible. Desktop layout completely unaffected by mobile-only fix. Screenshots captured for both viewports. Bug fix is working perfectly and ready for production."
+  - agent: "testing"
+    message: "Completed verification of SIMPLIFIED PROMOTIONS CARDS REDESIGN. REQUIREMENT: Verify vertical gradient (dark green top → yellow/gold bottom), NO SVG artwork, full-width text, readable on both viewports. VERIFICATION RESULTS: ✅ DESKTOP (1440x900): Both cards (welcome-boost, refer-and-earn) have smooth VERTICAL GRADIENT from dark green #0a2109 (top) to yellow/gold #C9BE33 (bottom). Gradient: linear-gradient(180deg, rgb(10,33,9) 0% → rgb(201,190,51) 100%). NO SVG artwork present (only arrow icon in link). Text spans FULL WIDTH (91% of card width). All text readable: white title/description on dark upper area, dark link rgb(10,33,9) on yellow lower area. Cards in 2-column grid. ✅ MOBILE (390x844): Same vertical gradient maintained. Cards stack vertically. All text readable on both dark and yellow areas. NO artwork. Text spans full width. Responsive layout perfect. ✅ SUMMARY: Background is top-to-bottom dark-green→yellow gradient on both cards ✓, Artwork is gone ✓, Text fills full card width and stays readable (including bottom link over yellow) ✓. Purely visual check passed on both viewports. Screenshots captured. Simplified redesign is complete and production-ready."
