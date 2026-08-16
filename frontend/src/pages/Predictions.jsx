@@ -11,7 +11,16 @@ export default function Predictions() {
         label="Predictions"
         title={<>Predict the Outcome. <span className="text-gold-gradient">Own the Moment.</span></>}
         sub="Back your instincts on live sports and events — clear options, transparent outcomes and settlement the moment the game is decided."
-      />
+      >
+        <Reveal delay={0.3} className="mt-6">
+          <span
+            data-testid="predictions-coming-soon-btn"
+            className="btn-gold cursor-default select-none"
+          >
+            Coming Soon
+          </span>
+        </Reveal>
+      </PageHero>
 
       <section className="section-light py-8 md:py-12" data-testid="predictions-steps-section">
         <div className="mx-auto max-w-6xl px-6">
@@ -51,19 +60,6 @@ export default function Predictions() {
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
             <img src="/pred-slide-2.jpg" alt="NextZGames Predictions — all categories and live events" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="bg-[#0E230B] py-14 text-center" data-testid="predictions-coming-soon-section">
-        <div className="mx-auto max-w-2xl px-6">
-          <Reveal>
-            <span
-              data-testid="predictions-coming-soon-btn"
-              className="btn-gold cursor-default select-none"
-            >
-              Coming Soon
-            </span>
           </Reveal>
         </div>
       </section>
