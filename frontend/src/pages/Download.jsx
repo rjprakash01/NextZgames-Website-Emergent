@@ -98,7 +98,7 @@ export default function DownloadPage() {
             </p>
           </Reveal>
           <Reveal delay={0.15} className="mx-auto">
-            <img src="/creative-predictions.jpg" alt="NextZGames app predictions screen" loading="lazy" className="w-[230px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+            <img src="/creative-predictions.jpg" alt="NextZGames app predictions screen" loading="lazy" className="w-[230px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
         </div>
       </section>

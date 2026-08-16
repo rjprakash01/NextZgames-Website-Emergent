@@ -85,7 +85,7 @@ const Hero = () => {
               src="/creative-poker.jpg"
               alt="NextZGames Poker app — cash games and tournaments"
               data-testid="hero-phone"
-              className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#EFE35F]/25 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+              className="w-[260px] md:w-[320px] rounded-[2rem] border border-white/15 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
             />
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
@@ -155,7 +155,7 @@ const PokerSection = () => (
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
-          <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+          <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
         </Reveal>
       </div>
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -206,7 +206,7 @@ const PredictionsSection = () => (
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="border-t-2 border-[#A3941F]/50 pt-4" data-testid={`prediction-step-${s.n}`}>
+            <div className="border-t-2 border-[#254F1F]/50 pt-4" data-testid={`prediction-step-${s.n}`}>
               <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
               <h3 className="mt-1 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
               <p className="mt-1.5 text-sm text-[#254F1F]/60">{s.desc}</p>
@@ -352,7 +352,7 @@ const HowItWorksSection = () => (
       <div className="mt-7 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="border-t-2 border-[#A3941F]/50 pt-4" data-testid={`how-step-${s.n}`}>
+            <div className="border-t-2 border-[#254F1F]/50 pt-4" data-testid={`how-step-${s.n}`}>
               <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
               <h3 className="mt-1 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
               <p className="mt-1.5 text-sm text-[#254F1F]/60">{s.desc}</p>
@@ -419,7 +419,7 @@ const FaqSection = () => (
         <Accordion type="single" collapsible className="w-full">
           {FAQ_GROUPS[0].items.slice(0, 5).map((f, i) => (
             <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#254F1F]/15">
-              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#254F1F] hover:text-[#A3941F] hover:no-underline">
+              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#254F1F] hover:text-[#254F1F] hover:no-underline">
                 {f.q}
               </AccordionTrigger>
               <AccordionContent className="text-sm text-[#254F1F]/65">{f.a}</AccordionContent>

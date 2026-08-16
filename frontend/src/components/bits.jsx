@@ -21,7 +21,7 @@ export const Chapter = ({ n, label, tone = "dark" }) => (
       data-testid={`chapter-${(n || label).toString().toLowerCase().replace(/\s+/g, "-")}`}
       className={`inline-flex items-center gap-2.5 rounded-full border px-4 py-1.5 ${
         tone === "light"
-          ? "border-[#254F1F]/20 bg-white text-[#A3941F]"
+          ? "border-[#254F1F]/20 bg-white text-[#254F1F]"
           : "border-[#EFE35F]/30 bg-[#EFE35F]/8 text-[#EFE35F]"
       }`}
     >

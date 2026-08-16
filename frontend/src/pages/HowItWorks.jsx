@@ -14,7 +14,7 @@ export default function HowItWorks() {
       />
       <section className="section-light py-8 md:py-12" data-testid="steps-section">
         <div className="mx-auto max-w-3xl px-6">
-          <div className="relative space-y-10 before:absolute before:bottom-5 before:left-[23px] before:top-5 before:w-px before:bg-[#A3941F]/30">
+          <div className="relative space-y-10 before:absolute before:bottom-5 before:left-[23px] before:top-5 before:w-px before:bg-[#254F1F]/30">
             {HOW_IT_WORKS_STEPS.map((s, i) => (
               <Reveal key={s.n} delay={0.06 * i}>
                 <div className="relative flex gap-6 md:gap-8" data-testid={`how-page-step-${s.n}`}>

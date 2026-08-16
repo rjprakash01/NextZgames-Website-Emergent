@@ -70,7 +70,7 @@ export default function Contact() {
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#254F1F] text-[#EFE35F]"><Mail size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#254F1F]/50">Support Email</p>
-                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#254F1F] hover:text-[#A3941F]">support@nextzgames.com</a>
+                    <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#254F1F] hover:text-[#254F1F]">support@nextzgames.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -91,7 +91,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <p className="text-sm text-[#254F1F]/60">
-                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#A3941F] underline underline-offset-4">FAQ page</Link>.
+                  Looking for quick answers? Visit our <Link to="/faq" data-testid="contact-faq-link" className="font-semibold text-[#254F1F] underline underline-offset-4">FAQ page</Link>.
                 </p>
               </div>
             </Reveal>

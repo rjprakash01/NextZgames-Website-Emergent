@@ -62,7 +62,7 @@ export default function Predictions() {
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
-            <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+            <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
         </div>
       </section>

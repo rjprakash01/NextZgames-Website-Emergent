@@ -101,8 +101,8 @@ body {
 }
 
 .gold-line {
-    height: 1px;
-    background: linear-gradient(90deg, var(--gold), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, #254F1F, transparent);
 }
 
 .card-green {
@@ -181,7 +181,7 @@ body {
 
 /* Light editorial sections */
 .section-light {
-    background: #FBFCF4;
+    background: #FFFFFF;
     color: #254F1F;
 }
 
@@ -199,7 +199,7 @@ body {
 }
 
 .gold-strong {
-    color: #A3941F;
+    color: #254F1F;
 }
 
 .text-gold-gradient {

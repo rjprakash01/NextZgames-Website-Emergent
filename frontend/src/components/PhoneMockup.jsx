@@ -70,7 +70,7 @@ const screens = {
   table: (
     <>
       <StatusBar />
-      <div className="relative mx-3 mt-3 flex-1 rounded-2xl border border-[#EFE35F]/25 bg-[radial-gradient(circle_at_center,#35602F_0%,#254F1F_55%,#254F1F_100%)]">
+      <div className="relative mx-3 mt-3 flex-1 rounded-2xl border border-white/15 bg-[radial-gradient(circle_at_center,#35602F_0%,#254F1F_55%,#254F1F_100%)]">
         <div className="absolute left-1/2 top-6 -translate-x-1/2 rounded-full bg-black/40 px-3 py-1 text-center">
           <p className="text-[6px] uppercase tracking-widest text-white/50">Pot</p>
           <p className="font-heading text-[10px] font-extrabold text-[#EFE35F]">₹ 1,280</p>
@@ -98,7 +98,7 @@ const screens = {
     <>
       <AppHeader />
       <p className="px-4 pt-3 font-heading text-[11px] font-bold text-white">Predictions</p>
-      <div className="mx-3 mt-2 rounded-xl bg-[#30512D]/70 border border-[#EFE35F]/25 p-3">
+      <div className="mx-3 mt-2 rounded-xl bg-[#30512D]/70 border border-white/15 p-3">
         <p className="text-[7px] uppercase tracking-widest text-white/50">Cricket · Tonight 7:30 PM</p>
         <p className="font-heading text-[10px] font-bold text-white mt-1">Mumbai vs Chennai</p>
         <p className="text-[7px] text-white/60 mt-2">Who wins the match?</p>

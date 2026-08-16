@@ -12,7 +12,7 @@ export default function Legal({ slug }) {
         <div className="mx-auto max-w-3xl space-y-10 px-6">
           {page.sections.map((s, i) => (
             <Reveal key={s.h} delay={0.04 * i}>
-              <div className="border-l border-[#A3941F]/40 pl-6">
+              <div className="border-l border-[#254F1F]/40 pl-6">
                 <h2 className="font-heading text-xl font-bold text-[#254F1F]">{s.h}</h2>
                 <p className="mt-3 text-sm md:text-base leading-relaxed text-[#254F1F]/65">{s.p}</p>
               </div>

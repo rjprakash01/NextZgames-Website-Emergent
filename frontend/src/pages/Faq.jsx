@@ -26,7 +26,7 @@ export default function Faq() {
                     <AccordionItem key={f.q} value={`${gi}-${i}`} className="border-[#254F1F]/15">
                       <AccordionTrigger
                         data-testid={`faq-q-${g.group.toLowerCase()}-${i}`}
-                        className="text-left font-heading text-sm md:text-base font-bold text-[#254F1F] hover:text-[#A3941F] hover:no-underline"
+                        className="text-left font-heading text-sm md:text-base font-bold text-[#254F1F] hover:text-[#254F1F] hover:no-underline"
                       >
                         {f.q}
                       </AccordionTrigger>

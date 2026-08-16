@@ -23,7 +23,7 @@ export default function Poker() {
       <section className="section-light py-8 md:py-12" data-testid="poker-lobby-section">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
           <Reveal className="relative order-2 mx-auto lg:order-1">
-            <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+            <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
           </Reveal>
           <div className="order-1 lg:order-2">
             <Chapter n="01" label="The Lobby" tone="light" />
