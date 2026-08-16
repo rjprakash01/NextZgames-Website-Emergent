@@ -1,3 +1,5 @@
+<!-- Latest update (16 Aug 2026): Home page — added the Brand section's gold-gradient underline divider (gold-line) under the headings of the Poker, Predictions, and How It Works sections. Colored card/step top-borders (CHIP_COLORS/STEP_COLORS) intentionally kept as-is per user choice. Verified via screenshots. -->
+
 # NextZGames — Official Website PRD
 
 ## Original Problem Statement

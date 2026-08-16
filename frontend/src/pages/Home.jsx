@@ -145,6 +145,13 @@ const PokerSection = () => (
               Experience Poker<br />Like Never Before
             </h2>
           </Reveal>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="gold-line mt-4 w-44 origin-left"
+          />
           <Reveal delay={0.2}>
             <p className="mt-3 max-w-md text-sm md:text-base text-white/70">
               Cash games, tournaments and classic formats at every stake — every hand plays fast, fair and beautifully on your phone. This is poker built for the mobile generation.
@@ -193,6 +200,13 @@ const PredictionsSection = () => (
               Predict the Outcome.<br /><span className="acc-teal">Own the Moment.</span>
             </h2>
           </Reveal>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="gold-line mt-4 w-44 origin-left"
+          />
           <Reveal delay={0.2}>
             <p className="mt-3 max-w-md text-sm md:text-base text-[#122A0E]/70">
               You already watch the game — now read it. Back your instincts on live events across cricket, football and more, and turn every match into a moment that matters.
@@ -351,6 +365,13 @@ const HowItWorksSection = () => (
           Getting Started <span className="acc-coral">Is Simple</span>
         </h2>
       </Reveal>
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        className="gold-line mt-4 w-44 origin-left"
+      />
       <div className="mt-7 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
