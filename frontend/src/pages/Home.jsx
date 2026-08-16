@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import {
   ShieldCheck, Headphones,
   Users, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
+  Lock, Clock, Handshake, Headset,
 } from "lucide-react";
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
 import {
@@ -181,9 +182,37 @@ const PredictionsSection = () => (
   </section>
 );
 
+const WHY_MOBILE = [
+  { Icon: Scale, title: "Fair Play, Always", desc: "Transparent gameplay and fair outcomes, because trust comes first." },
+  { Icon: Lock, title: "Your Data, Protected", desc: "Strong security measures keep your personal and account information protected." },
+  { Icon: CreditCard, title: "Secure Transactions", desc: "Safe, encrypted payments and withdrawals designed to keep your money secure." },
+  { Icon: Clock, title: "Fast Withdrawals", desc: "Get access to your winnings with quick and hassle-free withdrawals." },
+  { Icon: Handshake, title: "Built on Trust", desc: "A platform designed around transparency, security, and responsible play." },
+  { Icon: Headset, title: "24/7 Player Support", desc: "Need help? Our support team is available around the clock, whenever you need us." },
+];
+
 const WhySection = () => (
-  <section className="bg-[#122A0E] py-8 md:py-12" data-testid="why-section">
-    <div className="mx-auto max-w-6xl px-6">
+  <section className="bg-white md:bg-[#122A0E] py-9 md:py-12" data-testid="why-section">
+    {/* MOBILE ONLY — Play with Confidence */}
+    <div className="md:hidden px-6" data-testid="why-mobile">
+      <h2 className="text-center font-heading text-3xl font-extrabold tracking-tight text-[#122A0E]">
+        Play with Confidence
+      </h2>
+      <div className="mt-9 grid grid-cols-2 gap-x-5 gap-y-11">
+        {WHY_MOBILE.map(({ Icon, title, desc }, i) => (
+          <Reveal key={title} delay={0.05 * i}>
+            <div className="flex flex-col items-center text-center" data-testid={`why-mobile-card-${i}`}>
+              <Icon size={46} strokeWidth={1.4} className="text-[#4B5563]" />
+              <h3 className="mt-4 font-heading text-lg font-bold text-[#122A0E]">{title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[#374151]">{desc}</p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+
+    {/* DESKTOP — existing layout */}
+    <div className="hidden md:block mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
         <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">

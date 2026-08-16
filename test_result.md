@@ -101,3 +101,63 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: "Verify a MOBILE-VIEW-ONLY redesign on the NextZGames home page at the site root (/). The home page has a 'Why NextZGames' section (data-testid='why-section') with a mobile-only variant titled 'Play with Confidence' that should ONLY appear on mobile screen widths (below 768px), and a separate desktop variant ('Why NextZGames?') that should ONLY appear at >=768px."
+
+frontend:
+  - task: "Mobile-only 'Play with Confidence' section - responsive visibility"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ MOBILE VIEWPORT (390x844): Mobile section (data-testid='why-mobile') is visible with correct heading 'Play with Confidence'. Desktop variant (data-testid='why-card-0') is correctly hidden."
+      - working: true
+        agent: "testing"
+        comment: "✅ DESKTOP VIEWPORT (1440x900): Mobile section is correctly hidden. Desktop variant with heading 'Why NextZGames?' is visible. Background color is correct dark theme (rgb(18, 42, 14))."
+
+  - task: "Mobile section - 6 cards in 2-column grid with correct content"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All 6 cards present with correct test IDs (why-mobile-card-0 through why-mobile-card-5). Titles verified: 'Fair Play, Always', 'Your Data, Protected', 'Secure Transactions', 'Fast Withdrawals', 'Built on Trust', '24/7 Player Support'. Cards arranged in 2-column grid with icons on top, bold titles, and centered descriptions."
+
+  - task: "Mobile section - white background with dark text styling"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ Mobile section has white background (bg-white class) with dark text (text-[#122A0E]). Visual styling matches clean light layout as expected."
+
+metadata:
+  created_by: "testing_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "Mobile-only 'Play with Confidence' section - responsive visibility"
+    - "Mobile section - 6 cards in 2-column grid with correct content"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "testing"
+    message: "Completed comprehensive testing of mobile-only 'Play with Confidence' section. All responsive behavior working correctly. Mobile section shows only on mobile (<768px), desktop section shows only on desktop (>=768px). All 6 cards present with correct content and styling. Screenshots captured for both viewports."
