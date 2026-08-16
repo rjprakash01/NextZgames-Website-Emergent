@@ -1,4 +1,4 @@
-import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
+import { Chapter, Reveal, PageHero } from "../components/bits";
 import { PREDICTION_STEPS } from "../data/content";
 import { usePageMeta } from "../lib/meta";
 
@@ -11,11 +11,7 @@ export default function Predictions() {
         label="Predictions"
         title={<>Predict the Outcome. <span className="text-gold-gradient">Own the Moment.</span></>}
         sub="Back your instincts on live sports and events — clear options, transparent outcomes and settlement the moment the game is decided."
-      >
-        <Reveal delay={0.3} className="mt-6">
-          <DownloadButton testid="predictions-page-download-btn" source="predictions_page" />
-        </Reveal>
-      </PageHero>
+      />
 
       <section className="section-light py-8 md:py-12" data-testid="predictions-steps-section">
         <div className="mx-auto max-w-6xl px-6">
@@ -35,9 +31,6 @@ export default function Predictions() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={0.25} className="mt-7">
-            <DownloadButton testid="predictions-steps-download-btn" source="predictions_steps" />
-          </Reveal>
         </div>
       </section>
 
@@ -54,9 +47,6 @@ export default function Predictions() {
               <p className="mt-3 max-w-md text-sm md:text-base text-white/70">
                 Browse available events, review prediction options, confirm your selection and follow the outcome — every step designed to be clear and fast on mobile.
               </p>
-            </Reveal>
-            <Reveal delay={0.3} className="mt-5">
-              <DownloadButton testid="predictions-experience-download-btn" source="predictions_experience" />
             </Reveal>
           </div>
           <Reveal delay={0.15} className="relative mx-auto">
