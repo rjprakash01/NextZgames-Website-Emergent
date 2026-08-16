@@ -98,7 +98,6 @@ export const Header = () => {
                     }
                   >
                     {l.label}
-                    <span className="text-[#EFE35F]/50 text-xs font-normal">0{i + 1}</span>
                   </NavLink>
                 </motion.div>
               ))}
