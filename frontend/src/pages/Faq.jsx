@@ -23,14 +23,14 @@ export default function Faq() {
               <Reveal delay={0.1} className="mt-4">
                 <Accordion type="single" collapsible className="w-full">
                   {g.items.map((f, i) => (
-                    <AccordionItem key={f.q} value={`${gi}-${i}`} className="border-[#31602C]/15">
+                    <AccordionItem key={f.q} value={`${gi}-${i}`} className="border-[#23401F]/15">
                       <AccordionTrigger
                         data-testid={`faq-q-${g.group.toLowerCase()}-${i}`}
-                        className="text-left font-heading text-sm md:text-base font-bold text-[#274A22] hover:text-[#A3941F] hover:no-underline"
+                        className="text-left font-heading text-sm md:text-base font-bold text-[#1B3318] hover:text-[#A3941F] hover:no-underline"
                       >
                         {f.q}
                       </AccordionTrigger>
-                      <AccordionContent className="text-sm text-[#274A22]/65">{f.a}</AccordionContent>
+                      <AccordionContent className="text-sm text-[#1B3318]/65">{f.a}</AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>

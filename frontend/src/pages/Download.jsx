@@ -26,18 +26,18 @@ export default function DownloadPage() {
   const Card = ({ id, icon: Icon, title, note, primary }) => (
     <div
       data-testid={`download-card-${id}`}
-      className={`card-light relative h-full p-5 ${primary ? "!border-[#31602C]" : ""}`}
+      className={`card-light relative h-full p-5 ${primary ? "!border-[#23401F]" : ""}`}
     >
       {primary && (
-        <span className="absolute right-4 top-4 rounded-full bg-[#31602C] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
+        <span className="absolute right-4 top-4 rounded-full bg-[#23401F] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
           Your device
         </span>
       )}
       <span className="icon-chip !h-12 !w-12 !rounded-xl">
         <Icon size={22} />
       </span>
-      <h2 className="mt-5 font-heading text-lg font-extrabold text-[#274A22]">{title}</h2>
-      <p className="mt-1.5 text-sm text-[#274A22]/60">{note}</p>
+      <h2 className="mt-5 font-heading text-lg font-extrabold text-[#1B3318]">{title}</h2>
+      <p className="mt-1.5 text-sm text-[#1B3318]/60">{note}</p>
       <button
         data-testid={`download-btn-${id}`}
         onClick={() => track("download_store_click", { store: id })}
@@ -66,20 +66,20 @@ export default function DownloadPage() {
               <Card id="ios" icon={Apple} title="Download on the App Store" note="The iOS app is on its way. Check back soon." primary={device === "ios"} />
             </Reveal>
             <Reveal delay={0.2}>
-              <div data-testid="download-card-qr" className={`card-light relative h-full p-5 ${device === "desktop" ? "!border-[#31602C]" : ""}`}>
+              <div data-testid="download-card-qr" className={`card-light relative h-full p-5 ${device === "desktop" ? "!border-[#23401F]" : ""}`}>
                 {device === "desktop" && (
-                  <span className="absolute right-4 top-4 rounded-full bg-[#31602C] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
+                  <span className="absolute right-4 top-4 rounded-full bg-[#23401F] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
                     Your device
                   </span>
                 )}
                 <span className="icon-chip !h-12 !w-12 !rounded-xl">
                   <Monitor size={22} />
                 </span>
-                <h2 className="mt-5 font-heading text-lg font-extrabold text-[#274A22]">Scan to Download</h2>
-                <p className="mt-1.5 text-sm text-[#274A22]/60">Point your phone camera at the code to open this page on your device.</p>
+                <h2 className="mt-5 font-heading text-lg font-extrabold text-[#1B3318]">Scan to Download</h2>
+                <p className="mt-1.5 text-sm text-[#1B3318]/60">Point your phone camera at the code to open this page on your device.</p>
                 <div className="mt-6 flex justify-center">
-                  <div className="rounded-2xl border border-[#31602C]/15 bg-white p-4 shadow-[0_10px_30px_rgba(24,43,23,0.08)]" data-testid="download-qr">
-                    <QRCodeSVG value={downloadUrl} size={140} bgColor="#ffffff" fgColor="#31602C" level="M" />
+                  <div className="rounded-2xl border border-[#23401F]/15 bg-white p-4 shadow-[0_10px_30px_rgba(24,43,23,0.08)]" data-testid="download-qr">
+                    <QRCodeSVG value={downloadUrl} size={140} bgColor="#ffffff" fgColor="#23401F" level="M" />
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function DownloadPage() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-[#31602C] py-16 md:py-20" data-testid="download-showcase">
+      <section className="relative overflow-hidden bg-[#23401F] py-16 md:py-20" data-testid="download-showcase">
         <div className="mx-auto grid max-w-5xl items-center gap-8 px-6 lg:grid-cols-2">
           <Reveal>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">

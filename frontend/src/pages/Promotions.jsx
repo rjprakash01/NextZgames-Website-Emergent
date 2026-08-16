@@ -29,9 +29,9 @@ export default function Promotions() {
                     <Icon size={24} />
                   </span>
                   <div>
-                    <h2 className="font-heading text-xl font-extrabold text-[#274A22]">{p.title}</h2>
-                    <p className="mt-2 max-w-xl text-sm text-[#274A22]/65">{p.desc}</p>
-                    <div className="mt-4 grid gap-2.5 text-xs text-[#274A22]/55 sm:grid-cols-3">
+                    <h2 className="font-heading text-xl font-extrabold text-[#1B3318]">{p.title}</h2>
+                    <p className="mt-2 max-w-xl text-sm text-[#1B3318]/65">{p.desc}</p>
+                    <div className="mt-4 grid gap-2.5 text-xs text-[#1B3318]/55 sm:grid-cols-3">
                       <span className="flex items-start gap-2"><BadgeCheck size={14} className="mt-0.5 shrink-0 gold-strong" /> Eligibility: verified app accounts</span>
                       <span className="flex items-start gap-2"><ListChecks size={14} className="mt-0.5 shrink-0 gold-strong" /> {p.terms}</span>
                       <span className="flex items-start gap-2"><CalendarDays size={14} className="mt-0.5 shrink-0 gold-strong" /> Validity: {p.validity}</span>
@@ -45,7 +45,7 @@ export default function Promotions() {
             );
           })}
           <Reveal delay={0.2}>
-            <p className="text-xs text-[#274A22]/45">
+            <p className="text-xs text-[#1B3318]/45">
               Sample promotions shown for preview. Final offers, eligibility, validity and full terms will be published before launch. All promotions are subject to the Promotion Terms.
             </p>
           </Reveal>
