@@ -110,7 +110,7 @@ const PokerSection = () => (
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
-          <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
+          <img src="/creative-poker-v2.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-white/15 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
         </Reveal>
       </div>
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
