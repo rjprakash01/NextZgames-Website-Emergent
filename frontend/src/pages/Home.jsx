@@ -215,12 +215,54 @@ const PokerSection = () => (
   </section>
 );
 
+const PRED_SLIDES = ["/pred-slide-1.jpg", "/pred-slide-2.jpg"];
+
+const PredictionsCarousel = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIndex((p) => (p + 1) % PRED_SLIDES.length), 3000);
+    return () => clearInterval(id);
+  }, [index]);
+  return (
+    <div className="relative w-[240px] md:w-[280px] overflow-hidden rounded-[1.8rem] border border-[#122A0E]/15 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" data-testid="predictions-carousel">
+      <div
+        className="flex transition-transform duration-700 ease-out"
+        style={{ transform: `translateX(-${index * 100}%)` }}
+      >
+        {PRED_SLIDES.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            alt={`NextZGames Predictions app screen ${i + 1}`}
+            loading="lazy"
+            className="w-full shrink-0 object-cover object-top"
+            style={{ aspectRatio: "400 / 800" }}
+          />
+        ))}
+      </div>
+      <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">
+        {PRED_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Show predictions screen ${i + 1}`}
+            data-testid={`predictions-carousel-dot-${i}`}
+            onClick={() => setIndex(i)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-5 bg-[#D4C942]" : "w-1.5 bg-[#122A0E]/30"}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
 const PredictionsSection = () => (
   <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="predictions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <Reveal delay={0.15} className="relative order-2 mx-auto lg:order-1">
-          <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#122A0E]/15 -rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
+          <PredictionsCarousel />
         </Reveal>
         <div className="order-1 lg:order-2">
           <Chapter label="Predictions" tone="light" />
