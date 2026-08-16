@@ -41,7 +41,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-plum py-8 md:py-12" data-testid="poker-features-section">
+      <section className="bg-teal-deep py-8 md:py-12" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter label="Features" />
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

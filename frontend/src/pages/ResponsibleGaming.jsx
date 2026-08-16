@@ -38,7 +38,7 @@ export default function ResponsibleGaming() {
             ))}
           </div>
           <Reveal delay={0.2}>
-            <div className="mt-7 rounded-2xl border border-[#122A0E] bg-[#122A0E] p-5 md:p-8" data-testid="rg-notice">
+            <div className="mt-7 rounded-2xl border border-[#0F4C44] bg-[#0F4C44] p-5 md:p-8" data-testid="rg-notice">
               <p className="font-heading text-lg font-bold text-white">Need a break?</p>
               <p className="mt-2 max-w-2xl text-sm text-white/65">
                 If you feel your gaming is becoming a problem, contact our support team at{" "}

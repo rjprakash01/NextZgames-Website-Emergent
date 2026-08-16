@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="bg-teal-deep py-8 md:py-12" data-testid="about-vision">
+      <section className="bg-coral-deep py-8 md:py-12" data-testid="about-vision">
         <div className="mx-auto grid max-w-5xl gap-5 px-6 md:grid-cols-2">
           <Reveal>
             <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-vision-card">

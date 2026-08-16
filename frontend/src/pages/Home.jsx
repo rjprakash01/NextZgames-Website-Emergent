@@ -42,7 +42,7 @@ const Hero = () => {
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
 
   return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#122A0E]">
+    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-plum">
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
@@ -222,7 +222,7 @@ const PredictionsSection = () => (
 );
 
 const WhySection = () => (
-  <section className="bg-teal-deep py-8 md:py-12" data-testid="why-section">
+  <section className="bg-[#122A0E] py-8 md:py-12" data-testid="why-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
@@ -296,7 +296,7 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-[#122A0E] py-8 md:py-12" data-testid="promotions-section">
+  <section className="bg-coral-deep py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
@@ -319,15 +319,15 @@ const PromotionsSection = () => (
           const Icon = PROMO_ICONS[p.icon];
           return (
             <Reveal key={p.slug} delay={0.07 * i}>
-              <div className="card-green group relative h-full overflow-hidden p-5" data-testid={`promo-card-${p.slug}`}>
+              <div className="card-light group relative h-full overflow-hidden p-5" data-testid={`promo-card-${p.slug}`}>
                 <span className="icon-chip" style={{ background: CHIP_COLORS[i % CHIP_COLORS.length], color: "#122A0E" }}><Icon size={19} /></span>
-                <h3 className="mt-3 font-heading text-lg font-bold text-white">{p.title}</h3>
-                <p className="mt-1.5 text-sm text-white/60">{p.desc}</p>
-                <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-[#EFE35F]/80">{p.validity}</p>
+                <h3 className="mt-3 font-heading text-lg font-bold text-[#122A0E]">{p.title}</h3>
+                <p className="mt-1.5 text-sm text-[#122A0E]/60">{p.desc}</p>
+                <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-[#8C7A0F]">{p.validity}</p>
                 <Link
                   to="/promotions"
                   data-testid={`promo-view-${p.slug}`}
-                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors duration-300 group-hover:text-[#EFE35F]"
+                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#122A0E] transition-colors duration-300 group-hover:text-[#6A4FA3]"
                 >
                   View Promotion <ArrowUpRight size={15} />
                 </Link>
@@ -372,7 +372,7 @@ const HowItWorksSection = () => (
 );
 
 const TrustSection = () => (
-  <section className="bg-[#122A0E] py-8 md:py-12" data-testid="trust-section">
+  <section className="bg-plum py-8 md:py-12" data-testid="trust-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Trust & Responsible Gaming" />
       <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
@@ -396,7 +396,7 @@ const TrustSection = () => (
             const Icon = TRUST_ICONS[t.icon];
             return (
               <Reveal key={t.title} delay={0.06 * i}>
-                <div className="card-green h-full p-5" data-testid={`trust-card-${i}`}>
+                <div className="rounded-[1.25rem] border border-white/15 bg-white/10 h-full p-5" data-testid={`trust-card-${i}`}>
                   <span className="icon-chip !h-10 !w-10" style={{ background: ["#EFE35F", "#5EC8F2", "#4ADE80", "#9B7FE0"][i % 4], color: "#122A0E" }}><Icon size={17} /></span>
                   <h3 className="mt-3 font-heading text-base font-bold text-white">{t.title}</h3>
                   <p className="mt-1.5 text-sm text-white/60">{t.desc}</p>
@@ -439,7 +439,7 @@ const FaqSection = () => (
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-[#122A0E] py-10 md:py-14" data-testid="final-cta">
+  <section className="relative overflow-hidden bg-teal-deep py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal delay={0.1}>
         <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
