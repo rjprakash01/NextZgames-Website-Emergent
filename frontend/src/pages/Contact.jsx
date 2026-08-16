@@ -57,7 +57,7 @@ export default function Contact() {
       <PageHero
         chapter="@"
         label="Contact"
-        title={<>Talk to <span className="text-[#1B3A17]">the Team</span></>}
+        title={<>Talk to <span className="text-gold-gradient">Us</span></>}
         sub="Poker, predictions, payments or your account — ask us anything. A real person reads every message."
       />
       <section className="section-light py-8 md:py-12" data-testid="contact-section">
