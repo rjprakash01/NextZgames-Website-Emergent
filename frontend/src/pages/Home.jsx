@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import {
   Users, Smartphone, Layers, Compass, ShieldCheck, Headphones,
   Lock, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
+  Spade, Heart, Diamond, Club, Target,
 } from "lucide-react";
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
 import {
@@ -20,6 +21,7 @@ import {
 const WHY_ICONS = { users: Users, smartphone: Smartphone, layers: Layers, compass: Compass, shield: ShieldCheck, headphones: Headphones };
 const TRUST_ICONS = { lock: Lock, database: Database, card: CreditCard, scale: Scale };
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
+const SUITS = [Spade, Heart, Diamond, Club];
 
 const MaskedLine = ({ children, delay, className = "" }) => (
   <span className="block overflow-hidden pb-1">
@@ -38,10 +40,28 @@ const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
-  const phoneR = useTransform(scrollYProgress, [0, 1], [0, -3]);
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const tiltX = useTransform(my, [-0.5, 0.5], [7, -7]);
+  const tiltY = useTransform(mx, [-0.5, 0.5], [-7, 7]);
+
+  const onMouseMove = (e) => {
+    const r = ref.current?.getBoundingClientRect();
+    if (!r) return;
+    mx.set((e.clientX - r.left) / r.width - 0.5);
+    my.set((e.clientY - r.top) / r.height - 0.5);
+  };
 
   return (
-    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#284525]">
+    <section
+      ref={ref}
+      data-testid="hero-section"
+      onMouseMove={onMouseMove}
+      className="relative overflow-hidden bg-[#284525]"
+    >
+      <Spade size={120} className="suit-float anim-drift-a right-[8%] top-24 hidden md:block" />
+      <Club size={80} className="suit-float anim-drift-b left-[4%] bottom-24 hidden md:block" />
+      <Diamond size={60} className="suit-float anim-drift-a left-[42%] top-16 hidden lg:block" />
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
@@ -66,30 +86,35 @@ const Hero = () => {
               Explore Poker
             </Link>
           </motion.div>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 1 }}
-            className="mt-4 text-[10px] uppercase tracking-[0.25em] text-white/40"
+            className="mt-5 flex items-center gap-2.5"
           >
-            Android & iOS — Launching Soon
-          </motion.p>
+            {SUITS.map((Suit, i) => (
+              <Suit key={i} size={14} className="text-[#EFE35F]/70" />
+            ))}
+            <span className="ml-1 text-[10px] uppercase tracking-[0.25em] text-white/40">Android & iOS — Launching Soon</span>
+          </motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 50, rotate: 4 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto"
+          className="relative mx-auto [perspective:900px]"
         >
-          <motion.div style={{ y: phoneY, rotate: phoneR }}>
-            <div className="float-slow">
-              <img
-                src="/creative-poker.jpg"
-                alt="NextZGames Poker app — cash games and tournaments"
-                data-testid="hero-phone"
-                className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#EFE35F]/25 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
-              />
-            </div>
+          <motion.div style={{ y: phoneY }}>
+            <motion.div style={{ rotateX: tiltX, rotateY: tiltY, transformStyle: "preserve-3d" }}>
+              <div className="float-slow">
+                <img
+                  src="/creative-poker.jpg"
+                  alt="NextZGames Poker app — cash games and tournaments"
+                  data-testid="hero-phone"
+                  className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#EFE35F]/25 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+                />
+              </div>
+            </motion.div>
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
         </motion.div>
@@ -101,12 +126,15 @@ const Hero = () => {
 const Ticker = () => (
   <div className="bg-[#EFE35F] py-3" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
-      {["Poker", "Predictions", "Your Next Move", "One App", "Mobile First", "Download NextZGames"].map((t) => (
-        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#284525]">
-          {t}
-          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#284525]" />
-        </span>
-      ))}
+      {["Poker", "Predictions", "Your Next Move", "One App", "Mobile First", "Download NextZGames"].map((t, i) => {
+        const Suit = SUITS[i % 4];
+        return (
+          <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#284525]">
+            {t}
+            <Suit size={16} className="text-[#284525]" />
+          </span>
+        );
+      })}
     </Marquee>
   </div>
 );
@@ -138,6 +166,7 @@ const BrandStatement = () => (
 
 const PokerSection = () => (
   <section className="relative overflow-hidden bg-[#284525] py-8 md:py-12" data-testid="poker-section">
+    <Spade size={260} className="suit-float -right-14 top-6 !text-white/5" />
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
@@ -183,6 +212,7 @@ const PokerSection = () => (
 
 const PredictionsSection = () => (
   <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="predictions-section">
+    <Target size={240} className="suit-float-light -left-12 bottom-0" />
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <Reveal delay={0.15} className="relative order-2 mx-auto lg:order-1">
@@ -439,9 +469,12 @@ const FaqSection = () => (
 
 const FinalCTA = () => (
   <section className="relative overflow-hidden bg-[#284525] py-10 md:py-14" data-testid="final-cta">
+    <Spade size={100} className="suit-float anim-drift-a left-[8%] top-10 hidden md:block" />
+    <Heart size={80} className="suit-float anim-drift-b right-[10%] bottom-8 hidden md:block" />
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal>
         <span className="inline-flex items-center gap-2 rounded-full border border-[#EFE35F]/35 bg-[#EFE35F]/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EFE35F]">
+          <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-[#EFE35F]" />
           Download
         </span>
       </Reveal>

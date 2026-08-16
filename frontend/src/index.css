@@ -148,6 +148,33 @@ body {
     animation: float-slow 6s ease-in-out infinite;
 }
 
+@keyframes drift-a {
+    0%, 100% { transform: translateY(0) rotate(10deg); }
+    50% { transform: translateY(-16px) rotate(22deg); }
+}
+@keyframes drift-b {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50% { transform: translateY(-12px) rotate(-20deg); }
+}
+.suit-float {
+    position: absolute;
+    color: rgba(239, 227, 95, 0.18);
+    pointer-events: none;
+}
+.suit-float-light {
+    position: absolute;
+    color: rgba(40, 69, 37, 0.06);
+    pointer-events: none;
+}
+.anim-drift-a { animation: drift-a 7s ease-in-out infinite; }
+.anim-drift-b { animation: drift-b 9s ease-in-out infinite; }
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+.pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+
 @media (prefers-reduced-motion: reduce) {
     .float-slow { animation: none; }
 }
