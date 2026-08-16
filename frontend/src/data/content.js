@@ -14,10 +14,10 @@ export const MOBILE_EXTRA_LINKS = [
 ];
 
 export const POKER_FEATURES = [
-  { title: "Multiple Games", desc: "Cash games, tournaments and classic formats like No-Limit Hold'em and PLO — pick the game that fits your style and your bankroll." },
-  { title: "Smooth Experience", desc: "A fast, responsive table where every bet, call and raise lands exactly when you mean it to. No lag, no misclicks." },
-  { title: "Easy Game Selection", desc: "Live lobbies show real-time blinds, open seats and entry fees — find your table in seconds, not menus." },
-  { title: "Mobile First", desc: "A complete poker room in your pocket. Play a quick session on the move or settle in for a final table." },
+  { title: "Tables for Every Player", desc: "Choose from a range of stakes and table options that match your playing style and comfort level." },
+  { title: "Smooth Gameplay", desc: "Fast, responsive tables keep every bet, call, raise and fold seamless and precise." },
+  { title: "Live Poker Action", desc: "Find active tables, open seats and ongoing games with a simple, real-time lobby experience." },
+  { title: "Built for Mobile", desc: "Enjoy the complete poker experience on your phone — anytime, anywhere, with an interface designed for mobile play." },
 ];
 
 export const PREDICTION_STEPS = [

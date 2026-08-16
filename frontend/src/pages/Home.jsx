@@ -127,7 +127,7 @@ const PokerSection = () => (
       <Reveal delay={0.15} className="mt-7 text-center">
         <p className="font-heading text-lg md:text-xl font-bold text-white">Ready for the table?</p>
         <div className="mt-4">
-          <DownloadButton testid="poker-ready-download-btn" source="poker_ready" label="Download the NextZGames App" />
+          <DownloadButton testid="poker-ready-download-btn" source="poker_ready" label="Download NextZGames App" />
         </div>
       </Reveal>
     </div>
