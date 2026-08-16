@@ -28,12 +28,12 @@ export default function Poker() {
           <div className="order-1 lg:order-2">
             <Chapter n="01" label="The Lobby" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
+              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
                 Find Your Table <span className="gold-strong">in Seconds</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#284525]/65">
+              <p className="mt-4 max-w-md text-sm md:text-base text-[#254F1F]/65">
                 Browse available Poker formats, check blinds and open seats, and join the table that fits your game — all from the lobby inside the app.
               </p>
             </Reveal>
@@ -41,7 +41,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#284525] py-8 md:py-12" data-testid="poker-features-section">
+      <section className="bg-[#254F1F] py-8 md:py-12" data-testid="poker-features-section">
         <div className="mx-auto max-w-6xl px-6">
           <Chapter n="02" label="Features" />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -63,12 +63,12 @@ export default function Poker() {
           <div>
             <Chapter n="03" label="The Table" tone="light" />
             <Reveal delay={0.1}>
-              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
+              <h2 className="mt-5 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
                 Every Decision, <span className="gold-strong">In Your Hands</span>
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-4 max-w-md text-sm md:text-base text-[#284525]/65">
+              <p className="mt-4 max-w-md text-sm md:text-base text-[#254F1F]/65">
                 A clean, responsive table interface built for focus — your cards, the pot and your actions always front and centre.
               </p>
             </Reveal>
@@ -79,7 +79,7 @@ export default function Poker() {
         </div>
       </section>
 
-      <section className="bg-[#284525] py-16 text-center" data-testid="poker-cta">
+      <section className="bg-[#254F1F] py-16 text-center" data-testid="poker-cta">
         <div className="mx-auto max-w-2xl px-6">
           <Reveal>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">Ready for the table?</h2>

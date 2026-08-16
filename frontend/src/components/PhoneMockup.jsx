@@ -24,18 +24,18 @@ const screens = {
         <p className="font-heading text-lg font-extrabold text-[#EFE35F]">₹ 2,450.00</p>
       </div>
       <div className="mx-3 mt-2 grid grid-cols-2 gap-2">
-        <div className="rounded-xl bg-[#284525] border border-[#EFE35F]/30 p-3">
+        <div className="rounded-xl bg-[#254F1F] border border-[#EFE35F]/30 p-3">
           <p className="font-heading text-[10px] font-bold text-white">POKER</p>
           <p className="text-[7px] text-white/50 mt-1">12 tables live</p>
         </div>
-        <div className="rounded-xl bg-[#284525] border border-white/10 p-3">
+        <div className="rounded-xl bg-[#254F1F] border border-white/10 p-3">
           <p className="font-heading text-[10px] font-bold text-white">PREDICTIONS</p>
           <p className="text-[7px] text-white/50 mt-1">8 events open</p>
         </div>
       </div>
       <div className="mx-3 mt-2 rounded-xl bg-gradient-to-r from-[#EFE35F] to-[#CDBF4D] p-3">
-        <p className="font-heading text-[9px] font-extrabold text-[#284525]">WELCOME BOOST</p>
-        <p className="text-[7px] text-[#284525]/70">New player offer inside</p>
+        <p className="font-heading text-[9px] font-extrabold text-[#254F1F]">WELCOME BOOST</p>
+        <p className="text-[7px] text-[#254F1F]/70">New player offer inside</p>
       </div>
       <div className="mt-auto mx-3 mb-3 flex justify-between rounded-xl bg-black/30 px-4 py-2 text-[7px] text-white/50">
         <span className="text-[#EFE35F]">Home</span><span>Poker</span><span>Predict</span><span>Wallet</span>
@@ -58,7 +58,7 @@ const screens = {
               <p className="font-heading text-[9px] font-bold text-white">{name}</p>
               <p className="text-[7px] text-white/50">Blinds {blinds} · {seats} seated</p>
             </div>
-            <span className="rounded-full bg-[#EFE35F] px-2.5 py-1 font-heading text-[7px] font-extrabold text-[#284525]">JOIN</span>
+            <span className="rounded-full bg-[#EFE35F] px-2.5 py-1 font-heading text-[7px] font-extrabold text-[#254F1F]">JOIN</span>
           </div>
         ))}
       </div>
@@ -70,25 +70,25 @@ const screens = {
   table: (
     <>
       <StatusBar />
-      <div className="relative mx-3 mt-3 flex-1 rounded-2xl border border-[#EFE35F]/25 bg-[radial-gradient(circle_at_center,#35602F_0%,#284525_55%,#284525_100%)]">
+      <div className="relative mx-3 mt-3 flex-1 rounded-2xl border border-[#EFE35F]/25 bg-[radial-gradient(circle_at_center,#35602F_0%,#254F1F_55%,#254F1F_100%)]">
         <div className="absolute left-1/2 top-6 -translate-x-1/2 rounded-full bg-black/40 px-3 py-1 text-center">
           <p className="text-[6px] uppercase tracking-widest text-white/50">Pot</p>
           <p className="font-heading text-[10px] font-extrabold text-[#EFE35F]">₹ 1,280</p>
         </div>
         <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-1.5">
           {["A♠", "K♥", "Q♣", "7♦", "2♠"].map((c) => (
-            <span key={c} className="flex h-8 w-6 items-center justify-center rounded bg-white font-heading text-[8px] font-extrabold text-[#284525] shadow">{c}</span>
+            <span key={c} className="flex h-8 w-6 items-center justify-center rounded bg-white font-heading text-[8px] font-extrabold text-[#254F1F] shadow">{c}</span>
           ))}
         </div>
         <div className="absolute bottom-12 left-1/2 flex -translate-x-1/2 gap-1.5">
           {["9♠", "9♥"].map((c) => (
-            <span key={c} className="flex h-9 w-7 items-center justify-center rounded border-2 border-[#EFE35F] bg-white font-heading text-[9px] font-extrabold text-[#284525] shadow-lg">{c}</span>
+            <span key={c} className="flex h-9 w-7 items-center justify-center rounded border-2 border-[#EFE35F] bg-white font-heading text-[9px] font-extrabold text-[#254F1F] shadow-lg">{c}</span>
           ))}
         </div>
         <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5 text-[7px] font-heading font-bold">
           <span className="rounded-full bg-black/50 px-3 py-1.5 text-white/80">FOLD</span>
           <span className="rounded-full bg-black/50 px-3 py-1.5 text-white/80">CALL ₹80</span>
-          <span className="rounded-full bg-[#EFE35F] px-3 py-1.5 text-[#284525]">RAISE</span>
+          <span className="rounded-full bg-[#EFE35F] px-3 py-1.5 text-[#254F1F]">RAISE</span>
         </div>
       </div>
       <div className="mb-3" />
@@ -103,7 +103,7 @@ const screens = {
         <p className="font-heading text-[10px] font-bold text-white mt-1">Mumbai vs Chennai</p>
         <p className="text-[7px] text-white/60 mt-2">Who wins the match?</p>
         <div className="mt-2 grid grid-cols-2 gap-2">
-          <span className="rounded-lg bg-[#EFE35F] py-2 text-center font-heading text-[8px] font-extrabold text-[#284525]">MUMBAI · 1.85</span>
+          <span className="rounded-lg bg-[#EFE35F] py-2 text-center font-heading text-[8px] font-extrabold text-[#254F1F]">MUMBAI · 1.85</span>
           <span className="rounded-lg border border-white/20 py-2 text-center font-heading text-[8px] font-bold text-white/80">CHENNAI · 2.05</span>
         </div>
       </div>
@@ -112,7 +112,7 @@ const screens = {
         <p className="font-heading text-[10px] font-bold text-white mt-1">Goa vs Bengaluru</p>
         <p className="text-[7px] text-white/60 mt-1">Total goals over 2.5?</p>
       </div>
-      <div className="mt-auto mx-3 mb-3 rounded-xl bg-[#EFE35F] py-2.5 text-center font-heading text-[8px] font-extrabold tracking-widest text-[#284525]">
+      <div className="mt-auto mx-3 mb-3 rounded-xl bg-[#EFE35F] py-2.5 text-center font-heading text-[8px] font-extrabold tracking-widest text-[#254F1F]">
         CONFIRM SELECTION · ₹200
       </div>
     </>
@@ -120,11 +120,11 @@ const screens = {
   wallet: (
     <>
       <AppHeader />
-      <div className="mx-3 mt-3 rounded-2xl border border-[#EFE35F]/30 bg-gradient-to-br from-[#30512D] to-[#284525] p-4">
+      <div className="mx-3 mt-3 rounded-2xl border border-[#EFE35F]/30 bg-gradient-to-br from-[#30512D] to-[#254F1F] p-4">
         <p className="text-[7px] uppercase tracking-[0.2em] text-white/50">Wallet Balance</p>
         <p className="font-heading text-xl font-extrabold text-white mt-1">₹ 2,450.00</p>
         <div className="mt-3 flex gap-2">
-          <span className="rounded-full bg-[#EFE35F] px-3 py-1.5 font-heading text-[7px] font-extrabold text-[#284525]">ADD FUNDS</span>
+          <span className="rounded-full bg-[#EFE35F] px-3 py-1.5 font-heading text-[7px] font-extrabold text-[#254F1F]">ADD FUNDS</span>
           <span className="rounded-full border border-white/25 px-3 py-1.5 font-heading text-[7px] font-bold text-white/80">WITHDRAW</span>
         </div>
       </div>
@@ -149,7 +149,7 @@ export const PhoneMockup = ({ screen = "home", className = "", testid }) => (
     data-testid={testid || `phone-${screen}`}
     className={`relative w-[230px] shrink-0 rounded-[2.8rem] border border-white/15 bg-[#163010] p-[6px] shadow-[0_40px_80px_rgba(0,0,0,0.5)] ${className}`}
   >
-    <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[2.4rem] bg-[#284525] flex flex-col">
+    <div className="relative aspect-[9/19] w-full overflow-hidden rounded-[2.4rem] bg-[#254F1F] flex flex-col">
       {screens[screen]}
     </div>
   </div>

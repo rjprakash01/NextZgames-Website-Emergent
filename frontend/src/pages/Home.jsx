@@ -1,11 +1,10 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Users, Smartphone, Layers, Compass, ShieldCheck, Headphones,
   Lock, Database, CreditCard, Scale, Gift, Zap, ArrowRight, ArrowUpRight,
-  Spade, Heart, Diamond, Club, Target,
 } from "lucide-react";
 import { Chapter, Reveal, DownloadButton } from "../components/bits";
 import {
@@ -21,7 +20,6 @@ import {
 const WHY_ICONS = { users: Users, smartphone: Smartphone, layers: Layers, compass: Compass, shield: ShieldCheck, headphones: Headphones };
 const TRUST_ICONS = { lock: Lock, database: Database, card: CreditCard, scale: Scale };
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
-const SUITS = [Spade, Heart, Diamond, Club];
 
 const MaskedLine = ({ children, delay, className = "" }) => (
   <span className="block overflow-hidden pb-1">
@@ -40,28 +38,9 @@ const Hero = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const phoneY = useTransform(scrollYProgress, [0, 1], [0, 110]);
-  const mx = useMotionValue(0);
-  const my = useMotionValue(0);
-  const tiltX = useTransform(my, [-0.5, 0.5], [7, -7]);
-  const tiltY = useTransform(mx, [-0.5, 0.5], [-7, 7]);
-
-  const onMouseMove = (e) => {
-    const r = ref.current?.getBoundingClientRect();
-    if (!r) return;
-    mx.set((e.clientX - r.left) / r.width - 0.5);
-    my.set((e.clientY - r.top) / r.height - 0.5);
-  };
 
   return (
-    <section
-      ref={ref}
-      data-testid="hero-section"
-      onMouseMove={onMouseMove}
-      className="relative overflow-hidden bg-[#284525]"
-    >
-      <Spade size={120} className="suit-float anim-drift-a right-[8%] top-24 hidden md:block" />
-      <Club size={80} className="suit-float anim-drift-b left-[4%] bottom-24 hidden md:block" />
-      <Diamond size={60} className="suit-float anim-drift-a left-[42%] top-16 hidden lg:block" />
+    <section ref={ref} data-testid="hero-section" className="relative overflow-hidden bg-[#254F1F]">
       <div className="relative mx-auto grid max-w-6xl gap-8 px-6 pb-8 pt-20 md:pt-24 lg:grid-cols-[1.15fr_1fr] lg:items-center">
         <div>
           <h1 className="mt-5 font-heading font-extrabold tracking-tight leading-[1.02] text-[clamp(2.4rem,5.8vw,4.3rem)]">
@@ -86,35 +65,28 @@ const Hero = () => {
               Explore Poker
             </Link>
           </motion.div>
-          <motion.div
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 1 }}
-            className="mt-5 flex items-center gap-2.5"
+            className="mt-4 text-[10px] uppercase tracking-[0.25em] text-white/40"
           >
-            {SUITS.map((Suit, i) => (
-              <Suit key={i} size={14} className="text-[#EFE35F]/70" />
-            ))}
-            <span className="ml-1 text-[10px] uppercase tracking-[0.25em] text-white/40">Android & iOS — Launching Soon</span>
-          </motion.div>
+            Android & iOS — Launching Soon
+          </motion.p>
         </div>
         <motion.div
           initial={{ opacity: 0, y: 50, rotate: 4 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto [perspective:900px]"
+          className="relative mx-auto"
         >
           <motion.div style={{ y: phoneY }}>
-            <motion.div style={{ rotateX: tiltX, rotateY: tiltY, transformStyle: "preserve-3d" }}>
-              <div className="float-slow">
-                <img
-                  src="/creative-poker.jpg"
-                  alt="NextZGames Poker app — cash games and tournaments"
-                  data-testid="hero-phone"
-                  className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#EFE35F]/25 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
-                />
-              </div>
-            </motion.div>
+            <img
+              src="/creative-poker.jpg"
+              alt="NextZGames Poker app — cash games and tournaments"
+              data-testid="hero-phone"
+              className="w-[260px] md:w-[320px] rounded-[2rem] border border-[#EFE35F]/25 shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+            />
           </motion.div>
           <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto h-7 w-3/4 rounded-full bg-black/50 blur-2xl" />
         </motion.div>
@@ -126,15 +98,12 @@ const Hero = () => {
 const Ticker = () => (
   <div className="bg-[#EFE35F] py-3" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
-      {["Poker", "Predictions", "Your Next Move", "One App", "Mobile First", "Download NextZGames"].map((t, i) => {
-        const Suit = SUITS[i % 4];
-        return (
-          <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#284525]">
-            {t}
-            <Suit size={16} className="text-[#284525]" />
-          </span>
-        );
-      })}
+      {["Poker", "Predictions", "Your Next Move", "One App", "Mobile First", "Download NextZGames"].map((t) => (
+        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold uppercase tracking-[0.18em] text-[#254F1F]">
+          {t}
+          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#254F1F]" />
+        </span>
+      ))}
     </Marquee>
   </div>
 );
@@ -144,7 +113,7 @@ const BrandStatement = () => (
     <div className="mx-auto max-w-5xl px-6">
       <Chapter label="The Brand" tone="light" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#284525]">
+        <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#254F1F]">
           Built for the <span className="gold-strong">Next Move.</span>
         </h2>
       </Reveal>
@@ -156,7 +125,7 @@ const BrandStatement = () => (
         className="gold-line mt-5 w-44 origin-left"
       />
       <Reveal delay={0.25}>
-        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#284525]/70">
+        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#254F1F]/70">
           NextZGames brings Poker and Predictions together in one crafted mobile experience. Poker rewards patience; predictions reward instinct — we built a home for both, fast to learn and deep enough to master.
         </p>
       </Reveal>
@@ -165,8 +134,7 @@ const BrandStatement = () => (
 );
 
 const PokerSection = () => (
-  <section className="relative overflow-hidden bg-[#284525] py-8 md:py-12" data-testid="poker-section">
-    <Spade size={260} className="suit-float -right-14 top-6 !text-white/5" />
+  <section className="relative overflow-hidden bg-[#254F1F] py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
@@ -212,21 +180,20 @@ const PokerSection = () => (
 
 const PredictionsSection = () => (
   <section className="section-light relative overflow-hidden py-8 md:py-12" data-testid="predictions-section">
-    <Target size={240} className="suit-float-light -left-12 bottom-0" />
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <Reveal delay={0.15} className="relative order-2 mx-auto lg:order-1">
-          <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#284525]/15 -rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
+          <img src="/creative-predictions.jpg" alt="NextZGames Predictions — live events and wins" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#254F1F]/15 -rotate-2 shadow-[0_30px_60px_rgba(24,43,23,0.25)]" />
         </Reveal>
         <div className="order-1 lg:order-2">
           <Chapter label="Predictions" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#284525]">
+            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#254F1F]">
               Predict the Outcome.<br /><span className="gold-strong">Own the Moment.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-3 max-w-md text-sm md:text-base text-[#284525]/70">
+            <p className="mt-3 max-w-md text-sm md:text-base text-[#254F1F]/70">
               You already watch the game — now read it. Back your instincts on live events across cricket, football and more, and turn every match into a moment that matters.
             </p>
           </Reveal>
@@ -241,8 +208,8 @@ const PredictionsSection = () => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="border-t-2 border-[#A3941F]/50 pt-4" data-testid={`prediction-step-${s.n}`}>
               <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
-              <h3 className="mt-1 font-heading text-base font-bold text-[#284525]">{s.title}</h3>
-              <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
+              <h3 className="mt-1 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
+              <p className="mt-1.5 text-sm text-[#254F1F]/60">{s.desc}</p>
             </div>
           </Reveal>
         ))}
@@ -252,7 +219,7 @@ const PredictionsSection = () => (
 );
 
 const WhySection = () => (
-  <section className="bg-[#284525] py-8 md:py-12" data-testid="why-section">
+  <section className="bg-[#254F1F] py-8 md:py-12" data-testid="why-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
@@ -291,12 +258,12 @@ const AppShowcase = () => {
         <Chapter label="The App Experience" tone="light" />
         <div className="mt-4 flex flex-wrap items-end justify-between gap-5">
           <Reveal delay={0.1}>
-            <h2 className="max-w-xl font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#284525]">
+            <h2 className="max-w-xl font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#254F1F]">
               Everything. Right in <span className="gold-strong">Your Hands.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="max-w-sm text-sm text-[#284525]/70">
+            <p className="max-w-sm text-sm text-[#254F1F]/70">
               One App. Multiple Experiences. Discover Poker and Predictions from one simple mobile experience.
             </p>
           </Reveal>
@@ -304,7 +271,7 @@ const AppShowcase = () => {
         <div className="mt-6 grid gap-6 sm:grid-cols-2 max-w-3xl">
           {creatives.map(({ img, label, testid }, i) => (
             <Reveal key={label} delay={0.08 * i}>
-              <div className="group overflow-hidden rounded-3xl border border-[#284525]/10 bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]">
+              <div className="group overflow-hidden rounded-3xl border border-[#254F1F]/10 bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]">
                 <img
                   src={img}
                   alt={label}
@@ -313,7 +280,7 @@ const AppShowcase = () => {
                   className="w-full transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 />
               </div>
-              <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-[#284525]/45">{label}</p>
+              <p className="mt-3 text-center text-[10px] uppercase tracking-[0.25em] text-[#254F1F]/45">{label}</p>
             </Reveal>
           ))}
         </div>
@@ -326,7 +293,7 @@ const AppShowcase = () => {
 };
 
 const PromotionsSection = () => (
-  <section className="bg-[#284525] py-8 md:py-12" data-testid="promotions-section">
+  <section className="bg-[#254F1F] py-8 md:py-12" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="flex flex-wrap items-end justify-between gap-5">
         <div>
@@ -378,7 +345,7 @@ const HowItWorksSection = () => (
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Getting Started" tone="light" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#284525]">
+        <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#254F1F]">
           Getting Started <span className="gold-strong">Is Simple</span>
         </h2>
       </Reveal>
@@ -387,8 +354,8 @@ const HowItWorksSection = () => (
           <Reveal key={s.n} delay={0.07 * i}>
             <div className="border-t-2 border-[#A3941F]/50 pt-4" data-testid={`how-step-${s.n}`}>
               <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
-              <h3 className="mt-1 font-heading text-base font-bold text-[#284525]">{s.title}</h3>
-              <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
+              <h3 className="mt-1 font-heading text-base font-bold text-[#254F1F]">{s.title}</h3>
+              <p className="mt-1.5 text-sm text-[#254F1F]/60">{s.desc}</p>
             </div>
           </Reveal>
         ))}
@@ -401,7 +368,7 @@ const HowItWorksSection = () => (
 );
 
 const TrustSection = () => (
-  <section className="bg-[#284525] py-8 md:py-12" data-testid="trust-section">
+  <section className="bg-[#254F1F] py-8 md:py-12" data-testid="trust-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Trust & Responsible Gaming" />
       <div className="mt-5 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
@@ -444,18 +411,18 @@ const FaqSection = () => (
     <div className="mx-auto max-w-3xl px-6">
       <Chapter label="FAQ" tone="light" />
       <Reveal delay={0.1}>
-        <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#284525]">
+        <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#254F1F]">
           Common <span className="gold-strong">Questions</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2} className="mt-6">
         <Accordion type="single" collapsible className="w-full">
           {FAQ_GROUPS[0].items.slice(0, 5).map((f, i) => (
-            <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#284525]/15">
-              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#284525] hover:text-[#A3941F] hover:no-underline">
+            <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#254F1F]/15">
+              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#254F1F] hover:text-[#A3941F] hover:no-underline">
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-sm text-[#284525]/65">{f.a}</AccordionContent>
+              <AccordionContent className="text-sm text-[#254F1F]/65">{f.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
@@ -468,13 +435,10 @@ const FaqSection = () => (
 );
 
 const FinalCTA = () => (
-  <section className="relative overflow-hidden bg-[#284525] py-10 md:py-14" data-testid="final-cta">
-    <Spade size={100} className="suit-float anim-drift-a left-[8%] top-10 hidden md:block" />
-    <Heart size={80} className="suit-float anim-drift-b right-[10%] bottom-8 hidden md:block" />
+  <section className="relative overflow-hidden bg-[#254F1F] py-10 md:py-14" data-testid="final-cta">
     <div className="relative mx-auto max-w-3xl px-6 text-center">
       <Reveal>
         <span className="inline-flex items-center gap-2 rounded-full border border-[#EFE35F]/35 bg-[#EFE35F]/10 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#EFE35F]">
-          <span className="pulse-dot h-1.5 w-1.5 rounded-full bg-[#EFE35F]" />
           Download
         </span>
       </Reveal>

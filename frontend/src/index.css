@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --green: #284525;
+    --green: #254F1F;
     --green-light: #30512D;
-    --green-dark: #284525;
-    --green-darker: #284525;
+    --green-dark: #254F1F;
+    --green-darker: #254F1F;
     --gold: #EFE35F;
     --gold-hover: #F0E57C;
     --gold-dim: rgba(239, 227, 95, 0.2);
@@ -56,7 +56,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     background: linear-gradient(135deg, #F2E77E 0%, #EFE35F 55%, #D6CB52 100%);
-    color: #284525;
+    color: #254F1F;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     letter-spacing: 0.04em;
@@ -182,7 +182,7 @@ body {
 /* Light editorial sections */
 .section-light {
     background: #FBFCF4;
-    color: #284525;
+    color: #254F1F;
 }
 
 .card-light {
@@ -217,7 +217,7 @@ body {
     width: 2.75rem;
     border-radius: 0.9rem;
     background: linear-gradient(135deg, #F2E77E, #D9CE57);
-    color: #284525;
+    color: #254F1F;
     box-shadow: 0 8px 20px rgba(239, 227, 95, 0.3);
 }
 
@@ -227,8 +227,8 @@ body {
     justify-content: center;
     gap: 0.5rem;
     background: transparent;
-    border: 1.5px solid #284525;
-    color: #284525;
+    border: 1.5px solid #254F1F;
+    color: #254F1F;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -249,7 +249,7 @@ body {
     border: 1px solid rgba(40, 69, 37, 0.18);
     border-radius: 0.75rem;
     padding: 0.85rem 1rem;
-    color: #284525;
+    color: #254F1F;
     font-size: 0.9rem;
     outline: none;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -258,6 +258,6 @@ body {
     color: rgba(31, 54, 29, 0.35);
 }
 .input-light:focus {
-    border-color: #284525;
+    border-color: #254F1F;
     box-shadow: 0 0 0 3px rgba(40, 69, 37, 0.12);
 }
