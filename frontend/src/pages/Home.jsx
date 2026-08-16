@@ -98,7 +98,7 @@ const Hero = () => {
 const Ticker = () => (
   <div className="bg-[#1B3A17] border-y border-[#EFE35F]/20 py-3" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
-      {["Fair Play", "Instant Withdrawals", "RNG Certified", "Secure Transactions", "Data Privacy"].map((t) => (
+      {["Fair Play", "Instant Withdrawals", "RNG Certified", "Secure Transactions", "Data Privacy", "Account Protection"].map((t) => (
         <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold tracking-[0.08em] text-[#EFE35F]">
           {t}
           <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#EFE35F]" />
