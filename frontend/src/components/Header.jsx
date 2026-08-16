@@ -59,7 +59,7 @@ export const Header = () => {
                 <span className="hidden sm:inline">Download App</span>
                 <span className="sm:hidden">Get App</span>
               </Link>
-              <span data-testid="header-launch-note" className="whitespace-nowrap text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-white/45">Android & iOS — Launching Soon</span>
+              <span data-testid="header-launch-note" className="hidden sm:block whitespace-nowrap text-[9px] uppercase tracking-[0.18em] text-white/45">Android & iOS — Launching Soon</span>
             </div>
             <button
               data-testid="mobile-menu-toggle"
