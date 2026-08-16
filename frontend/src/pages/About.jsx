@@ -3,7 +3,7 @@ import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
 import { usePageMeta } from "../lib/meta";
 
 const PILLARS = [
-  { icon: Cpu, title: "Technology", desc: "A modern mobile platform built for speed and reliability.", color: "#EFE35F" },
+  { icon: Cpu, title: "Technology", desc: "A modern mobile platform built for speed and reliability.", color: "#E3B84A" },
   { icon: Gamepad2, title: "Gaming", desc: "Poker and Predictions crafted around real player behaviour.", color: "#FF7A59" },
   { icon: PenTool, title: "Design", desc: "Clean, premium interfaces that stay out of the way of the game.", color: "#5EC8F2" },
   { icon: HeartHandshake, title: "Player Experience", desc: "Support, security and responsible play at the core.", color: "#9B7FE0" },
@@ -38,8 +38,8 @@ export default function About() {
       <section className="bg-coral-deep py-8 md:py-12" data-testid="about-vision">
         <div className="mx-auto grid max-w-5xl gap-5 px-6 md:grid-cols-2">
           <Reveal>
-            <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-vision-card">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">Vision</span>
+            <div className="card-green h-full border-l-4 !border-l-[#E3B84A] p-8" data-testid="about-vision-card">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#E3B84A]">Vision</span>
               <p className="mt-3 font-heading text-xl font-bold leading-snug text-white">
                 To build a trusted and exciting destination for modern players.
               </p>

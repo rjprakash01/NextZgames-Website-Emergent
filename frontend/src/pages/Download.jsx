@@ -23,7 +23,7 @@ export default function DownloadPage() {
   const downloadUrl = `${window.location.origin}/download`;
 
   const Badge = () => (
-    <span className="absolute right-4 top-4 rounded-full bg-[#122A0E] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#EFE35F]">
+    <span className="absolute right-4 top-4 rounded-full bg-[#122A0E] px-3 py-1 font-heading text-[10px] font-extrabold uppercase tracking-widest text-[#E3B84A]">
       Your device
     </span>
   );

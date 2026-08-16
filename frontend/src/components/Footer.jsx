@@ -43,8 +43,8 @@ const SOCIALS = [
 ];
 
 export const Footer = () => (
-  <footer data-testid="site-footer" className="relative bg-[#122A0E] border-t border-[#EFE35F]/15">
-    <div className="h-[3px] w-full bg-gradient-to-r from-[#EFE35F] via-[#EFE35F]/50 to-transparent" />
+  <footer data-testid="site-footer" className="relative bg-[#122A0E] border-t border-[#E3B84A]/15">
+    <div className="h-[3px] w-full bg-gradient-to-r from-[#E3B84A] via-[#E3B84A]/50 to-transparent" />
     <div className="mx-auto max-w-6xl px-6 py-9 md:py-12">
       <div className="grid gap-10 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
@@ -61,7 +61,7 @@ export const Footer = () => (
                 {...(href !== "#" ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 aria-label={label}
                 data-testid={`social-${label.toLowerCase()}`}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#EFE35F] hover:text-[#EFE35F]"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-colors duration-300 hover:border-[#E3B84A] hover:text-[#E3B84A]"
               >
                 <Icon size={16} />
               </a>
@@ -70,7 +70,7 @@ export const Footer = () => (
         </div>
         {COLS.map((col) => (
           <div key={col.title}>
-            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">{col.title}</h4>
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#E3B84A]">{col.title}</h4>
             <ul className="mt-4 space-y-3">
               {col.links.map((l) => (
                 <li key={l.label}>

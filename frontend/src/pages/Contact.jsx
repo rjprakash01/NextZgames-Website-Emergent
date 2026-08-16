@@ -67,14 +67,14 @@ export default function Contact() {
             <Reveal delay={0.1}>
               <div className="mt-6 space-y-6">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#122A0E] text-[#EFE35F]"><Mail size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#122A0E] text-[#E3B84A]"><Mail size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#122A0E]/50">Support Email</p>
                     <a href="mailto:support@nextzgames.com" data-testid="contact-email" className="mt-1 block font-heading font-bold text-[#122A0E] hover:text-[#122A0E]">support@nextzgames.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#122A0E] text-[#EFE35F]"><Clock size={18} /></span>
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#122A0E] text-[#E3B84A]"><Clock size={18} /></span>
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.25em] text-[#122A0E]/50">Support Hours</p>
                     <p className="mt-1 font-heading font-bold text-[#122A0E]">Mon – Sun, 9:00 – 21:00 IST</p>
@@ -84,7 +84,7 @@ export default function Contact() {
                   <p className="text-[11px] uppercase tracking-[0.25em] text-[#122A0E]/50">Follow Us</p>
                   <div className="mt-3 flex gap-3">
                     {SOCIALS.map(({ icon: Icon, label }) => (
-                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#122A0E]/20 text-[#122A0E]/60 transition-colors duration-300 hover:border-[#122A0E] hover:bg-[#EFE35F] hover:text-[#122A0E]">
+                      <a key={label} href="#" aria-label={label} data-testid={`contact-social-${label.toLowerCase()}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-[#122A0E]/20 text-[#122A0E]/60 transition-colors duration-300 hover:border-[#122A0E] hover:bg-[#E3B84A] hover:text-[#122A0E]">
                         <Icon size={16} />
                       </a>
                     ))}

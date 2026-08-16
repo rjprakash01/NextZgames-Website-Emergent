@@ -23,7 +23,7 @@ export default function Promotions() {
               <Reveal key={p.slug} delay={0.05 * i}>
                 <article
                   data-testid={`promotion-${p.slug}`}
-                  style={{ borderTop: `3px solid ${["#EFE35F", "#5EC8F2", "#FF7A59"][i % 3]}` }}
+                  style={{ borderTop: `3px solid ${["#E3B84A", "#5EC8F2", "#FF7A59"][i % 3]}` }}
                   className="card-light relative grid gap-6 overflow-hidden p-5 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8"
                 >
                   <span className="icon-chip !h-14 !w-14 !rounded-2xl">

@@ -66,7 +66,7 @@ const HeroCarousel = () => {
             aria-label={`Show hero slide ${i + 1}`}
             data-testid={`hero-carousel-dot-${i}`}
             onClick={() => setIndex(i)}
-            className={`h-2 rounded-full transition-all duration-300 ${i === index ? "w-6 bg-[#D4C942]" : "w-2 bg-white/60"}`}
+            className={`h-2 rounded-full transition-all duration-300 ${i === index ? "w-6 bg-[#C9A227]" : "w-2 bg-white/60"}`}
           />
         ))}
       </div>
@@ -81,7 +81,7 @@ const Hero = () => (
 );
 
 const Ticker = () => (
-  <div className="bg-[#EFE35F] py-1.5" data-testid="ticker">
+  <div className="bg-[#E3B84A] py-1.5" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
       {["Fair Play", "Instant Withdrawals", "RNG Certified", "Secure Transactions", "Data Privacy", "Account Protection"].map((t) => (
         <span key={t} className="mx-7 flex items-center gap-7 font-heading text-sm md:text-base font-extrabold tracking-[0.08em] text-[#122A0E]">
@@ -154,7 +154,7 @@ const PokerCarousel = () => {
             aria-label={`Show poker screen ${i + 1}`}
             data-testid={`poker-carousel-dot-${i}`}
             onClick={() => setIndex(i)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-5 bg-[#D4C942]" : "w-1.5 bg-white/50"}`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-5 bg-[#C9A227]" : "w-1.5 bg-white/50"}`}
           />
         ))}
       </div>
@@ -187,7 +187,7 @@ const PokerSection = () => (
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
-            <Link to="/poker" data-testid="poker-section-explore-btn" onClick={() => track("cta_click", { source: "home_poker" })} className="inline-flex items-center gap-2 rounded-full bg-[#D4C942] px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#e2d84f]">Explore Poker</Link>
+            <Link to="/poker" data-testid="poker-section-explore-btn" onClick={() => track("cta_click", { source: "home_poker" })} className="inline-flex items-center gap-2 rounded-full bg-[#C9A227] px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#e2d84f]">Explore Poker</Link>
           </Reveal>
         </div>
         <Reveal delay={0.15} className="relative mx-auto">
@@ -197,7 +197,7 @@ const PokerSection = () => (
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {POKER_FEATURES.map((f, i) => (
           <Reveal key={f.title} delay={0.07 * i}>
-            <div className="border-t-2 border-[#D4C942] pt-4" data-testid={`poker-feature-${i}`}>
+            <div className="border-t-2 border-[#C9A227] pt-4" data-testid={`poker-feature-${i}`}>
               <h3 className="font-heading text-base font-bold text-white">{f.title}</h3>
               <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
             </div>
@@ -247,7 +247,7 @@ const PredictionsCarousel = () => {
             aria-label={`Show predictions screen ${i + 1}`}
             data-testid={`predictions-carousel-dot-${i}`}
             onClick={() => setIndex(i)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-5 bg-[#D4C942]" : "w-1.5 bg-[#122A0E]/30"}`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${i === index ? "w-5 bg-[#C9A227]" : "w-1.5 bg-[#122A0E]/30"}`}
           />
         ))}
       </div>
@@ -283,14 +283,14 @@ const PredictionsSection = () => (
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
-            <Link to="/predictions" data-testid="predictions-section-explore-btn" onClick={() => track("cta_click", { source: "home_predictions" })} className="inline-flex items-center gap-2 rounded-full bg-[#D4C942] px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#e2d84f]">Explore Predictions</Link>
+            <Link to="/predictions" data-testid="predictions-section-explore-btn" onClick={() => track("cta_click", { source: "home_predictions" })} className="inline-flex items-center gap-2 rounded-full bg-[#C9A227] px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#e2d84f]">Explore Predictions</Link>
           </Reveal>
         </div>
       </div>
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="border-t-2 border-[#D4C942] pt-4" data-testid={`prediction-step-${s.n}`}>
+            <div className="border-t-2 border-[#C9A227] pt-4" data-testid={`prediction-step-${s.n}`}>
               <h3 className="font-heading text-base font-bold text-[#122A0E]">{s.title}</h3>
               <p className="mt-1.5 text-sm text-[#122A0E]/60">{s.desc}</p>
             </div>
@@ -330,7 +330,7 @@ const WhySection = () => (
         {WHY_MOBILE.map(({ Icon, title, desc }, i) => (
           <Reveal key={title} delay={0.05 * i}>
             <div className="flex flex-col items-center text-center" data-testid={`why-mobile-card-${i}`}>
-              <Icon size={46} strokeWidth={1.4} className="text-[#EFE35F]" />
+              <Icon size={46} strokeWidth={1.4} className="text-[#E3B84A]" />
               <h3 className="mt-4 font-heading text-lg font-bold text-white">{title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-white/70">{desc}</p>
             </div>
@@ -350,7 +350,7 @@ const WhySection = () => (
         {WHY_DESKTOP.map(({ Icon, title, desc }, i) => (
           <Reveal key={title} delay={0.05 * i}>
             <div className="flex flex-col items-center text-center px-2" data-testid={`why-card-${i}`}>
-              <Icon size={52} strokeWidth={1.5} className="text-[#EFE35F]" />
+              <Icon size={52} strokeWidth={1.5} className="text-[#E3B84A]" />
               <h3 className="mt-5 font-heading text-xl font-bold text-white">{title}</h3>
               <p className="mt-2.5 max-w-[16rem] text-sm leading-relaxed text-white/70">{desc}</p>
             </div>
@@ -432,10 +432,10 @@ const PromotionsSection = () => (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div
                 className="group relative flex h-full min-h-[220px] flex-col overflow-hidden rounded-[1.25rem] p-6 shadow-[0_20px_45px_rgba(10,31,8,0.35)]"
-                style={{ background: "linear-gradient(180deg, #0a2109 0%, #143f16 40%, #4d6a17 72%, #C9BE33 100%)" }}
+                style={{ background: "linear-gradient(180deg, #0a2109 0%, #143f16 40%, #4d6a17 72%, #C9A227 100%)" }}
                 data-testid={`promo-card-${p.slug}`}
               >
-                <span className="self-start rounded-full border border-white/30 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#EFE35F]">
+                <span className="self-start rounded-full border border-white/30 bg-black/25 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#E3B84A]">
                   {p.validity}
                 </span>
                 <h3 className="mt-6 font-heading text-xl font-bold text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.35)]">{p.title}</h3>
@@ -503,7 +503,7 @@ const FaqSection = () => (
         <Accordion type="single" collapsible className="w-full">
           {FAQ_GROUPS[0].items.slice(0, 5).map((f, i) => (
             <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-white/15">
-              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-white hover:text-[#EFE35F] hover:no-underline">
+              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-white hover:text-[#E3B84A] hover:no-underline">
                 {f.q}
               </AccordionTrigger>
               <AccordionContent className="text-sm text-white/65">{f.a}</AccordionContent>
