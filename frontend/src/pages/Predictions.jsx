@@ -11,7 +11,7 @@ export default function Predictions() {
         chapter="PR"
         label="Predictions"
         title={<>Predict the Outcome. <span className="text-gold-gradient">Own the Moment.</span></>}
-        sub="Follow the action and explore Predictions through the NextZGames mobile experience."
+        sub="Back your instincts on live sports and events — clear options, transparent outcomes and settlement the moment the game is decided."
       >
         <Reveal delay={0.3} className="mt-6">
           <DownloadButton testid="predictions-page-download-btn" source="predictions_page" />

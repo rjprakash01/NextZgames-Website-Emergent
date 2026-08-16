@@ -58,7 +58,7 @@ export default function Contact() {
         chapter="@"
         label="Contact"
         title={<>Talk to <span className="text-[#EFE35F]">the Team</span></>}
-        sub="Questions about Poker, Predictions, your account or the app — we are here to help."
+        sub="Poker, predictions, payments or your account — ask us anything. A real person reads every message."
       />
       <section className="section-light py-8 md:py-12" data-testid="contact-section">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr_1.3fr]">

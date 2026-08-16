@@ -17,7 +17,7 @@ export default function About() {
         chapter="NZ"
         label="About Us"
         title={<>Built for the <span className="text-gold-gradient">Next Generation</span> of Players</>}
-        sub="NextZGames is a digital gaming brand focused on creating engaging Poker and Predictions experiences through a modern mobile platform."
+        sub="We are a team of gamers, engineers and designers building a real-money gaming experience that is fast, fair and genuinely enjoyable."
       />
       <section className="section-light py-8 md:py-12" data-testid="about-pillars">
         <div className="mx-auto max-w-6xl px-6">

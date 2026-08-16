@@ -10,7 +10,7 @@ export default function HowItWorks() {
         chapter="?"
         label="How It Works"
         title={<>Getting Started <span className="text-gold-gradient">Is Simple</span></>}
-        sub="Five steps separate you from your first game. The entire experience happens inside the NextZGames app."
+        sub="From download to your first game in five simple moves — here is exactly what happens at each step, all inside the NextZGames app."
       />
       <section className="section-light py-8 md:py-12" data-testid="steps-section">
         <div className="mx-auto max-w-3xl px-6">

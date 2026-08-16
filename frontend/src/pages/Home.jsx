@@ -53,7 +53,7 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.7 }}
             className="mt-4 max-w-md text-sm md:text-base text-white/70"
           >
-            Experience Poker and Predictions through the NextZGames app — built for players who want more from every game.
+            Experience Poker and Predictions through the NextZGames app — one home for players who read the game before they play it.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -128,8 +128,8 @@ const BrandStatement = () => (
         className="gold-line mt-5 w-44 origin-left"
       />
       <Reveal delay={0.25}>
-        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#284525]/65">
-          NextZGames brings Poker and Predictions together in a modern mobile experience designed around the way players play today.
+        <p className="mt-5 max-w-2xl text-sm md:text-base text-[#284525]/70">
+          NextZGames brings Poker and Predictions together in one crafted mobile experience. Poker rewards patience; predictions reward instinct — we built a home for both, fast to learn and deep enough to master.
         </p>
       </Reveal>
     </div>
@@ -149,7 +149,7 @@ const PokerSection = () => (
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-3 max-w-md text-sm md:text-base text-white/70">
-              From strategy to every decision at the table, discover a Poker experience designed for the mobile generation.
+              Cash games, tournaments and classic formats at every stake — every hand plays fast, fair and beautifully on your phone. This is poker built for the mobile generation.
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
@@ -161,17 +161,17 @@ const PokerSection = () => (
           <img src="/creative-poker.jpg" alt="NextZGames Poker lobby — cash games and tournaments" loading="lazy" className="relative w-[240px] md:w-[280px] rounded-[1.8rem] border border-[#EFE35F]/25 rotate-2 shadow-[0_30px_60px_rgba(0,0,0,0.45)]" />
         </Reveal>
       </div>
-      <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {POKER_FEATURES.map((f, i) => (
           <Reveal key={f.title} delay={0.07 * i}>
-            <div className="card-green h-full p-5" data-testid={`poker-feature-${i}`}>
+            <div className="border-t-2 border-[#EFE35F]/60 pt-4" data-testid={`poker-feature-${i}`}>
               <h3 className="font-heading text-base font-bold text-white">{f.title}</h3>
               <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
             </div>
           </Reveal>
         ))}
       </div>
-      <Reveal delay={0.15} className="mt-6 text-center">
+      <Reveal delay={0.15} className="mt-7 text-center">
         <p className="font-heading text-lg md:text-xl font-bold text-white">Ready for the table?</p>
         <div className="mt-4">
           <DownloadButton testid="poker-ready-download-btn" source="poker_ready" label="Download the NextZGames App" />
@@ -196,8 +196,8 @@ const PredictionsSection = () => (
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-3 max-w-md text-sm md:text-base text-[#284525]/65">
-              Follow the action and explore Predictions through the NextZGames mobile experience.
+            <p className="mt-3 max-w-md text-sm md:text-base text-[#284525]/70">
+              You already watch the game — now read it. Back your instincts on live events across cricket, football and more, and turn every match into a moment that matters.
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5 flex flex-wrap gap-3">
@@ -206,11 +206,12 @@ const PredictionsSection = () => (
           </Reveal>
         </div>
       </div>
-      <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="card-light h-full p-5" data-testid={`prediction-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#284525]">{s.title}</h3>
+            <div className="border-t-2 border-[#A3941F]/50 pt-4" data-testid={`prediction-step-${s.n}`}>
+              <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
+              <h3 className="mt-1 font-heading text-base font-bold text-[#284525]">{s.title}</h3>
               <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
             </div>
           </Reveal>
@@ -229,15 +230,17 @@ const WhySection = () => (
           Why <span className="text-gold-gradient">NextZGames?</span>
         </h2>
       </Reveal>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-7 grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
         {WHY_CARDS.map((c, i) => {
           const Icon = WHY_ICONS[c.icon];
           return (
             <Reveal key={c.title} delay={0.05 * i}>
-              <div className="card-green h-full p-5" data-testid={`why-card-${i}`}>
-                <span className="icon-chip"><Icon size={19} /></span>
-                <h3 className="mt-3 font-heading text-base font-bold text-white">{c.title}</h3>
-                <p className="mt-1.5 text-sm text-white/60">{c.desc}</p>
+              <div className="flex gap-4" data-testid={`why-card-${i}`}>
+                <span className="icon-chip shrink-0"><Icon size={19} /></span>
+                <div>
+                  <h3 className="font-heading text-base font-bold text-white">{c.title}</h3>
+                  <p className="mt-1 text-sm text-white/60">{c.desc}</p>
+                </div>
               </div>
             </Reveal>
           );
@@ -263,7 +266,7 @@ const AppShowcase = () => {
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="max-w-sm text-sm text-[#284525]/65">
+            <p className="max-w-sm text-sm text-[#284525]/70">
               One App. Multiple Experiences. Discover Poker and Predictions from one simple mobile experience.
             </p>
           </Reveal>
@@ -349,11 +352,12 @@ const HowItWorksSection = () => (
           Getting Started <span className="gold-strong">Is Simple</span>
         </h2>
       </Reveal>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-7 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="card-light h-full p-5" data-testid={`how-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#284525]">{s.title}</h3>
+            <div className="border-t-2 border-[#A3941F]/50 pt-4" data-testid={`how-step-${s.n}`}>
+              <span className="font-heading text-xs font-extrabold tracking-[0.25em] gold-strong">{s.n}</span>
+              <h3 className="mt-1 font-heading text-base font-bold text-[#284525]">{s.title}</h3>
               <p className="mt-1.5 text-sm text-[#284525]/60">{s.desc}</p>
             </div>
           </Reveal>
@@ -379,7 +383,7 @@ const TrustSection = () => (
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-3 text-sm md:text-base text-white/70">
-              NextZGames is built around secure systems, clear rules and responsible play. Gaming should stay entertainment — set limits, take breaks, and never chase losses.
+              Real-money gaming demands real trust. NextZGames is built on verified accounts, encrypted transactions and clear rules — and on the belief that gaming should stay entertainment. Set limits, take breaks, and never chase losses.
             </p>
           </Reveal>
           <Reveal delay={0.3} className="mt-5">

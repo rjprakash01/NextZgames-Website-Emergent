@@ -14,41 +14,41 @@ export const MOBILE_EXTRA_LINKS = [
 ];
 
 export const POKER_FEATURES = [
-  { title: "Multiple Games", desc: "Explore the available Poker formats through the app." },
-  { title: "Smooth Experience", desc: "A responsive interface designed for a seamless mobile experience." },
-  { title: "Easy Game Selection", desc: "Find available games and tables easily." },
-  { title: "Mobile First", desc: "Take your Poker experience wherever you go." },
+  { title: "Multiple Games", desc: "Cash games, tournaments and classic formats like No-Limit Hold'em and PLO — pick the game that fits your style and your bankroll." },
+  { title: "Smooth Experience", desc: "A fast, responsive table where every bet, call and raise lands exactly when you mean it to. No lag, no misclicks." },
+  { title: "Easy Game Selection", desc: "Live lobbies show real-time blinds, open seats and entry fees — find your table in seconds, not menus." },
+  { title: "Mobile First", desc: "A complete poker room in your pocket. Play a quick session on the move or settle in for a final table." },
 ];
 
 export const PREDICTION_STEPS = [
-  { n: "01", title: "Choose", desc: "Select an available event." },
-  { n: "02", title: "Predict", desc: "Choose from available prediction options." },
-  { n: "03", title: "Confirm", desc: "Review and confirm your selection." },
-  { n: "04", title: "Follow", desc: "Follow the outcome through the app." },
+  { n: "01", title: "Choose", desc: "Browse live and upcoming events — cricket, football and more, refreshed around the clock." },
+  { n: "02", title: "Predict", desc: "Read the form, trust your call and pick your outcome from clear, transparent options." },
+  { n: "03", title: "Confirm", desc: "Review your selection and lock it in with a single tap. No confusion, no fine print." },
+  { n: "04", title: "Follow", desc: "Track the action live and watch results settle the moment the game is decided." },
 ];
 
 export const WHY_CARDS = [
-  { icon: "users", title: "Built for Players", desc: "Designed around a simple and engaging experience." },
-  { icon: "smartphone", title: "Mobile First", desc: "Your gaming experience wherever you go." },
-  { icon: "layers", title: "Poker + Predictions", desc: "Two experiences in one app." },
-  { icon: "compass", title: "Simple Experience", desc: "Easy-to-understand navigation." },
-  { icon: "shield", title: "Secure Platform", desc: "Designed with account and platform security in mind." },
-  { icon: "headphones", title: "Player Support", desc: "Help when you need it." },
+  { icon: "users", title: "Built for Players", desc: "Every screen is shaped around real player behaviour — fewer taps, clearer choices, zero clutter." },
+  { icon: "smartphone", title: "Mobile First", desc: "Not a website squeezed onto a phone — an app engineered for one-handed, on-the-move play." },
+  { icon: "layers", title: "Poker + Predictions", desc: "Two ways to play, one account, one balance. Move between the table and the action seamlessly." },
+  { icon: "compass", title: "Simple Experience", desc: "If you can follow the game, you can play. Plain language, clean navigation, instant orientation." },
+  { icon: "shield", title: "Secure Platform", desc: "Encrypted transactions, verified accounts and protected balances — security built in, not bolted on." },
+  { icon: "headphones", title: "Player Support", desc: "Real people, real answers. Reach support any day of the week and get help that actually helps." },
 ];
 
 export const TRUST_ITEMS = [
-  { icon: "lock", title: "Account Protection", desc: "Measures designed to protect user accounts." },
-  { icon: "database", title: "Data Protection", desc: "Responsible handling of user information." },
-  { icon: "card", title: "Secure Transactions", desc: "Secure processing through supported payment providers." },
-  { icon: "scale", title: "Fair Play", desc: "Transparent rules and clearly communicated gameplay processes." },
+  { icon: "lock", title: "Account Protection", desc: "Verified accounts, secure login and activity monitoring keep your profile yours alone." },
+  { icon: "database", title: "Data Protection", desc: "Your personal information is handled responsibly, encrypted in transit and never sold." },
+  { icon: "card", title: "Secure Transactions", desc: "Deposits and withdrawals run through trusted payment providers with clear, upfront timelines." },
+  { icon: "scale", title: "Fair Play", desc: "Published rules, transparent processes and systems designed to keep every game honest." },
 ];
 
 export const HOW_IT_WORKS_STEPS = [
-  { n: "01", title: "Download", desc: "Get the official NextZGames app." },
-  { n: "02", title: "Register", desc: "Create your account and complete required verification." },
-  { n: "03", title: "Explore", desc: "Choose Poker or Predictions." },
-  { n: "04", title: "Play", desc: "Access the available experience through the app." },
-  { n: "05", title: "Enjoy", desc: "Continue exploring available games and promotions." },
+  { n: "01", title: "Download", desc: "Get the official NextZGames app for Android or iOS — free, fast and straight from the source." },
+  { n: "02", title: "Register", desc: "Create your account in under two minutes and complete a quick verification to keep the platform safe for everyone." },
+  { n: "03", title: "Explore", desc: "Walk through the poker lobby or browse live prediction events — see everything on offer before you commit a rupee." },
+  { n: "04", title: "Play", desc: "Join a table or back your prediction. Your balance, your pace, your call." },
+  { n: "05", title: "Enjoy", desc: "Track your results, unlock promotions and discover new formats and events as they drop." },
 ];
 
 export const PROMOTIONS = [
@@ -56,7 +56,7 @@ export const PROMOTIONS = [
     slug: "welcome-boost",
     icon: "gift",
     title: "Welcome Boost",
-    desc: "A welcome offer for new players joining the NextZGames app for the first time.",
+    desc: "New to NextZGames? Your first steps come with a welcome offer built to get you to the tables and events faster.",
     validity: "Launch period",
     terms: "New verified accounts only. One per player. In-app terms apply.",
   },
@@ -64,7 +64,7 @@ export const PROMOTIONS = [
     slug: "refer-and-earn",
     icon: "users",
     title: "Refer & Earn",
-    desc: "Invite your friends to NextZGames and earn rewards when they join and play.",
+    desc: "Good games are better shared. Invite friends to NextZGames and earn rewards when they join and start playing.",
     validity: "Ongoing",
     terms: "Reward credited after referred player completes verification. In-app terms apply.",
   },
@@ -72,7 +72,7 @@ export const PROMOTIONS = [
     slug: "weekend-predictions",
     icon: "zap",
     title: "Weekend Predictions Special",
-    desc: "Featured prediction events with special pools every weekend in the app.",
+    desc: "Weekends hit different. Featured prediction events with special pools land every weekend inside the app.",
     validity: "Every weekend",
     terms: "Available on selected events only. In-app terms apply.",
   },
@@ -82,54 +82,54 @@ export const FAQ_GROUPS = [
   {
     group: "General",
     items: [
-      { q: "What is NextZGames?", a: "NextZGames is a digital gaming brand offering Poker and Predictions through a single modern mobile application. The website is our official front door — the gameplay happens inside the app." },
-      { q: "What games are available?", a: "NextZGames currently focuses on two experiences: Poker and Predictions. Available formats and events are listed inside the app." },
-      { q: "Where can I download the app?", a: "Head to our Download page. Android and iOS distribution links will be activated there as soon as the app launches." },
-      { q: "Is NextZGames available on Android?", a: "Yes — the NextZGames app is being built for Android first. The download link will go live on our Download page at launch." },
-      { q: "Is NextZGames available on iOS?", a: "An iOS version is planned. The App Store button on our Download page will be activated when the iOS app is available." },
+      { q: "What is NextZGames?", a: "NextZGames is a mobile gaming platform that brings two experiences together in one app: Poker — cash games and tournaments across popular formats — and Predictions, where you back your instincts on live events. This website is our official front door; all gameplay happens inside the app." },
+      { q: "What games are available?", a: "Poker and Predictions. The poker lobby carries formats like No-Limit Hold'em and PLO across cash games and tournaments, while Predictions covers live and upcoming events across sports. The app shows everything currently available." },
+      { q: "Where can I download the app?", a: "Head to our Download page. Android and iOS download options go live there the moment the app launches — desktop users can scan the QR code to open it on their phone." },
+      { q: "Is NextZGames available on Android?", a: "Yes — Android is our first platform. The official download activates on our Download page at launch." },
+      { q: "Is NextZGames available on iOS?", a: "An iOS app is on the way. The App Store button on our Download page will activate as soon as it is available." },
     ],
   },
   {
     group: "Poker",
     items: [
-      { q: "What Poker games are available?", a: "The app offers multiple Poker formats. Open the Poker lobby in the app to explore the games currently available." },
-      { q: "How do I play Poker?", a: "Download the app, register, and head to the Poker lobby. Choose a table that suits you and take your seat." },
-      { q: "Can I play Poker on mobile?", a: "Yes — NextZGames is mobile first. The entire Poker experience is designed for your phone." },
-      { q: "How do I access Poker?", a: "Poker is available exclusively inside the NextZGames mobile app. There is no website gameplay." },
+      { q: "What Poker games are available?", a: "The lobby features popular formats including No-Limit Hold'em and Pot-Limit Omaha, across cash games and scheduled tournaments at a range of stakes. Open the app to see what's running right now." },
+      { q: "How do I play Poker?", a: "Download the app, register, and open the poker lobby. Browse by format, blinds or entry fee, tap a table and you're seated — the interface guides every action clearly." },
+      { q: "Can I play Poker on mobile?", a: "Yes — that's the whole point. The NextZGames poker room is designed mobile-first: quick to join, smooth to play, and comfortable for both five-minute sessions and deep tournament runs." },
+      { q: "How do I access Poker?", a: "Poker is available exclusively inside the NextZGames app. There is no browser or website gameplay — this keeps the tables fast, fair and secure." },
     ],
   },
   {
     group: "Predictions",
     items: [
-      { q: "What are Predictions?", a: "Predictions let you choose outcomes on available events — pick your option, confirm your selection, and follow the result in the app." },
-      { q: "How do Predictions work?", a: "Choose an event, select from the available prediction options, confirm your selection, then follow the outcome — all inside the app." },
-      { q: "What events are available?", a: "Available events are listed in the Predictions section of the app and updated regularly." },
-      { q: "Where can I access Predictions?", a: "Predictions are available exclusively inside the NextZGames mobile app." },
+      { q: "What are Predictions?", a: "Predictions let you back your read on real events — match winners, totals and more across sports like cricket and football. You choose an outcome, confirm your selection, and results settle when the event is decided." },
+      { q: "How do Predictions work?", a: "Four steps: choose an event, pick from the available options, confirm your selection, then follow it live in the app. Every option shows exactly what you're selecting before you confirm." },
+      { q: "What events are available?", a: "Live and upcoming fixtures across major sports, refreshed regularly. The Predictions tab in the app always shows what's open right now and what's coming next." },
+      { q: "Where can I access Predictions?", a: "Exclusively inside the NextZGames app, under the Predictions tab. The website doesn't host any prediction gameplay." },
     ],
   },
   {
     group: "Account",
     items: [
-      { q: "How do I create an account?", a: "Download the app, tap Register, and follow the on-screen steps to create and verify your account." },
-      { q: "How do I verify my account?", a: "Verification is completed in the app during registration. You may be asked to confirm your mobile number and provide required details." },
-      { q: "What if I forget my login details?", a: "Use the account recovery option on the app's login screen, or contact our support team through the Contact page." },
+      { q: "How do I create an account?", a: "Download the app, tap Register and follow the guided steps — it takes under two minutes. You'll verify your mobile number and set up your profile in one flow." },
+      { q: "How do I verify my account?", a: "Verification happens inside the app during registration. Confirm your mobile number and provide the requested details — it keeps the platform safe and unlocks full access, including withdrawals." },
+      { q: "What if I forget my login details?", a: "Use the recovery option on the app's login screen to regain access in minutes. If you're stuck, our support team can help — reach them through the Contact page." },
     ],
   },
   {
     group: "Payments",
     items: [
-      { q: "How do I add funds?", a: "Funds are added inside the app through the supported payment providers listed in your account section." },
-      { q: "What payment methods are supported?", a: "Supported payment methods are shown in the app's wallet section. We never process payments on this website." },
-      { q: "How do I withdraw?", a: "Withdrawals are requested from the wallet section inside the app, subject to account verification." },
-      { q: "How long do withdrawals take?", a: "Withdrawal timelines depend on the payment provider and verification status. Current timelines are communicated inside the app." },
+      { q: "How do I add funds?", a: "Open the wallet inside the app and choose from the supported payment providers. Amounts and any applicable limits are shown clearly before you confirm — nothing is ever processed on this website." },
+      { q: "What payment methods are supported?", a: "The app's wallet section lists every supported method for your region. We work with trusted payment providers and never store your payment credentials on our servers or website." },
+      { q: "How do I withdraw?", a: "Request a withdrawal from the wallet section of the app. Withdrawals go to your verified payment method, subject to standard account verification." },
+      { q: "How long do withdrawals take?", a: "Timelines depend on your payment provider and verification status — the app shows the expected timeline when you request. Most verified withdrawals process quickly." },
     ],
   },
   {
     group: "App",
     items: [
-      { q: "How do I download the app?", a: "Visit our Download page and use the Android or iOS option for your device. Desktop users can scan the QR code." },
-      { q: "How do I install the app?", a: "Android users may need to allow installation from the official source. iOS users install directly from the App Store when available." },
-      { q: "How do I update the app?", a: "Updates are delivered through the same channel you installed from. Keep the app updated for the latest games and promotions." },
+      { q: "How do I download the app?", a: "Visit the Download page and pick your platform — Android or iOS. On desktop, scan the QR code with your phone camera to jump straight to the right download option." },
+      { q: "How do I install the app?", a: "Follow the on-screen steps after downloading. Android may ask you to allow installation from the official source; iOS installs directly from the App Store when available." },
+      { q: "How do I update the app?", a: "Updates arrive through the same channel you installed from. Keep auto-update on so you never miss new formats, events and promotions." },
     ],
   },
 ];

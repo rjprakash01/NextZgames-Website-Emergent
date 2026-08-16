@@ -13,7 +13,7 @@ export default function Promotions() {
         chapter="%"
         label="Promotions"
         title={<>More Reasons <span className="text-gold-gradient">to Play</span></>}
-        sub="Promotions live inside the NextZGames app. Download the app to participate in any active offer."
+        sub="Real value, clear terms, no fine-print games. Every promotion lives inside the NextZGames app — download it to take part."
       />
       <section className="section-light py-8 md:py-12" data-testid="promotions-list">
         <div className="mx-auto max-w-5xl space-y-6 px-6">

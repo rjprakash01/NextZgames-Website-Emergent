@@ -12,7 +12,7 @@ export default function Poker() {
         chapter="P"
         label="Poker"
         title={<>Experience Poker <span className="text-gold-gradient">Like Never Before</span></>}
-        sub="From strategy to every decision at the table, discover a Poker experience designed for the mobile generation."
+        sub="Cash games, tournaments and classic formats at every stake — a poker room engineered for the way the mobile generation thinks, reads and plays."
       >
         <Reveal delay={0.3} className="mt-6 flex flex-wrap gap-3">
           <DownloadButton testid="poker-page-download-btn" source="poker_page" />
