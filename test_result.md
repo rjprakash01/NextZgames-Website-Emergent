@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Verify a DESKTOP-VIEW redesign of the 'Why NextZGames' section on the NextZGames home page (site root /). The DESKTOP variant should match a new reference layout with centered heading 'Why Players Trust NextZGames', 6 cards in 3-column grid (2 rows of 3), center-aligned cards with gold/yellow icons on top, bold white titles, centered light descriptions, and dark green background (#122A0E). Mobile version should remain unchanged."
+user_problem_statement: "Verify a redesigned 'Promotions' section on the NextZGames home page (site root /). The section has data-testid='promotions-section'. Check on BOTH viewports: DESKTOP (1440x900) - heading 'More Reasons to Play', 3 promotion cards in 3-column grid with colored icon tiles, validity badges, titles, descriptions, and 'View Promotion' links with colored accent bars. MOBILE (390x844) - cards stack in single column, readable and well-spaced."
 
 frontend:
   - task: "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
@@ -171,16 +171,53 @@ frontend:
         agent: "testing"
         comment: "✅ Mobile section has white background (bg-white class) with dark text (text-[#122A0E]). Visual styling matches clean light layout as expected."
 
+  - task: "Promotions section - desktop layout with 3 cards in 3-column grid"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ DESKTOP VIEWPORT (1440x900): Promotions section verified with heading 'More Reasons to Play'. All 3 cards present (promo-card-welcome-boost, promo-card-refer-and-earn, promo-card-weekend-predictions) in 3-column grid layout (lg:grid-cols-3). Each card has colored accent bar at top, colored rounded icon tile, validity badge (Launch period/Ongoing/Every weekend), bold title, description, and colored 'View Promotion' link with arrow. 'View all promotions' link visible at top-right. Layout is clean and professional."
+
+  - task: "Promotions section - mobile responsive layout with stacked cards"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ MOBILE VIEWPORT (390x844): All 3 promotion cards stack properly in single column. Heading 'More Reasons to Play' is visible and centered. All card components (icon tiles, validity badges, titles, descriptions, View Promotion links) are readable and well-spaced. 'View all promotions' link visible. Responsive behavior working correctly."
+
+  - task: "Promotions section - card components and visual elements"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/pages/Home.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ All 3 promotion cards verified with complete components: (1) Welcome Boost - purple icon, 'Launch period' badge; (2) Refer & Earn - teal icon, 'Ongoing' badge; (3) Weekend Predictions Special - coral icon, 'Every weekend' badge. Each card has thin colored accent bar at top edge, colored rounded icon tile at top-left, validity badge at top-right, bold title, description text, and colored 'View Promotion' link with arrow icon. All visual elements rendering correctly on both desktop and mobile."
+
 metadata:
   created_by: "testing_agent"
   version: "1.0"
-  test_sequence: 2
+  test_sequence: 3
   run_ui: true
 
 test_plan:
   current_focus:
-    - "Desktop 'Why Players Trust NextZGames' section - redesigned layout"
-    - "Desktop section - 6 cards with correct titles and content"
+    - "Promotions section - desktop layout with 3 cards in 3-column grid"
+    - "Promotions section - mobile responsive layout with stacked cards"
+    - "Promotions section - card components and visual elements"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -190,3 +227,5 @@ agent_communication:
     message: "Completed comprehensive testing of mobile-only 'Play with Confidence' section. All responsive behavior working correctly. Mobile section shows only on mobile (<768px), desktop section shows only on desktop (>=768px). All 6 cards present with correct content and styling. Screenshots captured for both viewports."
   - agent: "testing"
     message: "Completed verification of DESKTOP redesign for 'Why Players Trust NextZGames' section. Desktop layout verified at 1440x900 viewport: centered heading, 6 cards in 3-column grid (2 rows), center-aligned cards with gold/yellow icons, bold white titles, centered descriptions, dark green background (#122A0E). Mobile version (390x844) re-confirmed working correctly with 'Play with Confidence' heading and 2-column grid. Desktop redesign successfully implemented without breaking mobile view. Screenshots captured for both viewports."
+  - agent: "testing"
+    message: "Completed comprehensive testing of redesigned Promotions section. DESKTOP (1440x900): Verified heading 'More Reasons to Play', 3 promotion cards (welcome-boost, refer-and-earn, weekend-predictions) in 3-column grid, all card components present (accent bars, icon tiles, validity badges, titles, descriptions, View Promotion links), and 'View all promotions' link. MOBILE (390x844): Verified cards stack properly in single column, all components readable and well-spaced, responsive behavior working correctly. All visual elements rendering perfectly on both viewports. Screenshots captured. Promotions section is fully functional and matches design requirements."

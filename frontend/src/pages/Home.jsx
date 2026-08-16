@@ -286,14 +286,16 @@ const AppShowcase = () => {
   );
 };
 
+const PROMO_ACCENTS = ["#6A4FA3", "#0E7C6B", "#D65A3A"];
+
 const PromotionsSection = () => (
-  <section className="section-light py-8 md:py-12" data-testid="promotions-section">
+  <section className="section-light py-10 md:py-14" data-testid="promotions-section">
     <div className="mx-auto max-w-6xl px-6">
-      <div className="flex flex-wrap items-end justify-between gap-5">
+      <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
         <div>
           <Chapter label="Promotions" tone="light" />
           <Reveal delay={0.1}>
-            <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#122A0E]">
+            <h2 className="mt-4 font-heading text-3xl lg:text-4xl font-extrabold tracking-tight text-[#122A0E]">
               More Reasons <span className="acc-coral">to Play</span>
             </h2>
           </Reveal>
@@ -305,30 +307,42 @@ const PromotionsSection = () => (
           </Link>
         </Reveal>
       </div>
-      <div className="mt-6 grid gap-4 md:grid-cols-3">
+
+      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {PROMOTIONS.map((p, i) => {
           const Icon = PROMO_ICONS[p.icon];
+          const accent = PROMO_ACCENTS[i % PROMO_ACCENTS.length];
           return (
             <Reveal key={p.slug} delay={0.07 * i}>
-              <div className="card-light group relative h-full overflow-hidden p-5" data-testid={`promo-card-${p.slug}`}>
-                <span className="icon-chip" style={{ background: CHIP_COLORS[i % CHIP_COLORS.length], color: "#122A0E" }}><Icon size={19} /></span>
-                <h3 className="mt-3 font-heading text-lg font-bold text-[#122A0E]">{p.title}</h3>
-                <p className="mt-1.5 text-sm text-[#122A0E]/60">{p.desc}</p>
-                <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-[#8C7A0F]">{p.validity}</p>
+              <div className="card-light group relative flex h-full flex-col overflow-hidden p-6" data-testid={`promo-card-${p.slug}`}>
+                <span className="absolute inset-x-0 top-0 h-1" style={{ background: accent }} />
+                <div className="flex items-center justify-between">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-sm transition-transform duration-300 group-hover:scale-105" style={{ background: accent }}>
+                    <Icon size={22} />
+                  </span>
+                  <span className="rounded-full bg-[#122A0E]/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-[#8C7A0F]">
+                    {p.validity}
+                  </span>
+                </div>
+                <h3 className="mt-5 font-heading text-xl font-bold text-[#122A0E]">{p.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-[#122A0E]/60">{p.desc}</p>
                 <Link
                   to="/promotions"
                   data-testid={`promo-view-${p.slug}`}
-                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#122A0E] transition-colors duration-300 group-hover:text-[#6A4FA3]"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold"
+                  style={{ color: accent }}
                 >
-                  View Promotion <ArrowUpRight size={15} />
+                  View Promotion
+                  <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>
             </Reveal>
           );
         })}
       </div>
+
       <Reveal delay={0.2}>
-        <p className="mt-5 text-xs text-[#122A0E]/40">Sample promotions shown for preview. Final offers, eligibility and terms will be published before launch.</p>
+        <p className="mt-6 text-center text-xs text-[#122A0E]/40 sm:text-left">Sample promotions shown for preview. Final offers, eligibility and terms will be published before launch.</p>
       </Reveal>
     </div>
   </section>
