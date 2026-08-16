@@ -304,3 +304,10 @@ body {
     border-color: #122A0E;
     box-shadow: 0 0 0 3px rgba(40, 69, 37, 0.12);
 }
+
+/* Extended accent palette */
+.acc-teal { color: #0E7C6B; }
+.acc-coral { color: #D65A3A; }
+.acc-violet { color: #6A4FA3; }
+.bg-plum { background: #35284F; }
+.bg-teal-deep { background: #0F4C44; }

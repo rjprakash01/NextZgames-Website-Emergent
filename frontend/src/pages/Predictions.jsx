@@ -41,7 +41,7 @@ export default function Predictions() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#122A0E] py-8 md:py-12" data-testid="predictions-experience-section">
+      <section className="relative overflow-hidden bg-teal-deep py-8 md:py-12" data-testid="predictions-experience-section">
         <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-6 lg:grid-cols-2">
           <div>
             <Chapter label="The Experience" />

@@ -84,7 +84,7 @@ export default function DownloadPage() {
           </div>
         </div>
       </section>
-      <section className="relative overflow-hidden bg-[#122A0E] py-8 md:py-12" data-testid="download-showcase">
+      <section className="relative overflow-hidden bg-plum py-8 md:py-12" data-testid="download-showcase">
         <div className="mx-auto grid max-w-5xl items-center gap-8 px-6 lg:grid-cols-2">
           <Reveal>
             <h2 className="font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-white">

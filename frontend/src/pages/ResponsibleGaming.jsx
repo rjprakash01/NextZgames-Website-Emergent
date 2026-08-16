@@ -30,7 +30,7 @@ export default function ResponsibleGaming() {
             {ITEMS.map((item, i) => (
               <Reveal key={item.title} delay={0.04 * i}>
                 <div className="card-light h-full p-5" data-testid={`rg-card-${i}`}>
-                  <span className="icon-chip !h-10 !w-10"><item.icon size={17} /></span>
+                  <span className="icon-chip !h-10 !w-10" style={{ background: ["#EFE35F", "#5EC8F2", "#FF7A59", "#9B7FE0", "#4ADE80", "#F2C94C", "#7ED3B2", "#E879A6"][i % 8], color: "#122A0E" }}><item.icon size={17} /></span>
                   <h3 className="mt-3 font-heading text-base font-bold text-[#122A0E]">{item.title}</h3>
                   <p className="mt-1.5 text-sm text-[#122A0E]/60">{item.desc}</p>
                 </div>

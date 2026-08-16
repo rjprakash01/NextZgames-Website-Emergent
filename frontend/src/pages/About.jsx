@@ -3,10 +3,10 @@ import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
 import { usePageMeta } from "../lib/meta";
 
 const PILLARS = [
-  { icon: Cpu, title: "Technology", desc: "A modern mobile platform built for speed and reliability." },
-  { icon: Gamepad2, title: "Gaming", desc: "Poker and Predictions crafted around real player behaviour." },
-  { icon: PenTool, title: "Design", desc: "Clean, premium interfaces that stay out of the way of the game." },
-  { icon: HeartHandshake, title: "Player Experience", desc: "Support, security and responsible play at the core." },
+  { icon: Cpu, title: "Technology", desc: "A modern mobile platform built for speed and reliability.", color: "#EFE35F" },
+  { icon: Gamepad2, title: "Gaming", desc: "Poker and Predictions crafted around real player behaviour.", color: "#FF7A59" },
+  { icon: PenTool, title: "Design", desc: "Clean, premium interfaces that stay out of the way of the game.", color: "#5EC8F2" },
+  { icon: HeartHandshake, title: "Player Experience", desc: "Support, security and responsible play at the core.", color: "#9B7FE0" },
 ];
 
 export default function About() {
@@ -25,8 +25,8 @@ export default function About() {
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {PILLARS.map((p, i) => (
               <Reveal key={p.title} delay={0.06 * i}>
-                <div className="card-light h-full p-5" data-testid={`about-pillar-${i}`}>
-                  <span className="icon-chip"><p.icon size={18} /></span>
+                <div className="card-light h-full p-5" style={{ borderTop: `3px solid ${p.color}` }} data-testid={`about-pillar-${i}`}>
+                  <span className="icon-chip" style={{ background: p.color, color: "#122A0E" }}><p.icon size={18} /></span>
                   <h3 className="mt-3 font-heading text-base font-bold text-[#122A0E]">{p.title}</h3>
                   <p className="mt-1.5 text-sm text-[#122A0E]/60">{p.desc}</p>
                 </div>
@@ -35,7 +35,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="bg-[#122A0E] py-8 md:py-12" data-testid="about-vision">
+      <section className="bg-teal-deep py-8 md:py-12" data-testid="about-vision">
         <div className="mx-auto grid max-w-5xl gap-5 px-6 md:grid-cols-2">
           <Reveal>
             <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-vision-card">
@@ -46,8 +46,8 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal delay={0.12}>
-            <div className="card-green h-full border-l-4 !border-l-[#EFE35F] p-8" data-testid="about-mission-card">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#EFE35F]">Mission</span>
+            <div className="card-green h-full border-l-4 !border-l-[#5EC8F2] p-8" data-testid="about-mission-card">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#5EC8F2]">Mission</span>
               <p className="mt-3 font-heading text-xl font-bold leading-snug text-white">
                 To create engaging, accessible and responsible digital gaming experiences through technology.
               </p>

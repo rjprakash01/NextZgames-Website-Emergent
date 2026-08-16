@@ -20,6 +20,8 @@ import {
 const WHY_ICONS = { users: Users, smartphone: Smartphone, layers: Layers, compass: Compass, shield: ShieldCheck, headphones: Headphones };
 const TRUST_ICONS = { lock: Lock, database: Database, card: CreditCard, scale: Scale };
 const PROMO_ICONS = { gift: Gift, users: Users, zap: Zap };
+const CHIP_COLORS = ["#EFE35F", "#FF7A59", "#5EC8F2", "#9B7FE0", "#4ADE80", "#F2C94C"];
+const STEP_COLORS = ["#8C7A0F", "#0E7C6B", "#D65A3A", "#6A4FA3"];
 
 const MaskedLine = ({ children, delay, className = "" }) => (
   <span className="block overflow-hidden pb-1">
@@ -96,12 +98,12 @@ const Hero = () => {
 };
 
 const Ticker = () => (
-  <div className="bg-[#122A0E] border-y border-[#EFE35F]/20 py-3" data-testid="ticker">
+  <div className="bg-[#EFE35F] py-3" data-testid="ticker">
     <Marquee speed={40} gradient={false} pauseOnHover>
       {["Fair Play", "Instant Withdrawals", "RNG Certified", "Secure Transactions", "Data Privacy", "Account Protection"].map((t) => (
-        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold tracking-[0.08em] text-[#EFE35F]">
+        <span key={t} className="mx-7 flex items-center gap-7 font-heading text-base md:text-lg font-extrabold tracking-[0.08em] text-[#122A0E]">
           {t}
-          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#EFE35F]" />
+          <span className="inline-block h-1.5 w-1.5 rotate-45 bg-[#122A0E]" />
         </span>
       ))}
     </Marquee>
@@ -114,7 +116,7 @@ const BrandStatement = () => (
       <Chapter label="The Brand" tone="light" />
       <Reveal delay={0.1}>
         <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-extrabold tracking-tight text-[#122A0E]">
-          Built for the <span className="gold-strong">Next Move.</span>
+          Built for the <span className="acc-coral">Next Move.</span>
         </h2>
       </Reveal>
       <motion.div
@@ -134,7 +136,7 @@ const BrandStatement = () => (
 );
 
 const PokerSection = () => (
-  <section className="relative overflow-hidden bg-[#122A0E] py-8 md:py-12" data-testid="poker-section">
+  <section className="relative overflow-hidden bg-plum py-8 md:py-12" data-testid="poker-section">
     <div className="mx-auto max-w-6xl px-6">
       <div className="grid items-center gap-8 lg:grid-cols-2">
         <div>
@@ -161,7 +163,7 @@ const PokerSection = () => (
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {POKER_FEATURES.map((f, i) => (
           <Reveal key={f.title} delay={0.07 * i}>
-            <div className="border-t-2 border-[#EFE35F]/60 pt-4" data-testid={`poker-feature-${i}`}>
+            <div className="border-t-2 pt-4" style={{ borderColor: CHIP_COLORS[i % CHIP_COLORS.length] }} data-testid={`poker-feature-${i}`}>
               <h3 className="font-heading text-base font-bold text-white">{f.title}</h3>
               <p className="mt-1.5 text-sm text-white/60">{f.desc}</p>
             </div>
@@ -189,7 +191,7 @@ const PredictionsSection = () => (
           <Chapter label="Predictions" tone="light" />
           <Reveal delay={0.1}>
             <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#122A0E]">
-              Predict the Outcome.<br /><span className="gold-strong">Own the Moment.</span>
+              Predict the Outcome.<br /><span className="acc-teal">Own the Moment.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -206,8 +208,10 @@ const PredictionsSection = () => (
       <div className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {PREDICTION_STEPS.map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="border-t-2 border-[#122A0E]/30 pt-4" data-testid={`prediction-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#122A0E]"><span className="gold-strong">{s.n}.</span> {s.title}</h3>
+            <div className="border-t-2 pt-4" style={{ borderColor: STEP_COLORS[i % STEP_COLORS.length] }} data-testid={`prediction-step-${s.n}`}>
+              <h3 className="font-heading text-base font-bold text-[#122A0E]">
+                <span style={{ color: STEP_COLORS[i % STEP_COLORS.length] }}>{s.n}.</span> {s.title}
+              </h3>
               <p className="mt-1.5 text-sm text-[#122A0E]/60">{s.desc}</p>
             </div>
           </Reveal>
@@ -218,7 +222,7 @@ const PredictionsSection = () => (
 );
 
 const WhySection = () => (
-  <section className="bg-[#122A0E] py-8 md:py-12" data-testid="why-section">
+  <section className="bg-teal-deep py-8 md:py-12" data-testid="why-section">
     <div className="mx-auto max-w-6xl px-6">
       <Chapter label="Why NextZGames" />
       <Reveal delay={0.1}>
@@ -232,10 +236,10 @@ const WhySection = () => (
           return (
             <Reveal key={c.title} delay={0.05 * i}>
               <div className="flex gap-4" data-testid={`why-card-${i}`}>
-                <span className="icon-chip shrink-0"><Icon size={19} /></span>
+                <span className="icon-chip shrink-0" style={{ background: CHIP_COLORS[i % CHIP_COLORS.length], color: "#122A0E" }}><Icon size={19} /></span>
                 <div>
                   <h3 className="font-heading text-base font-bold text-white">{c.title}</h3>
-                  <p className="mt-1 text-sm text-white/60">{c.desc}</p>
+                  <p className="mt-1 text-sm text-white/65">{c.desc}</p>
                 </div>
               </div>
             </Reveal>
@@ -258,7 +262,7 @@ const AppShowcase = () => {
         <div className="mt-4 flex flex-wrap items-end justify-between gap-5">
           <Reveal delay={0.1}>
             <h2 className="max-w-xl font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#122A0E]">
-              Everything. Right in <span className="gold-strong">Your Hands.</span>
+              Everything. Right in <span className="acc-violet">Your Hands.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
@@ -270,7 +274,7 @@ const AppShowcase = () => {
         <div className="mt-6 grid gap-6 sm:grid-cols-2 max-w-3xl">
           {creatives.map(({ img, label, testid }, i) => (
             <Reveal key={label} delay={0.08 * i}>
-              <div className="group overflow-hidden rounded-3xl border border-[#122A0E]/10 bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]">
+              <div className="group overflow-hidden rounded-3xl border bg-white shadow-[0_20px_50px_rgba(24,43,23,0.12)]" style={{ borderColor: ["#6A4FA3", "#0E7C6B"][i % 2] }}>
                 <img
                   src={img}
                   alt={label}
@@ -316,7 +320,7 @@ const PromotionsSection = () => (
           return (
             <Reveal key={p.slug} delay={0.07 * i}>
               <div className="card-green group relative h-full overflow-hidden p-5" data-testid={`promo-card-${p.slug}`}>
-                <span className="icon-chip"><Icon size={19} /></span>
+                <span className="icon-chip" style={{ background: CHIP_COLORS[i % CHIP_COLORS.length], color: "#122A0E" }}><Icon size={19} /></span>
                 <h3 className="mt-3 font-heading text-lg font-bold text-white">{p.title}</h3>
                 <p className="mt-1.5 text-sm text-white/60">{p.desc}</p>
                 <p className="mt-3 text-[10px] uppercase tracking-[0.25em] text-[#EFE35F]/80">{p.validity}</p>
@@ -345,14 +349,16 @@ const HowItWorksSection = () => (
       <Chapter label="Getting Started" tone="light" />
       <Reveal delay={0.1}>
         <h2 className="mt-4 font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-[#122A0E]">
-          Getting Started <span className="gold-strong">Is Simple</span>
+          Getting Started <span className="acc-coral">Is Simple</span>
         </h2>
       </Reveal>
       <div className="mt-7 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
         {HOW_IT_WORKS_STEPS.slice(0, 4).map((s, i) => (
           <Reveal key={s.n} delay={0.07 * i}>
-            <div className="border-t-2 border-[#122A0E]/30 pt-4" data-testid={`how-step-${s.n}`}>
-              <h3 className="font-heading text-base font-bold text-[#122A0E]"><span className="gold-strong">{s.n}.</span> {s.title}</h3>
+            <div className="border-t-2 pt-4" style={{ borderColor: STEP_COLORS[i % STEP_COLORS.length] }} data-testid={`how-step-${s.n}`}>
+              <h3 className="font-heading text-base font-bold text-[#122A0E]">
+                <span style={{ color: STEP_COLORS[i % STEP_COLORS.length] }}>{s.n}.</span> {s.title}
+              </h3>
               <p className="mt-1.5 text-sm text-[#122A0E]/60">{s.desc}</p>
             </div>
           </Reveal>
@@ -391,7 +397,7 @@ const TrustSection = () => (
             return (
               <Reveal key={t.title} delay={0.06 * i}>
                 <div className="card-green h-full p-5" data-testid={`trust-card-${i}`}>
-                  <span className="icon-chip !h-10 !w-10"><Icon size={17} /></span>
+                  <span className="icon-chip !h-10 !w-10" style={{ background: ["#EFE35F", "#5EC8F2", "#4ADE80", "#9B7FE0"][i % 4], color: "#122A0E" }}><Icon size={17} /></span>
                   <h3 className="mt-3 font-heading text-base font-bold text-white">{t.title}</h3>
                   <p className="mt-1.5 text-sm text-white/60">{t.desc}</p>
                 </div>
@@ -410,14 +416,14 @@ const FaqSection = () => (
       <Chapter label="FAQ" tone="light" />
       <Reveal delay={0.1}>
         <h2 className="mt-4 font-heading text-2xl sm:text-3xl font-extrabold tracking-tight text-[#122A0E]">
-          Common <span className="gold-strong">Questions</span>
+          Common <span className="acc-violet">Questions</span>
         </h2>
       </Reveal>
       <Reveal delay={0.2} className="mt-6">
         <Accordion type="single" collapsible className="w-full">
           {FAQ_GROUPS[0].items.slice(0, 5).map((f, i) => (
             <AccordionItem key={f.q} value={`home-faq-${i}`} className="border-[#122A0E]/15">
-              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#122A0E] hover:text-[#122A0E]/70 hover:no-underline">
+              <AccordionTrigger data-testid={`home-faq-q-${i}`} className="text-left font-heading text-sm md:text-base font-bold text-[#122A0E] hover:text-[#6A4FA3] hover:no-underline">
                 {f.q}
               </AccordionTrigger>
               <AccordionContent className="text-sm text-[#122A0E]/65">{f.a}</AccordionContent>
