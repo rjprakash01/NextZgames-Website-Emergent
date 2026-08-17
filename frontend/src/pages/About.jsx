@@ -1,13 +1,5 @@
-import { Cpu, Gamepad2, PenTool, HeartHandshake } from "lucide-react";
-import { Chapter, Reveal, DownloadButton, PageHero } from "../components/bits";
+import { Chapter, Reveal, PageHero } from "../components/bits";
 import { usePageMeta } from "../lib/meta";
-
-const PILLARS = [
-  { icon: Cpu, title: "Technology", desc: "A modern mobile platform built for speed and reliability.", color: "#E3B84A" },
-  { icon: Gamepad2, title: "Gaming", desc: "Poker and Predictions crafted around real player behaviour.", color: "#FF7A59" },
-  { icon: PenTool, title: "Design", desc: "Clean, premium interfaces that stay out of the way of the game.", color: "#5EC8F2" },
-  { icon: HeartHandshake, title: "Player Experience", desc: "Support, security and responsible play at the core.", color: "#9B7FE0" },
-];
 
 export default function About() {
   usePageMeta("About Us — NextZGames", "NextZGames is a digital gaming brand built for the next generation of players.");
@@ -20,43 +12,20 @@ export default function About() {
         sub="We are a team of gamers, engineers and designers building a real-money gaming experience that is fast, fair and genuinely enjoyable."
       />
       <section className="section-light py-8 md:py-12" data-testid="about-pillars">
-        <div className="mx-auto max-w-6xl px-6">
-          <Chapter label="What We Combine" tone="light" />
-          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {PILLARS.map((p, i) => (
-              <Reveal key={p.title} delay={0.06 * i}>
-                <div className="card-light h-full p-5" style={{ borderTop: `3px solid ${p.color}` }} data-testid={`about-pillar-${i}`}>
-                  <span className="icon-chip" style={{ background: p.color, color: "#122A0E" }}><p.icon size={18} /></span>
-                  <h3 className="mt-3 font-heading text-base font-bold text-[#122A0E]">{p.title}</h3>
-                  <p className="mt-1.5 text-sm text-[#122A0E]/60">{p.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="bg-coral-deep py-8 md:py-12" data-testid="about-vision">
-        <div className="mx-auto grid max-w-5xl gap-5 px-6 md:grid-cols-2">
-          <Reveal>
-            <div className="card-green h-full border-l-4 !border-l-[#E3B84A] p-8" data-testid="about-vision-card">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#E3B84A]">Vision</span>
-              <p className="mt-3 font-heading text-xl font-bold leading-snug text-white">
-                To build a trusted and exciting destination for modern players.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <div className="card-green h-full border-l-4 !border-l-[#5EC8F2] p-8" data-testid="about-mission-card">
-              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#5EC8F2]">Mission</span>
-              <p className="mt-3 font-heading text-xl font-bold leading-snug text-white">
-                To create engaging, accessible and responsible digital gaming experiences through technology.
-              </p>
+        <div className="mx-auto max-w-3xl px-6">
+          <Chapter label="Who We Are" tone="light" />
+          <Reveal delay={0.1}>
+            <div className="mt-6 space-y-4 text-sm md:text-base leading-relaxed text-[#122A0E]/75">
+              <p>NextZGames is a technology-driven real-money gaming platform built to deliver secure, transparent, and reliable experiences across Poker and Predictions. We combine modern technology, real-money gaming expertise, and a player-first approach to create a platform designed around what matters most — security, fair play, transparency, and trust.</p>
+              <p>Our focus goes beyond providing games. We build the technology and infrastructure that power a dependable real-money gaming experience, with strong emphasis on secure account management, protected player data, secure transactions, reliable withdrawals, and seamless gameplay. Every part of the platform is designed to provide players with a clear and consistent experience, from accessing games to managing their funds.</p>
+              <p>Security is at the core of NextZGames. We take the protection of player information and financial transactions seriously and continuously work to strengthen the systems and processes that safeguard them. At the same time, we believe transparency is essential to building long-term trust. Players should have clear information, straightforward processes, and an experience where they know what to expect.</p>
+              <p>Fair play is equally important to us. We are committed to creating a gaming environment built around fairness, integrity, and responsible participation. Our technology and platform processes are designed to support a reliable gaming experience while giving players confidence in the platform they choose to play on.</p>
+              <p>From NL Hold’em, PLO4, PLO5, PLO6, Double Board and Bomb Pots to a growing range of prediction experiences, NextZGames brings technology and real-money gaming together on one platform. We continuously improve our products, infrastructure, security, and player support to meet the evolving expectations of modern players.</p>
+              <p>Our vision is simple: to build a real-money gaming platform that players can use with confidence — where technology delivers performance, security protects what matters, transparency builds trust, and fair play remains at the centre of the experience.</p>
+              <p className="font-heading text-lg font-bold text-[#122A0E]">Secure. Transparent. Fair. Built on Trust.</p>
             </div>
           </Reveal>
         </div>
-        <Reveal delay={0.2} className="mt-9 text-center">
-          <DownloadButton testid="about-download-btn" source="about" />
-        </Reveal>
       </section>
     </>
   );
